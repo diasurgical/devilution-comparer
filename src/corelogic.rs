@@ -37,7 +37,7 @@ pub fn write_decompiled(
 
     let symbol_info = cvdump_output
         .lines()
-        .find(|line| line.ends_with("InitMonsterTRN") && line.contains("PROC"))
+        .find(|line| line.ends_with(debug_symbol) && line.contains("PROC"))
         .map(|line| {
             let captures = regex.captures(line).unwrap();
             let offset = u64::from_str_radix(&captures["offset"], 16).unwrap();
