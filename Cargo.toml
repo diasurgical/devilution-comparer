@@ -1,0 +1,13 @@
+cargo-features = ["edition"]
+
+[package]
+name = "devilution-comparer"
+version = "0.1.0"
+authors = ["Dennis Duda <github@seritools.de>"]
+edition = '2018'
+
+[dependencies]
+capstone = "0.4.0"
+notify = "4.0.0"
+clap = "2"
+regex = "1"
