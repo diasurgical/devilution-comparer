@@ -6,6 +6,12 @@ Generates an orig.asm and a compare.asm in the current directory and watches the
 
 Use `--help` for parameter guidance.
 
+Example call:
+
+```plain
+devilution-comparer.exe path\to\Diablo_orig.exe 0x303EF devilution\bld\Diablo.exe InitMonsterTRN
+```
+
 ## Requirements
 
 This uses Rust in the 2018 edition (so currently nightly only).
