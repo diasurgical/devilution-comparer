@@ -106,15 +106,17 @@ fn run_disassemble(opts: &mut Opts) {
             println!(
                 "Found {} at offset: {}{}, length: {}{}",
                 &opts.debug_symbol,
-                format!("{:X}", offset),
+                format!("{:#X}", offset),
                 if let Some((old_offset, _)) = opts.last_offset_length {
-                    format!(" ({:+X})", offset - old_offset)
+                    let diff = (offset as i64) - (old_offset as i64);
+                    format!(" ({}{:#X})", if diff.is_negative() { "-" } else { "+" }, diff.abs())
                 } else {
                     "".into()
                 },
-                format!("{:X}", length),
+                format!("{:#X}", length),
                 if let Some((_, old_length)) = opts.last_offset_length {
-                    format!(" ({:+X})", length - old_length)
+                    let diff = (length as i64) - (old_length as i64);
+                    format!(" ({}{:#X})", if diff.is_negative() { "-" } else { "+" }, diff.abs())
                 } else {
                     "".into()
                 },
