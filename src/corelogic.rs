@@ -2,31 +2,54 @@ use std::env::current_exe;
 use std::fs::File;
 use std::io::{BufWriter, Read, Seek, SeekFrom, Write};
 use std::path::Path;
+use std::path::PathBuf;
 use std::process::Command;
 
 use capstone::prelude::*;
 use regex::Regex;
 
 // pdb symbol offset + offset_compare = file offset
+// this is 0x1000 for VC6 linked files, 0x400 for VC5 linked files
 const OFFSET_COMPARE_FILE: u64 = 0x1000;
 
-pub fn write_decompiled(
-    orig: impl AsRef<Path>,
-    orig_offset_start: u64,
-    compare_file_path: impl AsRef<Path>,
-    compare_pdb_file: impl AsRef<Path>,
-    debug_symbol: &str,
-) -> std::io::Result<()> {
-    let cvdump_exe_path = current_exe()?.with_file_name("cvdump.exe");
+pub struct Opts {
+    pub orig: PathBuf,
+    pub compare_file_path: PathBuf,
+    pub compare_pdb_file: PathBuf,
+    pub orig_offset_start: u64,
+    pub debug_symbol: String,
+    pub print_adresses: bool,
+    pub last_offset_length: Option<(u64, usize)>,
+    pub enable_watcher: bool,
+}
 
-    let cvdump = Command::new(cvdump_exe_path)
-        .arg("-s")
-        .arg(compare_pdb_file.as_ref())
-        .output()?;
+pub enum CoreError {
+    CvDumpFail(std::io::Error),
+    CvDumpUnsuccessful,
+    SymbolNotFound,
+    IoError(std::io::Error),
+    CapstoneError(capstone::Error),
+}
+
+pub fn run_compare(opts: &Opts) -> Result<(u64, usize), CoreError> {
+    let cvdump_exe_path = current_exe()
+        .map_err(CoreError::IoError)?
+        .with_file_name("cvdump.exe");
+
+    let cvdump = (if cfg!(target_os = "windows") {
+        Command::new(cvdump_exe_path)
+    } else {
+        let mut c = Command::new("wine");
+        c.arg(cvdump_exe_path);
+        c
+    }).arg("-s")
+    .arg(&opts.compare_pdb_file)
+    .output()
+    .map_err(CoreError::CvDumpFail)?;
 
     if !cvdump.status.success() {
-        println!("Could not read pdb, aborting.");
-        return Ok(());
+        //println!("Could not read the pdb file, skipping the file.");
+        return Err(CoreError::CvDumpUnsuccessful);
     }
 
     let cvdump_output = String::from_utf8_lossy(&cvdump.stdout);
@@ -37,7 +60,7 @@ pub fn write_decompiled(
 
     let symbol_info = cvdump_output
         .lines()
-        .find(|line| line.ends_with(debug_symbol) && line.contains("PROC"))
+        .find(|line| line.ends_with(&opts.debug_symbol) && line.contains("PROC"))
         .map(|line| {
             let captures = regex.captures(line).unwrap();
             let offset = u64::from_str_radix(&captures["offset"], 16).unwrap();
@@ -47,32 +70,23 @@ pub fn write_decompiled(
 
     let (offset, length) = match symbol_info {
         None => {
-            println!("Could not find the symbol, skipping.");
-            return Ok(());
+            println!("Could not find the symbol, skipping the file.");
+            return Err(CoreError::SymbolNotFound);
         }
         Some(info) => info,
     };
-
-    println!(
-        "found {} at offset: {:X}, length: {:X}",
-        debug_symbol, offset, length
-    );
 
     let mut orig_function_bytes = Vec::with_capacity(length);
     orig_function_bytes.extend((0..length).map(|_| 0));
     let mut compare_function_bytes = Vec::with_capacity(length);
     compare_function_bytes.extend((0..length).map(|_| 0));
 
-    {
-        let mut orig_file = File::open(orig.as_ref())?;
-        orig_file.seek(SeekFrom::Start(orig_offset_start))?;
-        orig_file.read_exact(orig_function_bytes.as_mut_slice())?;
-    }
-    {
-        let mut compare_file = File::open(compare_file_path.as_ref())?;
-        compare_file.seek(SeekFrom::Start(offset + OFFSET_COMPARE_FILE))?;
-        compare_file.read_exact(compare_function_bytes.as_mut_slice())?;
-    }
+    read_file_into(&mut orig_function_bytes, &opts.orig, opts.orig_offset_start)?;
+    read_file_into(
+        &mut compare_function_bytes,
+        &opts.compare_file_path,
+        offset + OFFSET_COMPARE_FILE,
+    )?;
 
     let mut cs = Capstone::new()
         .x86()
@@ -80,32 +94,70 @@ pub fn write_decompiled(
         .syntax(arch::x86::ArchSyntax::Intel)
         .detail(true)
         .build()
-        .unwrap();
+        .map_err(CoreError::CapstoneError)?;
 
-    {
-        let instructions = cs
-            .disasm_all(&orig_function_bytes, offset + OFFSET_COMPARE_FILE)
-            .unwrap();
-        let mut output_file = std::env::current_dir()?;
-        output_file.push("orig.asm");
-        let out = File::create(output_file)?;
-        let mut buf = BufWriter::new(out);
-        for i in instructions.iter() {
-            writeln!(buf, "{}", i);
-        }
-    }
-    {
-        let instructions = cs
-            .disasm_all(&compare_function_bytes, offset + OFFSET_COMPARE_FILE)
-            .unwrap();
-        let mut output_file = std::env::current_dir()?;
-        output_file.push("compare.asm");
-        let out = File::create(output_file)?;
-        let mut buf = BufWriter::new(out);
-        for i in instructions.iter() {
-            writeln!(buf, "{}", i);
-        }
-    }
+    let curdir = std::env::current_dir().map_err(CoreError::IoError)?;
 
-    Ok(())
+    write_disasm(
+        "orig.asm",
+        &curdir,
+        &orig_function_bytes,
+        &mut cs,
+        &opts,
+        offset,
+    )?;
+
+    write_disasm(
+        "compare.asm",
+        &curdir,
+        &orig_function_bytes,
+        &mut cs,
+        &opts,
+        offset,
+    )?;
+
+    Ok((offset, length))
+}
+
+fn read_file_into(buffer: &mut [u8], path: impl AsRef<Path>, offset: u64) -> Result<(), CoreError> {
+    File::open(path)
+        .and_then(|mut f| {
+            f.seek(SeekFrom::Start(offset + OFFSET_COMPARE_FILE))
+                .map(|_| f)
+        }).and_then(|mut f| f.read_exact(buffer))
+        .map_err(CoreError::IoError)
+}
+
+fn write_disasm(
+    filename: impl AsRef<Path>,
+    curdir: &PathBuf,
+    bytes: &[u8],
+    cs: &mut Capstone,
+    opts: &Opts,
+    offset: u64,
+) -> Result<(), CoreError> {
+    cs.disasm_all(&bytes, offset + OFFSET_COMPARE_FILE)
+        .map_err(CoreError::CapstoneError)
+        .and_then(|insns| {
+            let mut path = curdir.clone();
+            path.push(filename);
+            File::create(path)
+                .map_err(CoreError::IoError)
+                .map(|file| (insns, file))
+        }).map(|(insns, file)| {
+            let mut buf = BufWriter::new(file);
+
+            for i in insns.iter() {
+                if opts.print_adresses {
+                    writeln!(buf, "{}", i);
+                } else {
+                    writeln!(
+                        buf,
+                        "{} {}",
+                        i.mnemonic().unwrap_or(""),
+                        i.op_str().unwrap_or("")
+                    );
+                }
+            }
+        })
 }
