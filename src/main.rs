@@ -15,10 +15,8 @@ fn main() {
              Finds the function specified in the devilution binary, disassembles it, \
              then disassembles the original binary with the same length at the specified offset. \
              The disassembled original code will be written into orig.asm, the devilution code \
-             into compare.asm.
-
-             Note that the disassembler will use the function offset read from the PDB for both \
-             decompilations in order to align the addresses in the output files \
+             into compare.asm.\n\nNote that the disassembler will use the function offset read \
+             from the PDB for both decompilations in order to align the addresses in the output files \
              (including relative jumps).",
         ).arg(
             Arg::with_name("DIABLO_FILE")
