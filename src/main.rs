@@ -125,7 +125,7 @@ fn run_disassemble(opts: &mut Opts) {
         Err(e) => match e {
             CvDumpFail(e) => println!("CvDump.exe error: {:?}", e),
             CvDumpUnsuccessful => println!("CvDump exited with errorcode != 0."),
-            SymbolNotFound => println!("Symbol not found in the pdb."),
+            SymbolNotFound => println!("Could not find the symbol in the PDB, skipping the file."),
             IoError(e) => println!("IO error: {:?}", e),
             CapstoneError(e) => println!("Capstone disassembly engine error: {:?}", e),
         },

@@ -70,7 +70,6 @@ pub fn run_compare(opts: &Opts) -> Result<(u64, usize), CoreError> {
 
     let (offset, length) = match symbol_info {
         None => {
-            println!("Could not find the symbol, skipping the file.");
             return Err(CoreError::SymbolNotFound);
         }
         Some(info) => info,
@@ -110,7 +109,7 @@ pub fn run_compare(opts: &Opts) -> Result<(u64, usize), CoreError> {
     write_disasm(
         "compare.asm",
         &curdir,
-        &orig_function_bytes,
+        &compare_function_bytes,
         &mut cs,
         &opts,
         offset,
@@ -122,7 +121,7 @@ pub fn run_compare(opts: &Opts) -> Result<(u64, usize), CoreError> {
 fn read_file_into(buffer: &mut [u8], path: impl AsRef<Path>, offset: u64) -> Result<(), CoreError> {
     File::open(path)
         .and_then(|mut f| {
-            f.seek(SeekFrom::Start(offset + OFFSET_COMPARE_FILE))
+            f.seek(SeekFrom::Start(offset))
                 .map(|_| f)
         }).and_then(|mut f| f.read_exact(buffer))
         .map_err(CoreError::IoError)
