@@ -207,15 +207,16 @@ fn format_addrs(
     _: u64,
     display_opts: Option<&mut Any>,
 ) -> ZydisResult<()> {
-    let opts = display_opts
-                    .unwrap()
-                    .downcast_ref::<DisplayOpts>()
-                    .unwrap();
+    let opts = display_opts.unwrap().downcast_ref::<DisplayOpts>().unwrap();
     match op.type_ {
         // memory address
         2 => {
             if opts.show_mem_disp {
-                buf.append(&format!("{:#X}", op.mem.disp.value))?
+                if insn.opcode == 0xFF && [2, 3].contains(&insn.raw.modrm.reg) {
+                    buf.append("<indir_fn>")? // hide function call addresses, 0xFF /3 = CALL m16:32)
+                } else {
+                    buf.append(&format!("{:#X}", op.mem.disp.value))?
+                }
             } else {
                 buf.append("<indir_addr>")?
             }
@@ -223,7 +224,6 @@ fn format_addrs(
         // immediate address
         4 => match insn.opcode {
             0xE8 => buf.append("<imm_fn>")?, // hide function call addresses, 0xE8 = CALL rel32
-            0xFF if [2, 3].contains(&insn.raw.modrm.reg) => buf.append("<indir_fn>")?, // hide function call addresses, 0xFF /3 = CALL m16:32
             _ => {
                 if op.imm.isRelative != 0 {
                     buf.append("$")?;
