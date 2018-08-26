@@ -9,7 +9,7 @@ Use `--help` for parameter info.
 Example call:
 
 ```plain
-devilution-comparer -w --no-addr path\to\Diablo_orig.exe devilution\bld\Diablo.exe 0x303EF InitMonsterTRN
+devilution-comparer path\to\Diablo_orig.exe devilution\bld\WinRel\Diablo.exe 0x303EF InitMonsterTRN -w
 ```
 
 ## Requirements
@@ -27,17 +27,20 @@ Generates orig.asm and compare.asm in the current working directory. Finds the f
 binary, disassembles it, then disassembles the original binary with the same length at the specified offset. The
 disassembled original code will be written into orig.asm, the devilution code into compare.asm.
 
-Note that the disassembler will use the function offset read from the PDB for both decompilations in order
-to align the addresses in the output files (including relative jumps).
+Note that the disassembler will use the function offset read from the PDB for both decompilations in order to align the
+addresses in the output files (including relative jumps).
 
 USAGE:
     devilution-comparer.exe [FLAGS] <DIABLO_FILE> <DEVILUTION_FILE> <DIABLO_OFFSET_START> <DEBUG_SYMBOL>
 
 FLAGS:
-    -h, --help       Prints help information
-        --no-addr    Removes the leading addresses from the output.
-    -V, --version    Prints version information
-    -w, --watch      Enable watching for changes to the PDB file, updating the output files on change.
+    -h, --help           Prints help information
+        --no-imms        Hides all immediate values. Use only with caution.
+        --no-mem-disp    Hide memory displacements and indirect calls. This cleans up the output tremendously, but can
+                         cause you to miss wrong stack variables or globals. Use only with caution.
+    -i, --show-ip        Shows leading addresses in the output.
+    -V, --version        Prints version information
+    -w, --watch          Enable watching for changes to the PDB file, updating the output files on change.
 
 ARGS:
     <DIABLO_FILE>            Path to the original Diablo.exe to use

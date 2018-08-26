@@ -5,11 +5,15 @@ use std::sync::mpsc::channel;
 use std::time::Duration;
 
 mod corelogic;
+mod hexformat;
 use self::corelogic::CoreError::*;
-use self::corelogic::{run_compare, Opts};
+use self::corelogic::{run_compare, DisplayOpts, FileOpts, Opts};
+
+const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn main() {
     let cmdline = App::new("devilution-comparer")
+        .version(VERSION)
         .about(
             "Generates orig.asm and compare.asm in the current working directory. \
              Finds the function specified in the devilution binary, disassembles it, \
@@ -44,24 +48,41 @@ fn main() {
             "Enable watching for changes to the PDB file, updating the output files \
              on change.",
         )).arg(
-            Arg::with_name("noaddr")
-                .long("no-addr")
-                .help("Removes the leading addresses from the output."),
-        ).get_matches();
+            Arg::with_name("show-ip")
+                .short("i")
+                .long("show-ip")
+                .help("Shows leading addresses in the output."),
+        ).arg(
+            Arg::with_name("no-mem-disp")
+                .long("no-mem-disp")
+                .help("Hide memory displacements and indirect calls. This cleans up the output tremendously, \
+                    but can cause you to miss wrong stack variables or globals. Use only with caution."),
+        ).arg(
+            Arg::with_name("no-imms")
+                .long("no-imms")
+                .help("Hides all immediate values. Use only with caution."),
+        )
+        .get_matches();
 
     let compare_file_path: PathBuf = cmdline.value_of_os("DEVILUTION_FILE").unwrap().into();
     let compare_pdb_file = compare_file_path.with_extension("pdb");
 
     let opts = Opts {
-        orig: cmdline.value_of_os("DIABLO_FILE").unwrap().into(),
-        compare_file_path,
-        compare_pdb_file,
-        orig_offset_start: cmdline
-            .value_of("DIABLO_OFFSET_START")
-            .map(|s| parse_offset(s).unwrap())
-            .unwrap(),
-        debug_symbol: cmdline.value_of("DEBUG_SYMBOL").unwrap().into(),
-        print_adresses: !cmdline.is_present("noaddr"),
+        file_opts: FileOpts {
+            orig: cmdline.value_of_os("DIABLO_FILE").unwrap().into(),
+            compare_file_path,
+            compare_pdb_file,
+            orig_offset_start: cmdline
+                .value_of("DIABLO_OFFSET_START")
+                .map(|s| parse_offset(s).unwrap())
+                .unwrap(),
+            debug_symbol: cmdline.value_of("DEBUG_SYMBOL").unwrap().into(),
+        },
+        display_opts: DisplayOpts {
+            print_adresses: cmdline.is_present("show-ip"),
+            show_mem_disp: !cmdline.is_present("no-mem-disp"),
+            show_imms: !cmdline.is_present("no-imms"),
+        },
         last_offset_length: None,
         enable_watcher: cmdline.is_present("watch"),
     };
@@ -83,10 +104,13 @@ fn watch(mut opts: Opts) -> notify::Result<()> {
 
     let mut watcher: RecommendedWatcher = Watcher::new(tx, Duration::from_secs(2))?;
 
-    watcher.watch(&opts.compare_pdb_file, RecursiveMode::NonRecursive)?;
+    watcher.watch(
+        &opts.file_opts.compare_pdb_file,
+        RecursiveMode::NonRecursive,
+    )?;
     println!(
         "Started watching {} for changes. CTRL+C to quit.",
-        opts.compare_pdb_file.to_string_lossy()
+        opts.file_opts.compare_pdb_file.to_string_lossy()
     );
 
     loop {
@@ -100,23 +124,31 @@ fn watch(mut opts: Opts) -> notify::Result<()> {
     }
 }
 
-fn run_disassemble(opts: &mut Opts) {
-    match run_compare(&opts) {
+fn run_disassemble(mut opts: &mut Opts) {
+    match run_compare(&mut opts) {
         Ok((offset, length)) => {
             println!(
                 "Found {} at offset: {}{}, length: {}{}",
-                &opts.debug_symbol,
+                &opts.file_opts.debug_symbol,
                 format!("{:#X}", offset),
                 if let Some((old_offset, _)) = opts.last_offset_length {
                     let diff = (offset as i64) - (old_offset as i64);
-                    format!(" ({}{:#X})", if diff.is_negative() { "-" } else { "+" }, diff.abs())
+                    format!(
+                        " ({}{:#X})",
+                        if diff.is_negative() { "-" } else { "+" },
+                        diff.abs()
+                    )
                 } else {
                     "".into()
                 },
                 format!("{:#X}", length),
                 if let Some((_, old_length)) = opts.last_offset_length {
                     let diff = (length as i64) - (old_length as i64);
-                    format!(" ({}{:#X})", if diff.is_negative() { "-" } else { "+" }, diff.abs())
+                    format!(
+                        " ({}{:#X})",
+                        if diff.is_negative() { "-" } else { "+" },
+                        diff.abs()
+                    )
                 } else {
                     "".into()
                 },
@@ -129,11 +161,13 @@ fn run_disassemble(opts: &mut Opts) {
             CvDumpUnsuccessful => println!("CvDump exited with errorcode != 0."),
             SymbolNotFound => println!("Could not find the symbol in the PDB, skipping the file."),
             IoError(e) => println!("IO error: {:?}", e),
-            CapstoneError(e) => println!("Capstone disassembly engine error: {:?}", e),
+            ZydisError(e) => println!("Zydis disassembly engine error: {:?}", e),
         },
     };
 }
 
+#[allow(unknown_lints)]
+#[allow(needless_pass_by_value)] // clap returns an owned string
 fn is_vaild_number(v: String) -> Result<(), String> {
     parse_offset(&v)
         .map(|_| ())

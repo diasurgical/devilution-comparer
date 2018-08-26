@@ -2,12 +2,13 @@ cargo-features = ["edition"]
 
 [package]
 name = "devilution-comparer"
-version = "0.1.0"
-authors = ["Dennis Duda <github@seritools.de>"]
+version = "0.2.0"
+authors = ["Dennis Duda <git@seri.tools>"]
 edition = '2018'
 
 [dependencies]
-capstone = "0.4.0"
-notify = "4.0.0"
+zydis = "0.0.3"
+notify = "4"
 clap = "2"
 regex = "1"
+num-traits = "0.2"
