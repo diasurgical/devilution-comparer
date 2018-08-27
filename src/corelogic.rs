@@ -254,8 +254,12 @@ fn void_format_disp(
     op: &ZydisDecodedOperand,
     _: Option<&mut Any>,
 ) -> ZydisResult<()> {
-    buf.append(if op.mem.disp.value < 0 { "-" } else { "+" })?;
-    buf.append(&format!("<disp{}>", op.elementSize))?;
+    if op.mem.disp.value != 0 {
+        // only write the displacement if it's actually displacing
+        // not the case for something like `mov bl, [eax]`, i.e. `mov bl, [eax+0x0]`
+        buf.append(if op.mem.disp.value < 0 { "-" } else { "+" })?;
+        buf.append(&format!("<disp{}>", op.size))?;
+    }
     Ok(())
 }
 
@@ -266,6 +270,6 @@ fn void_format_imms(
     op: &ZydisDecodedOperand,
     _: Option<&mut Any>,
 ) -> ZydisResult<()> {
-    buf.append(&format!("<imm{}>", op.elementSize))?;
+    buf.append(&format!("<imm{}>", op.size))?;
     Ok(())
 }
