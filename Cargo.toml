@@ -2,7 +2,7 @@ cargo-features = ["edition"]
 
 [package]
 name = "devilution-comparer"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Dennis Duda <git@seri.tools>"]
 edition = '2018'
 

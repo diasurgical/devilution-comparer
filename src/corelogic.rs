@@ -254,11 +254,8 @@ fn void_format_disp(
     op: &ZydisDecodedOperand,
     _: Option<&mut Any>,
 ) -> ZydisResult<()> {
-    buf.append(if op.mem.disp.value < 0 {
-        "-<disp>"
-    } else {
-        "+<disp>"
-    })?;
+    buf.append(if op.mem.disp.value < 0 { "-" } else { "+" })?;
+    buf.append(&format!("<disp{}>", op.elementSize))?;
     Ok(())
 }
 
@@ -266,9 +263,9 @@ fn void_format_imms(
     _: &Formatter,
     buf: &mut Buffer,
     _: &ZydisDecodedInstruction,
-    _: &ZydisDecodedOperand,
+    op: &ZydisDecodedOperand,
     _: Option<&mut Any>,
 ) -> ZydisResult<()> {
-    buf.append("<imm>")?;
+    buf.append(&format!("<imm{}>", op.elementSize))?;
     Ok(())
 }
