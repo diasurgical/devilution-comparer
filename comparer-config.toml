@@ -1,0 +1,8056 @@
+# conversion between function and file location of the functions
+# = (0x401000 - PE header offset) (0x400 for VC5 linker)
+address_offset = 0x400C00
+
+
+# APPFAT.CPP
+
+[[func]]
+name = "j_appfat_cpp_init"
+addr = 0x401000
+
+[[func]]
+name = "appfat_cpp_init"
+addr = 0x401005
+
+[[func]]
+name = "appfat_cpp_free"
+addr = 0x401010
+
+[[func]]
+name = "GetErr"
+addr = 0x40102A
+
+[[func]]
+name = "GetDDErr"
+addr = 0x4010CE
+
+[[func]]
+name = "GetDSErr"
+addr = 0x401831
+
+[[func]]
+name = "GetLastErr"
+addr = 0x40193A
+
+[[func]]
+name = "TermMsg"
+addr = 0x401947
+size = 0x24
+
+[[func]]
+name = "MsgBox"
+addr = 0x401975
+size = 0x52
+
+[[func]]
+name = "FreeDlg"
+addr = 0x4019C7
+size = 0x69
+
+[[func]]
+name = "DrawDlg"
+addr = 0x401A30
+size = 0x35
+
+[[func]]
+name = "DDErrDlg"
+addr = 0x401A65
+size = 0x23
+
+[[func]]
+name = "DSErrDlg"
+addr = 0x401A88
+size = 0x23
+
+[[func]]
+name = "CenterDlg"
+addr = 0x401AAB
+size = 0x92
+
+[[func]]
+name = "TermDlg"
+addr = 0x401B3D
+size = 0x85
+
+[[func]]
+name = "FuncDlg"
+addr = 0x401BCA
+size = 0x45
+
+[[func]]
+name = "TextDlg"
+addr = 0x401C0F
+size = 0x1F
+
+[[func]]
+name = "ErrDlg"
+addr = 0x401C2E
+size = 0x6E
+
+[[func]]
+name = "FileErrDlg"
+addr = 0x401C9C
+size = 0x43
+
+[[func]]
+name = "DiskFreeDlg"
+addr = 0x401CE1
+size = 0x3A
+
+[[func]]
+name = "InsertCDDlg"
+addr = 0x401D1D
+size = 0x4B
+
+[[func]]
+name = "DirErrDlg"
+addr = 0x401D68
+size = 0x3A
+
+
+# AUTOMAP.CPP
+
+[[func]]
+name = "InitAutomapOnce"
+addr = 0x401DA4
+size = 0x44
+
+[[func]]
+name = "InitAutomap"
+addr = 0x401DE8
+size = 0x10C
+
+[[func]]
+name = "StartAutomap"
+addr = 0x401EF4
+
+[[func]]
+name = "AutomapUp"
+addr = 0x401F0D
+
+[[func]]
+name = "AutomapDown"
+addr = 0x401F1A
+
+[[func]]
+name = "AutomapLeft"
+addr = 0x401F27
+
+[[func]]
+name = "AutomapRight"
+addr = 0x401F34
+
+[[func]]
+name = "AutomapZoomIn"
+addr = 0x401F41
+
+[[func]]
+name = "AutomapZoomOut"
+addr = 0x401F80
+
+[[func]]
+name = "DrawAutomap"
+addr = 0x401FBD
+size = 0x276
+
+[[func]]
+name = "DrawAutomapType"
+addr = 0x402233
+size = 0x745
+
+[[func]]
+name = "DrawAutomapPlr"
+addr = 0x4029A8
+size = 0x3BB
+
+[[func]]
+name = "GetAutomapType"
+addr = 0x402D83
+size = 0xC7
+
+[[func]]
+name = "DrawAutomapGame"
+addr = 0x402E4A
+size = 0xDD
+
+[[func]]
+name = "SetAutomapView"
+addr = 0x402F27
+size = 0x1B6
+
+[[func]]
+name = "AutomapZoomReset"
+addr = 0x4030DD
+size = 0x3E
+
+
+# CAPTURE.CPP
+
+[[func]]
+name = "CaptureScreen"
+addr = 0x40311B
+
+[[func]]
+name = "CaptureHdr"
+addr = 0x403204
+
+[[func]]
+name = "CapturePal"
+addr = 0x403294
+
+[[func]]
+name = "CapturePix"
+addr = 0x4032FD
+
+[[func]]
+name = "CaptureEnc"
+addr = 0x40336A
+
+[[func]]
+name = "CaptureFile"
+addr = 0x4033A8
+
+[[func]]
+name = "RedPalette"
+addr = 0x403470
+
+
+# CODEC.CPP
+
+[[func]]
+name = "codec_decode"
+addr = 0x4034D9
+
+[[func]]
+name = "j_SHA1Clear"
+addr = 0x4035D6
+
+[[func]]
+name = "codec_init_key"
+addr = 0x4035DB
+
+[[func]]
+name = "codec_get_encoded_len"
+addr = 0x4036AC
+
+[[func]]
+name = "codec_encode"
+addr = 0x4036BE
+
+
+# CONTROL.CPP
+
+[[func]]
+name = "DrawSpellCel"
+addr = 0x4037D4
+
+[[func]]
+name = "SetSpellTrans"
+addr = 0x40387E
+
+[[func]]
+name = "DrawSpell"
+addr = 0x4039C7
+
+[[func]]
+name = "DrawSpellList"
+addr = 0x403A8E
+
+[[func]]
+name = "SetSpell"
+addr = 0x403F69
+
+[[func]]
+name = "SetSpeedSpell"
+addr = 0x403FAC
+
+[[func]]
+name = "ToggleSpell"
+addr = 0x404017
+
+[[func]]
+name = "CPrintString"
+addr = 0x4040DA
+
+[[func]]
+name = "AddPanelString"
+addr = 0x404218
+
+[[func]]
+name = "ClearPanel"
+addr = 0x40424A
+
+[[func]]
+name = "DrawPanelBox"
+addr = 0x404259
+
+[[func]]
+name = "InitPanelStr"
+addr = 0x4042C5
+
+[[func]]
+name = "SetFlaskHeight"
+addr = 0x4042CA
+
+[[func]]
+name = "DrawFlask"
+addr = 0x40431B
+
+[[func]]
+name = "DrawLifeFlask"
+addr = 0x40435B
+
+[[func]]
+name = "UpdateLifeFlask"
+addr = 0x4043F4
+
+[[func]]
+name = "DrawManaFlask"
+addr = 0x404475
+
+[[func]]
+name = "control_update_life_mana"
+addr = 0x4044F6
+
+[[func]]
+name = "UpdateManaFlask"
+addr = 0x40456A
+
+[[func]]
+name = "InitControlPan"
+addr = 0x404616
+
+[[func]]
+name = "ClearCtrlPan"
+addr = 0x404934
+
+[[func]]
+name = "DrawCtrlPan"
+addr = 0x404959
+
+[[func]]
+name = "DoSpeedBook"
+addr = 0x404A0A
+
+[[func]]
+name = "DoPanBtn"
+addr = 0x404B52
+
+[[func]]
+name = "control_set_button_down"
+addr = 0x404BEB
+
+[[func]]
+name = "control_check_btn_press"
+addr = 0x404C00
+
+[[func]]
+name = "DoAutoMap"
+addr = 0x404C74
+
+[[func]]
+name = "CheckPanelInfo"
+addr = 0x404CA0
+
+[[func]]
+name = "CheckBtnUp"
+addr = 0x404FE4
+
+[[func]]
+name = "FreeControlPan"
+addr = 0x405181
+
+[[func]]
+name = "control_WriteStringToBuffer"
+addr = 0x405295
+
+[[func]]
+name = "DrawInfoBox"
+addr = 0x4052C8
+
+[[func]]
+name = "control_print_info_str"
+addr = 0x4055BC
+
+[[func]]
+name = "PrintGameStr"
+addr = 0x405681
+
+[[func]]
+name = "DrawChr"
+addr = 0x4056D8
+
+[[func]]
+name = "ADD_PlrStringXY"
+addr = 0x406058
+
+[[func]]
+name = "MY_PlrStringXY"
+addr = 0x40610F
+
+[[func]]
+name = "CheckLvlBtn"
+addr = 0x4061CA
+
+[[func]]
+name = "ReleaseLvlBtn"
+addr = 0x406200
+
+[[func]]
+name = "DrawLevelUpIcon"
+addr = 0x406234
+
+[[func]]
+name = "CheckChrBtns"
+addr = 0x40627A
+
+[[func]]
+name = "ReleaseChrBtns"
+addr = 0x406366
+
+[[func]]
+name = "DrawDurIcon"
+addr = 0x406408
+
+[[func]]
+name = "DrawDurIcon4Item"
+addr = 0x40648E
+
+[[func]]
+name = "RedBack"
+addr = 0x406508
+
+[[func]]
+name = "GetSBookTrans"
+addr = 0x406592
+
+[[func]]
+name = "DrawSpellBook"
+addr = 0x406667
+
+[[func]]
+name = "PrintSBookStr"
+addr = 0x4068F4
+
+[[func]]
+name = "CheckSBook"
+addr = 0x4069B6
+
+[[func]]
+name = "get_pieces_str"
+addr = 0x406AF8
+
+[[func]]
+name = "DrawGoldSplit"
+addr = 0x406B08
+
+[[func]]
+name = "control_drop_gold"
+addr = 0x406C40
+
+[[func]]
+name = "control_remove_gold"
+addr = 0x406D6E
+
+[[func]]
+name = "control_set_gold_curs"
+addr = 0x406E24
+
+[[func]]
+name = "DrawTalkPan"
+addr = 0x406E6A
+
+[[func]]
+name = "control_print_talk_msg"
+addr = 0x407071
+
+[[func]]
+name = "control_check_talk_btn"
+addr = 0x4070F3
+
+[[func]]
+name = "control_release_talk_btn"
+addr = 0x40714D
+
+[[func]]
+name = "control_reset_talk_msg"
+addr = 0x4071C0
+
+[[func]]
+name = "control_type_message"
+addr = 0x4071FA
+
+[[func]]
+name = "control_reset_talk"
+addr = 0x407241
+
+[[func]]
+name = "control_talk_last_key"
+addr = 0x40725A
+
+[[func]]
+name = "control_presskeys"
+addr = 0x40729A
+
+[[func]]
+name = "control_press_enter"
+addr = 0x407304
+
+[[func]]
+name = "control_up_down"
+addr = 0x4073C2
+
+
+# CURSOR.CPP
+
+[[func]]
+name = "InitCursor"
+addr = 0x40740A
+
+[[func]]
+name = "FreeCursor"
+addr = 0x407420
+
+[[func]]
+name = "SetICursor"
+addr = 0x407437
+
+[[func]]
+name = "SetCursor"
+addr = 0x40746B
+
+[[func]]
+name = "NewCursor"
+addr = 0x40748E
+
+[[func]]
+name = "InitLevelCursor"
+addr = 0x407493
+
+[[func]]
+name = "CheckTown"
+addr = 0x4074D0
+
+[[func]]
+name = "CheckRportal"
+addr = 0x4075FD
+
+[[func]]
+name = "CheckCursMove"
+addr = 0x407729
+
+
+# DEAD.CPP
+
+[[func]]
+name = "InitDead"
+addr = 0x4084A6
+
+[[func]]
+name = "AddDead"
+addr = 0x40865C
+
+[[func]]
+name = "SetDead"
+addr = 0x40867D
+
+
+# DEBUG.CPP
+
+[[func]]
+name = "LoadDebugGFX"
+addr = 0x4086F4
+
+[[func]]
+name = "FreeDebugGFX"
+addr = 0x40870F
+
+[[func]]
+name = "CheckDungeonClear"
+addr = 0x408721
+
+
+# DIABLO.CPP
+
+[[func]]
+name = "j_diablo_cpp_init"
+addr = 0x4087B1
+
+[[func]]
+name = "diablo_cpp_init"
+addr = 0x4087B6
+
+[[func]]
+name = "FreeGameMem"
+addr = 0x4087C1
+
+[[func]]
+name = "diablo_init_menu"
+addr = 0x408838
+
+[[func]]
+name = "run_game_loop"
+addr = 0x4088E2
+
+[[func]]
+name = "start_game"
+addr = 0x408A8C
+
+[[func]]
+name = "free_game"
+addr = 0x408ADB
+
+[[func]]
+name = "diablo_get_not_running"
+addr = 0x408B1E
+
+[[func]]
+name = "WinMain"
+addr = 0x408B4A
+
+[[func]]
+name = "diablo_parse_flags"
+addr = 0x408CB1
+
+[[func]]
+name = "diablo_init_screen"
+addr = 0x408D61
+
+[[func]]
+name = "diablo_find_window"
+addr = 0x408DB1
+
+[[func]]
+name = "diablo_reload_process"
+addr = 0x408DF4
+
+[[func]]
+name = "PressEscKey"
+addr = 0x408FCF
+
+[[func]]
+name = "DisableInputWndProc"
+addr = 0x40905E
+
+[[func]]
+name = "GM_Game"
+addr = 0x409131
+
+[[func]]
+name = "LeftMouseDown"
+addr = 0x4093B2
+
+[[func]]
+name = "TryIconCurs"
+addr = 0x4097EC
+
+[[func]]
+name = "LeftMouseUp"
+addr = 0x409963
+
+[[func]]
+name = "RightMouseDown"
+addr = 0x4099A8
+
+[[func]]
+name = "j_gmenu_run_item"
+addr = 0x409A89
+
+[[func]]
+name = "PressSysKey"
+addr = 0x409A8E
+
+[[func]]
+name = "diablo_hotkey_msg"
+addr = 0x409AB0
+
+[[func]]
+name = "ReleaseKey"
+addr = 0x409B51
+
+[[func]]
+name = "PressKey"
+addr = 0x409B5C
+
+[[func]]
+name = "diablo_pause_game"
+addr = 0x409F43
+
+[[func]]
+name = "PressChar"
+addr = 0x409F7F
+
+[[func]]
+name = "LoadLvlGFX"
+addr = 0x40A391
+
+[[func]]
+name = "LoadAllGFX"
+addr = 0x40A4B4
+
+[[func]]
+name = "CreateLevel"
+addr = 0x40A4E1
+
+[[func]]
+name = "LoadGameLevel"
+addr = 0x40A5A4
+
+[[func]]
+name = "game_loop"
+addr = 0x40AAE3
+
+[[func]]
+name = "game_logic"
+addr = 0x40AB33
+
+[[func]]
+name = "timeout_cursor"
+addr = 0x40ABE7
+
+[[func]]
+name = "diablo_color_cyc_logic"
+addr = 0x40AC6B
+
+
+# DOOM.CPP
+
+[[func]]
+name = "doom_get_frame_from_time"
+addr = 0x40ACAD
+
+[[func]]
+name = "doom_alloc_cel"
+addr = 0x40ACC6
+
+[[func]]
+name = "doom_cleanup"
+addr = 0x40ACD6
+
+[[func]]
+name = "doom_load_graphics"
+addr = 0x40ACE8
+
+[[func]]
+name = "doom_init"
+addr = 0x40AD34
+
+[[func]]
+name = "doom_close"
+addr = 0x40AD5E
+
+[[func]]
+name = "doom_draw"
+addr = 0x40AD74
+
+
+# DRLG_L1.CPP
+
+[[func]]
+name = "DRLG_Init_Globals"
+addr = 0x40ADD6
+
+[[func]]
+name = "LoadL1Dungeon"
+addr = 0x40AE79
+
+[[func]]
+name = "DRLG_L1Floor"
+addr = 0x40AF65
+
+[[func]]
+name = "DRLG_L1Pass3"
+addr = 0x40AFB3
+
+[[func]]
+name = "DRLG_InitL1Vals"
+addr = 0x40B0A5
+
+[[func]]
+name = "LoadPreL1Dungeon"
+addr = 0x40B160
+
+[[func]]
+name = "CreateL5Dungeon"
+addr = 0x40B229
+
+[[func]]
+name = "DRLG_LoadL1SP"
+addr = 0x40B276
+
+[[func]]
+name = "DRLG_FreeL1SP"
+addr = 0x40B2F4
+
+[[func]]
+name = "DRLG_L5"
+addr = 0x40B306
+
+[[func]]
+name = "DRLG_PlaceDoor"
+addr = 0x40B56F
+
+[[func]]
+name = "DRLG_L1Shadows"
+addr = 0x40B699
+
+[[func]]
+name = "DRLG_PlaceMiniSet"
+addr = 0x40B881
+
+[[func]]
+name = "InitL5Dungeon"
+addr = 0x40BAF6
+
+[[func]]
+name = "L5ClearFlags"
+addr = 0x40BB18
+
+[[func]]
+name = "L5firstRoom"
+addr = 0x40BB33
+
+[[func]]
+name = "L5drawRoom"
+addr = 0x40BD66
+
+[[func]]
+name = "L5roomGen"
+addr = 0x40BD9D
+
+[[func]]
+name = "L5checkRoom"
+addr = 0x40BFA4
+
+[[func]]
+name = "L5GetArea"
+addr = 0x40C008
+
+[[func]]
+name = "L5makeDungeon"
+addr = 0x40C02A
+
+[[func]]
+name = "L5makeDmt"
+addr = 0x40C06E
+
+[[func]]
+name = "L5AddWall"
+addr = 0x40C0E0
+
+[[func]]
+name = "L5HWallOk"
+addr = 0x40C23C
+
+[[func]]
+name = "L5VWallOk"
+addr = 0x40C2DC
+
+[[func]]
+name = "L5HorizWall"
+addr = 0x40C35B
+
+[[func]]
+name = "L5VertWall"
+addr = 0x40C449
+
+[[func]]
+name = "L5tileFix"
+addr = 0x40C551
+
+[[func]]
+name = "DRLG_L5Subs"
+addr = 0x40C8C0
+
+[[func]]
+name = "L5FillChambers"
+addr = 0x40C99D
+
+[[func]]
+name = "DRLG_L5GChamber"
+addr = 0x40CD86
+
+[[func]]
+name = "DRLG_L5GHall"
+addr = 0x40CEC7
+
+[[func]]
+name = "DRLG_L5SetRoom"
+addr = 0x40CF17
+
+[[func]]
+name = "DRLG_L5FloodTVal"
+addr = 0x40CF9C
+
+[[func]]
+name = "DRLG_L5FTVR"
+addr = 0x40D00B
+
+[[func]]
+name = "DRLG_L5TransFix"
+addr = 0x40D1FB
+
+[[func]]
+name = "DRLG_L5DirtFix"
+addr = 0x40D283
+
+[[func]]
+name = "DRLG_L5CornerFix"
+addr = 0x40D2EF
+
+
+# DRLG_L2.CPP
+
+[[func]]
+name = "InitDungeon"
+addr = 0x40D357
+
+[[func]]
+name = "L2LockoutFix"
+addr = 0x40D379
+
+[[func]]
+name = "L2DoorFix"
+addr = 0x40D4CC
+
+[[func]]
+name = "LoadL2Dungeon"
+addr = 0x40D501
+
+[[func]]
+name = "DRLG_L2Pass3"
+addr = 0x40D6C1
+
+[[func]]
+name = "LoadPreL2Dungeon"
+addr = 0x40D7B3
+
+[[func]]
+name = "CreateL2Dungeon"
+addr = 0x40D888
+
+[[func]]
+name = "DRLG_LoadL2SP"
+addr = 0x40D94F
+
+[[func]]
+name = "DRLG_FreeL2SP"
+addr = 0x40D9A4
+
+[[func]]
+name = "DRLG_L2"
+addr = 0x40D9B6
+
+[[func]]
+name = "DRLG_L2PlaceMiniSet"
+addr = 0x40E074
+
+[[func]]
+name = "DRLG_L2PlaceRndSet"
+addr = 0x40E2D1
+
+[[func]]
+name = "DRLG_L2Subs"
+addr = 0x40E49C
+
+[[func]]
+name = "DRLG_L2Shadows"
+addr = 0x40E59C
+
+[[func]]
+name = "DRLG_L2SetRoom"
+addr = 0x40E66B
+
+[[func]]
+name = "L2TileFix"
+addr = 0x40E6F0
+
+[[func]]
+name = "CreateDungeon"
+addr = 0x40E74F
+
+[[func]]
+name = "CreateRoom"
+addr = 0x40E8A4
+
+[[func]]
+name = "DefineRoom"
+addr = 0x40ECF9
+
+[[func]]
+name = "AddHall"
+addr = 0x40EE1D
+
+[[func]]
+name = "GetHall"
+addr = 0x40EEAC
+
+[[func]]
+name = "ConnectHall"
+addr = 0x40EF09
+
+[[func]]
+name = "CreateDoorType"
+addr = 0x40F265
+
+[[func]]
+name = "PlaceHallExt"
+addr = 0x40F2BD
+
+[[func]]
+name = "DoPatternCheck"
+addr = 0x40F2D0
+
+[[func]]
+name = "DL2_FillVoids"
+addr = 0x40F459
+
+[[func]]
+name = "DL2_Cont"
+addr = 0x40F9B1
+
+[[func]]
+name = "DL2_NumNoChar"
+addr = 0x40F9EE
+
+[[func]]
+name = "DL2_DrawRoom"
+addr = 0x40FA10
+
+[[func]]
+name = "DL2_KnockWalls"
+addr = 0x40FA97
+
+[[func]]
+name = "DRLG_L2FloodTVal"
+addr = 0x40FB6C
+
+[[func]]
+name = "DRLG_L2FTVR"
+addr = 0x40FBDB
+
+[[func]]
+name = "DRLG_L2TransFix"
+addr = 0x40FDCB
+
+[[func]]
+name = "L2DirtFix"
+addr = 0x40FE53
+
+[[func]]
+name = "DRLG_InitL2Vals"
+addr = 0x40FEBF
+
+
+# DRLR_L3.CPP
+
+[[func]]
+name = "AddFenceDoors"
+addr = 0x40FF81
+
+[[func]]
+name = "FenceDoorFix"
+addr = 0x40FFEC
+
+[[func]]
+name = "DRLG_L3Anvil"
+addr = 0x410105
+
+[[func]]
+name = "FixL3Warp"
+addr = 0x410215
+
+[[func]]
+name = "FixL3HallofHeroes"
+addr = 0x41027D
+
+[[func]]
+name = "DRLG_L3LockRec"
+addr = 0x4102F1
+
+[[func]]
+name = "DRLG_L3Lockout"
+addr = 0x410344
+
+[[func]]
+name = "CreateL3Dungeon"
+addr = 0x4103A1
+
+[[func]]
+name = "DRLG_L3"
+addr = 0x41044E
+
+[[func]]
+name = "InitL3Dungeon"
+addr = 0x41087F
+
+[[func]]
+name = "DRLG_L3FillRoom"
+addr = 0x4108B5
+
+[[func]]
+name = "DRLG_L3CreateBlock"
+addr = 0x4109F0
+
+[[func]]
+name = "DRLG_L3FloorArea"
+addr = 0x410BC0
+
+[[func]]
+name = "DRLG_L3FillDiags"
+addr = 0x410BF4
+
+[[func]]
+name = "DRLG_L3FillSingles"
+addr = 0x410C65
+
+[[func]]
+name = "DRLG_L3FillStraights"
+addr = 0x410CC4
+
+[[func]]
+name = "DRLG_L3Edges"
+addr = 0x410EDB
+
+[[func]]
+name = "DRLG_L3GetFloorArea"
+addr = 0x410EFC
+
+[[func]]
+name = "DRLG_L3MakeMegas"
+addr = 0x410F1F
+
+[[func]]
+name = "DRLG_L3River"
+addr = 0x410FAD
+
+[[func]]
+name = "DRLG_L3Pool"
+addr = 0x411614
+
+[[func]]
+name = "DRLG_L3SpawnEdge"
+addr = 0x411772
+
+[[func]]
+name = "DRLG_L3Spawn"
+addr = 0x41189C
+
+[[func]]
+name = "DRLG_L3PoolFix"
+addr = 0x4119E0
+
+[[func]]
+name = "DRLG_L3PlaceMiniSet"
+addr = 0x411A74
+
+[[func]]
+name = "DRLG_L3PlaceRndSet"
+addr = 0x411C83
+
+[[func]]
+name = "DRLG_L3Wood"
+addr = 0x411E0E
+
+[[func]]
+name = "WoodVertU"
+addr = 0x41223E
+
+[[func]]
+name = "WoodVertD"
+addr = 0x41228A
+
+[[func]]
+name = "WoodHorizL"
+addr = 0x4122CE
+
+[[func]]
+name = "WoodHorizR"
+addr = 0x41231A
+
+[[func]]
+name = "DRLG_L3Pass3"
+addr = 0x41235E
+
+[[func]]
+name = "LoadL3Dungeon"
+addr = 0x412466
+
+[[func]]
+name = "LoadPreL3Dungeon"
+addr = 0x4125B0
+
+
+# DRLG_L4.CPP
+
+[[func]]
+name = "DRLG_LoadL4SP"
+addr = 0x412655
+
+[[func]]
+name = "DRLG_FreeL4SP"
+addr = 0x4126AD
+
+[[func]]
+name = "DRLG_L4SetSPRoom"
+addr = 0x4126BF
+
+[[func]]
+name = "L4SaveQuads"
+addr = 0x412744
+
+[[func]]
+name = "DRLG_L4SetRoom"
+addr = 0x4127D3
+
+[[func]]
+name = "DRLG_LoadDiabQuads"
+addr = 0x412831
+
+[[func]]
+name = "IsDURWall"
+addr = 0x412933
+
+[[func]]
+name = "IsDLLWall"
+addr = 0x412948
+
+[[func]]
+name = "L4FixRim"
+addr = 0x41295D
+
+[[func]]
+name = "DRLG_L4GeneralFix"
+addr = 0x41297B
+
+[[func]]
+name = "CreateL4Dungeon"
+addr = 0x4129B0
+
+[[func]]
+name = "DRLG_L4"
+addr = 0x412A00
+
+[[func]]
+name = "DRLG_L4Shadows"
+addr = 0x412DDD
+
+[[func]]
+name = "InitL4Dungeon"
+addr = 0x412E34
+
+[[func]]
+name = "L4makeDmt"
+addr = 0x412E7B
+
+[[func]]
+name = "L4AddWall"
+addr = 0x412ECB
+
+[[func]]
+name = "L4HWallOk"
+addr = 0x4131C2
+
+[[func]]
+name = "L4VWallOk"
+addr = 0x413270
+
+[[func]]
+name = "L4HorizWall"
+addr = 0x41330B
+
+[[func]]
+name = "L4VertWall"
+addr = 0x4133D6
+
+[[func]]
+name = "L4tileFix"
+addr = 0x4134B4
+
+[[func]]
+name = "DRLG_L4Subs"
+addr = 0x4142DD
+
+[[func]]
+name = "L4makeDungeon"
+addr = 0x41439A
+
+[[func]]
+name = "uShape"
+addr = 0x4144B1
+
+[[func]]
+name = "GetArea"
+addr = 0x4145E4
+
+[[func]]
+name = "L4firstRoom"
+addr = 0x414606
+
+[[func]]
+name = "L4drawRoom"
+addr = 0x414738
+
+[[func]]
+name = "L4roomGen"
+addr = 0x41476F
+
+[[func]]
+name = "L4checkRoom"
+addr = 0x414976
+
+[[func]]
+name = "DRLG_L4PlaceMiniSet"
+addr = 0x4149E2
+
+[[func]]
+name = "DRLG_L4FloodTVal"
+addr = 0x414C44
+
+[[func]]
+name = "DRLG_L4FTVR"
+addr = 0x414CB3
+
+[[func]]
+name = "DRLG_L4TransFix"
+addr = 0x414EA3
+
+[[func]]
+name = "DRLG_L4Corners"
+addr = 0x414F5B
+
+[[func]]
+name = "DRLG_L4Pass3"
+addr = 0x414F90
+
+
+# DTHREAD.CPP
+
+[[func]]
+name = "j_dthread_cpp_init_1"
+addr = 0x415098
+
+[[func]]
+name = "dthread_cpp_init_1"
+addr = 0x41509D
+
+[[func]]
+name = "dthread_cpp_init_2"
+addr = 0x4150A8
+
+[[func]]
+name = "dthread_init_mutex"
+addr = 0x4150B2
+
+[[func]]
+name = "dthread_cleanup_mutex_atexit"
+addr = 0x4150BE
+
+[[func]]
+name = "dthread_cleanup_mutex"
+addr = 0x4150CA
+
+[[func]]
+name = "dthread_remove_player"
+addr = 0x4150D6
+
+[[func]]
+name = "dthread_send_delta"
+addr = 0x415109
+
+[[func]]
+name = "dthread_start"
+addr = 0x415186
+
+[[func]]
+name = "dthread_handler"
+addr = 0x4151F3
+
+[[func]]
+name = "dthread_cleanup"
+addr = 0x4152C0
+
+
+# DX.CPP
+
+[[func]]
+name = "j_dx_cpp_init_1"
+addr = 0x415362
+
+[[func]]
+name = "dx_cpp_init_1"
+addr = 0x415367
+
+[[func]]
+name = "dx_cpp_init_2"
+addr = 0x415372
+
+[[func]]
+name = "dx_init_mutex"
+addr = 0x41537C
+
+[[func]]
+name = "dx_cleanup_mutex_atexit"
+addr = 0x415388
+
+[[func]]
+name = "dx_cleanup_mutex"
+addr = 0x415394
+
+[[func]]
+name = "dx_init"
+addr = 0x4153A0
+
+[[func]]
+name = "dx_create_back_buffer"
+addr = 0x4154B5
+
+[[func]]
+name = "dx_create_primary_surface"
+addr = 0x4155C2
+
+[[func]]
+name = "dx_DirectDrawCreate"
+addr = 0x41561A
+
+[[func]]
+name = "j_dx_lock_mutex"
+addr = 0x415695
+
+[[func]]
+name = "dx_lock_mutex"
+addr = 0x41569A
+
+[[func]]
+name = "j_dx_unlock_mutex"
+addr = 0x415720
+
+[[func]]
+name = "dx_unlock_mutex"
+addr = 0x415725
+
+[[func]]
+name = "dx_cleanup"
+addr = 0x4157A0
+
+[[func]]
+name = "dx_reinit"
+addr = 0x415848
+
+[[func]]
+name = "j_dx_reinit"
+addr = 0x4158A4
+
+
+# EFFECTS.CPP
+
+[[func]]
+name = "j_effects_cpp_init"
+addr = 0x4158A9
+
+[[func]]
+name = "effects_cpp_init"
+addr = 0x4158AE
+
+[[func]]
+name = "effect_is_playing"
+addr = 0x4158B9
+
+[[func]]
+name = "sfx_stop"
+addr = 0x4158E2
+
+[[func]]
+name = "InitMonsterSND"
+addr = 0x41590B
+
+[[func]]
+name = "FreeEffects"
+addr = 0x4159DB
+
+[[func]]
+name = "PlayEffect"
+addr = 0x415A45
+
+[[func]]
+name = "calc_snd_position"
+addr = 0x415AE1
+
+[[func]]
+name = "PlaySFX"
+addr = 0x415B59
+
+[[func]]
+name = "PlaySFX_priv"
+addr = 0x415B71
+
+[[func]]
+name = "stream_play"
+addr = 0x415C2A
+
+[[func]]
+name = "RndSFX"
+addr = 0x415C97
+
+[[func]]
+name = "PlaySfxLoc"
+addr = 0x415D01
+
+[[func]]
+name = "FreeMonsterSnd"
+addr = 0x415D39
+
+[[func]]
+name = "sound_stop"
+addr = 0x415D9A
+
+[[func]]
+name = "sound_update"
+addr = 0x415DBA
+
+[[func]]
+name = "effects_cleanup_sfx"
+addr = 0x415DFF
+
+[[func]]
+name = "stream_update"
+addr = 0x415E2A
+
+[[func]]
+name = "priv_sound_init"
+addr = 0x415E77
+
+[[func]]
+name = "sound_init"
+addr = 0x415ED8
+
+[[func]]
+name = "effects_play_sound"
+addr = 0x415EDF
+
+
+# ENCRYPT.CPP
+
+[[func]]
+name = "encrypt_decrypt_block"
+addr = 0x415F43
+
+[[func]]
+name = "encrypt_encrypt_block"
+addr = 0x415F8F
+
+[[func]]
+name = "encrypt_hash"
+addr = 0x415FDF
+
+[[func]]
+name = "encrypt_init_lookup_table"
+addr = 0x41602E
+
+[[func]]
+name = "encrypt_compress"
+addr = 0x41609D
+
+[[func]]
+name = "encrypt_pkware_read"
+addr = 0x416133
+
+[[func]]
+name = "encrypt_pkware_write"
+addr = 0x416167
+
+[[func]]
+name = "encrypt_decompress"
+addr = 0x41618E
+
+
+# ENGINE.CPP
+
+[[func]]
+name = "j_engine_cpp_init_1"
+addr = 0x4161FC
+
+[[func]]
+name = "engine_cpp_init_1"
+addr = 0x416201
+
+[[func]]
+name = "CelDrawDatOnly"
+addr = 0x41620C
+
+[[func]]
+name = "CelDecodeOnly"
+addr = 0x416274
+
+[[func]]
+name = "CelDecDatOnly"
+addr = 0x4162B8
+
+[[func]]
+name = "CelDrawHdrOnly"
+addr = 0x4162DE
+
+[[func]]
+name = "CelDecodeHdrOnly"
+addr = 0x416359
+
+[[func]]
+name = "CelDecDatLightOnly"
+addr = 0x4163AC
+
+[[func]]
+name = "CelDecDatLightEntry"
+addr = 0x416423
+
+[[func]]
+name = "CelDecDatLightTrans"
+addr = 0x416488
+
+[[func]]
+name = "CelDecodeLightOnly"
+addr = 0x416565
+
+[[func]]
+name = "CelDecodeHdrLightOnly"
+addr = 0x4165BD
+
+[[func]]
+name = "CelDecodeHdrLightTrans"
+addr = 0x41664B
+
+[[func]]
+name = "CelDrawHdrLightRed"
+addr = 0x4166BF
+
+[[func]]
+name = "Cel2DecDatOnly"
+addr = 0x4167DB
+
+[[func]]
+name = "Cel2DrawHdrOnly"
+addr = 0x41685A
+
+[[func]]
+name = "Cel2DecodeHdrOnly"
+addr = 0x4168D5
+
+[[func]]
+name = "Cel2DecDatLightOnly"
+addr = 0x41692A
+
+[[func]]
+name = "Cel2DecDatLightEntry"
+addr = 0x4169BC
+
+[[func]]
+name = "Cel2DecDatLightTrans"
+addr = 0x416A21
+
+[[func]]
+name = "Cel2DecodeHdrLight"
+addr = 0x416B19
+
+[[func]]
+name = "Cel2DecodeLightTrans"
+addr = 0x416BA9
+
+[[func]]
+name = "Cel2DrawHdrLightRed"
+addr = 0x416C1B
+
+[[func]]
+name = "CelDecodeRect"
+addr = 0x416D3C
+
+[[func]]
+name = "CelDecodeClr"
+addr = 0x416DC6
+
+[[func]]
+name = "CelDrawHdrClrHL"
+addr = 0x416EC0
+
+[[func]]
+name = "ENG_set_pixel"
+addr = 0x416FEF
+
+[[func]]
+name = "engine_draw_pixel"
+addr = 0x417034
+
+[[func]]
+name = "engine_draw_automap_pixels"
+addr = 0x4170BD
+
+[[func]]
+name = "GetDirection"
+addr = 0x4174B3
+
+[[func]]
+name = "SetRndSeed"
+addr = 0x417518
+
+[[func]]
+name = "GetRndSeed"
+addr = 0x41752C
+
+[[func]]
+name = "random"
+addr = 0x41754B
+
+[[func]]
+name = "engine_cpp_init_2"
+addr = 0x41756D
+
+[[func]]
+name = "mem_init_mutex"
+addr = 0x417577
+
+[[func]]
+name = "mem_atexit_mutex"
+addr = 0x417583
+
+[[func]]
+name = "mem_free_mutex"
+addr = 0x41758F
+
+[[func]]
+name = "DiabloAllocPtr"
+addr = 0x41759B
+
+[[func]]
+name = "mem_free_dbg"
+addr = 0x4175E8
+
+[[func]]
+name = "LoadFileInMem"
+addr = 0x417618
+
+[[func]]
+name = "LoadFileWithMem"
+addr = 0x417673
+
+[[func]]
+name = "Cl2ApplyTrans"
+addr = 0x4176D2
+
+[[func]]
+name = "Cl2DecodeFrm1"
+addr = 0x417745
+
+[[func]]
+name = "Cl2DecDatFrm1"
+addr = 0x4177BF
+
+[[func]]
+name = "Cl2DecodeFrm2"
+addr = 0x417847
+
+[[func]]
+name = "Cl2DecDatFrm2"
+addr = 0x4178C5
+
+[[func]]
+name = "Cl2DecodeFrm3"
+addr = 0x417981
+
+[[func]]
+name = "Cl2DecDatLightTbl1"
+addr = 0x417A44
+
+[[func]]
+name = "Cl2DecodeLightTbl"
+addr = 0x417AE9
+
+[[func]]
+name = "Cl2DecodeFrm4"
+addr = 0x417B83
+
+[[func]]
+name = "Cl2DecDatFrm4"
+addr = 0x417BFD
+
+[[func]]
+name = "Cl2DecodeClrHL"
+addr = 0x417C99
+
+[[func]]
+name = "Cl2DecDatClrHL"
+addr = 0x417D28
+
+[[func]]
+name = "Cl2DecodeFrm5"
+addr = 0x417DF8
+
+[[func]]
+name = "Cl2DecDatLightTbl2"
+addr = 0x417EBB
+
+[[func]]
+name = "Cl2DecodeFrm6"
+addr = 0x417F78
+
+[[func]]
+name = "PlayInGameMovie"
+addr = 0x418012
+
+
+# ERROR.CPP
+
+[[func]]
+name = "InitDiabloMsg"
+addr = 0x41804E
+
+[[func]]
+name = "ClrDiabloMsg"
+addr = 0x41808F
+
+[[func]]
+name = "DrawDiabloMsg"
+addr = 0x4180AA
+
+
+# FAULT.CPP
+
+[[func]]
+name = "exception_cpp_init"
+addr = 0x4182AD
+
+[[func]]
+name = "exception_install_filter"
+addr = 0x4182B7
+
+[[func]]
+name = "j_exception_init_filter"
+addr = 0x4182C1
+
+[[func]]
+name = "exception_init_filter"
+addr = 0x4182CD
+
+[[func]]
+name = "TopLevelExceptionFilter"
+addr = 0x4182D7
+
+[[func]]
+name = "exception_hex_format"
+addr = 0x418455
+
+[[func]]
+name = "exception_unknown_module"
+addr = 0x418518
+
+[[func]]
+name = "exception_call_stack"
+addr = 0x4185FF
+
+[[func]]
+name = "exception_get_error_type"
+addr = 0x418688
+
+[[func]]
+name = "exception_set_filter"
+addr = 0x41883C
+
+[[func]]
+name = "exception_set_filter_ptr"
+addr = 0x418853
+
+[[func]]
+name = "exception_get_filter"
+addr = 0x418860
+
+
+# GAMEMENU.CPP
+
+[[func]]
+name = "gamemenu_previous"
+addr = 0x418866
+
+[[func]]
+name = "gamemenu_enable_single"
+addr = 0x41888F
+
+[[func]]
+name = "gamemenu_enable_multi"
+addr = 0x4188C8
+
+[[func]]
+name = "gamemenu_off"
+addr = 0x4188D8
+
+[[func]]
+name = "gamemenu_handle_previous"
+addr = 0x4188E1
+
+[[func]]
+name = "j_gamemenu_previous"
+addr = 0x4188F4
+
+[[func]]
+name = "gamemenu_new_game"
+addr = 0x4188F9
+
+[[func]]
+name = "gamemenu_quit_game"
+addr = 0x41893B
+
+[[func]]
+name = "gamemenu_load_game"
+addr = 0x418948
+
+[[func]]
+name = "gamemenu_save_game"
+addr = 0x4189BE
+
+[[func]]
+name = "gamemenu_restart_town"
+addr = 0x418A42
+
+[[func]]
+name = "gamemenu_options"
+addr = 0x418A4C
+
+[[func]]
+name = "gamemenu_get_music"
+addr = 0x418A6C
+
+[[func]]
+name = "gamemenu_sound_music_toggle"
+addr = 0x418A85
+
+[[func]]
+name = "gamemenu_get_sound"
+addr = 0x418AC6
+
+[[func]]
+name = "gamemenu_get_color_cycling"
+addr = 0x418ADF
+
+[[func]]
+name = "gamemenu_get_gamma"
+addr = 0x418AF4
+
+[[func]]
+name = "gamemenu_music_volume"
+addr = 0x418B1A
+
+[[func]]
+name = "gamemenu_slider_music_sound"
+addr = 0x418BA3
+
+[[func]]
+name = "gamemenu_sound_volume"
+addr = 0x418BB0
+
+[[func]]
+name = "gamemenu_gamma"
+addr = 0x418C30
+
+[[func]]
+name = "gamemenu_slider_gamma"
+addr = 0x418C5A
+
+[[func]]
+name = "gamemenu_color_cycling"
+addr = 0x418C6A
+
+
+# GENDUNG.CPP
+
+[[func]]
+name = "FillSolidBlockTbls"
+addr = 0x418C8B
+
+[[func]]
+name = "gendung_418D91"
+addr = 0x418D91
+
+[[func]]
+name = "gendung_4191BF"
+addr = 0x4191BF
+
+[[func]]
+name = "gendung_4191FB"
+addr = 0x4191FB
+
+[[func]]
+name = "gendung_get_dpiece_num_from_coord"
+addr = 0x41927A
+
+[[func]]
+name = "gendung_4192C2"
+addr = 0x4192C2
+
+[[func]]
+name = "SetDungeonMicros"
+addr = 0x41930B
+
+[[func]]
+name = "DRLG_InitTrans"
+addr = 0x41944A
+
+[[func]]
+name = "DRLG_MRectTrans"
+addr = 0x419477
+
+[[func]]
+name = "DRLG_RectTrans"
+addr = 0x4194D0
+
+[[func]]
+name = "DRLG_CopyTrans"
+addr = 0x419515
+
+[[func]]
+name = "DRLG_ListTrans"
+addr = 0x419534
+
+[[func]]
+name = "DRLG_AreaTrans"
+addr = 0x419565
+
+[[func]]
+name = "DRLG_InitSetPC"
+addr = 0x4195A2
+
+[[func]]
+name = "DRLG_SetPC"
+addr = 0x4195B9
+
+[[func]]
+name = "Make_SetPC"
+addr = 0x41960C
+
+[[func]]
+name = "DRLG_WillThemeRoomFit"
+addr = 0x41965B
+
+[[func]]
+name = "DRLG_CreateThemeRoom"
+addr = 0x4197F4
+
+[[func]]
+name = "DRLG_PlaceThemeRooms"
+addr = 0x419C10
+
+[[func]]
+name = "DRLG_HoldThemeRooms"
+addr = 0x419D92
+
+[[func]]
+name = "SkipThemeRoom"
+addr = 0x419E1F
+
+[[func]]
+name = "InitLevels"
+addr = 0x419E71
+
+
+# GMENU.CPP
+
+[[func]]
+name = "gmenu_draw_pause"
+addr = 0x419E8B
+
+[[func]]
+name = "gmenu_print_text"
+addr = 0x419EBE
+
+[[func]]
+name = "FreeGMenu"
+addr = 0x419F17
+
+[[func]]
+name = "gmenu_init_menu"
+addr = 0x419F70
+
+[[func]]
+name = "gmenu_exception"
+addr = 0x419FE8
+
+[[func]]
+name = "gmenu_call_proc"
+addr = 0x419FF4
+
+[[func]]
+name = "gmenu_up_down"
+addr = 0x41A04E
+
+[[func]]
+name = "gmenu_draw"
+addr = 0x41A0B6
+
+[[func]]
+name = "gmenu_draw_menu_item"
+addr = 0x41A145
+
+[[func]]
+name = "gmenu_clear_buffer"
+addr = 0x41A239
+
+[[func]]
+name = "gmenu_get_lfont"
+addr = 0x41A272
+
+[[func]]
+name = "gmenu_presskeys"
+addr = 0x41A2AE
+
+[[func]]
+name = "gmenu_left_right"
+addr = 0x41A32A
+
+[[func]]
+name = "gmenu_on_mouse_move"
+addr = 0x41A37A
+
+[[func]]
+name = "gmenu_valid_mouse_pos"
+addr = 0x41A3D2
+
+[[func]]
+name = "gmenu_left_mouse"
+addr = 0x41A401
+
+[[func]]
+name = "gmenu_enable"
+addr = 0x41A4B8
+
+[[func]]
+name = "gmenu_slider_1"
+addr = 0x41A4C6
+
+[[func]]
+name = "gmenu_slider_get"
+addr = 0x41A508
+
+[[func]]
+name = "gmenu_slider_3"
+addr = 0x41A545
+
+
+# HELP.CPP
+
+[[func]]
+name = "InitHelp"
+addr = 0x41A553
+
+[[func]]
+name = "DrawHelp"
+addr = 0x41A565
+
+[[func]]
+name = "DrawHelpLine"
+addr = 0x41A6FA
+
+[[func]]
+name = "DisplayHelp"
+addr = 0x41A773
+
+[[func]]
+name = "HelpScrollUp"
+addr = 0x41A78F
+
+[[func]]
+name = "HelpScrollDown"
+addr = 0x41A79F
+
+
+# INIT.CPP
+
+[[func]]
+name = "j_init_cpp_init"
+addr = 0x41A7B3
+
+[[func]]
+name = "init_cpp_init"
+addr = 0x41A7B8
+
+[[func]]
+name = "init_cleanup"
+addr = 0x41A7C3
+
+[[func]]
+name = "init_run_office_from_start_menu"
+addr = 0x41A84C
+
+[[func]]
+name = "init_run_office"
+addr = 0x41A8B9
+
+[[func]]
+name = "init_disable_screensaver"
+addr = 0x41AA2C
+
+[[func]]
+name = "init_create_window"
+addr = 0x41AAC5
+
+[[func]]
+name = "init_kill_mom_parent"
+addr = 0x41AC00
+
+[[func]]
+name = "init_find_mom_parent"
+addr = 0x41AC21
+
+[[func]]
+name = "init_await_mom_parent_exit"
+addr = 0x41AC71
+
+[[func]]
+name = "init_archives"
+addr = 0x41ACA1
+
+[[func]]
+name = "init_test_access"
+addr = 0x41AD72
+
+[[func]]
+name = "init_strip_trailing_slash"
+addr = 0x41AF22
+
+[[func]]
+name = "init_read_test_file"
+addr = 0x41AF3A
+
+[[func]]
+name = "init_get_file_info"
+addr = 0x41AFCE
+
+[[func]]
+name = "init_palette"
+addr = 0x41B06C
+
+[[func]]
+name = "init_activate_window"
+addr = 0x41B105
+
+[[func]]
+name = "init_redraw_window"
+addr = 0x41B15F
+
+[[func]]
+name = "SetWindowProc"
+addr = 0x41B184
+
+
+# INTERFAC>CPP
+
+[[func]]
+name = "j_interfac_cpp_init"
+addr = 0x41B190
+
+[[func]]
+name = "interfac_cpp_init"
+addr = 0x41B195
+
+[[func]]
+name = "interface_msg_pump"
+addr = 0x41B1A0
+
+[[func]]
+name = "IncProgress"
+addr = 0x41B1DF
+
+[[func]]
+name = "DrawCutscene"
+addr = 0x41B218
+
+[[func]]
+name = "DrawProgress"
+addr = 0x41B28D
+
+[[func]]
+name = "ShowProgress"
+addr = 0x41B2B6
+
+[[func]]
+name = "FreeInterface"
+addr = 0x41B5F5
+
+[[func]]
+name = "InitCutscene"
+addr = 0x41B607
+
+
+# INV.CPP
+
+[[func]]
+name = "FreeInvGFX"
+addr = 0x41B814
+
+[[func]]
+name = "InitInv"
+addr = 0x41B826
+
+[[func]]
+name = "InvDrawSlotBack"
+addr = 0x41B871
+
+[[func]]
+name = "DrawInv"
+addr = 0x41B8C4
+
+[[func]]
+name = "DrawInvBelt"
+addr = 0x41C060
+
+[[func]]
+name = "AutoPlace"
+addr = 0x41C23F
+
+[[func]]
+name = "SpecialAutoPlace"
+addr = 0x41C373
+
+[[func]]
+name = "GoldAutoPlace"
+addr = 0x41C4E0
+
+[[func]]
+name = "WeaponAutoPlace"
+addr = 0x41C6A9
+
+[[func]]
+name = "SwapItem"
+addr = 0x41C746
+
+[[func]]
+name = "CheckInvPaste"
+addr = 0x41C783
+
+[[func]]
+name = "CheckInvSwap"
+addr = 0x41D2CF
+
+[[func]]
+name = "CheckInvCut"
+addr = 0x41D378
+
+[[func]]
+name = "inv_update_rem_item"
+addr = 0x41D6EB
+
+[[func]]
+name = "RemoveInvItem"
+addr = 0x41D722
+
+[[func]]
+name = "RemoveSpdBarItem"
+addr = 0x41D810
+
+[[func]]
+name = "CheckInvItem"
+addr = 0x41D86C
+
+[[func]]
+name = "CheckInvScrn"
+addr = 0x41D893
+
+[[func]]
+name = "CheckItemStats"
+addr = 0x41D8BF
+
+[[func]]
+name = "CheckBookLevel"
+addr = 0x41D90B
+
+[[func]]
+name = "CheckQuestItem"
+addr = 0x41D97F
+
+[[func]]
+name = "InvGetItem"
+addr = 0x41DB65
+
+[[func]]
+name = "AutoGetItem"
+addr = 0x41DC79
+
+[[func]]
+name = "FindGetItem"
+addr = 0x41E103
+
+[[func]]
+name = "SyncGetItem"
+addr = 0x41E158
+
+[[func]]
+name = "CanPut"
+addr = 0x41E222
+
+[[func]]
+name = "TryInvPut"
+addr = 0x41E2F9
+
+[[func]]
+name = "DrawInvMsg"
+addr = 0x41E3BC
+
+[[func]]
+name = "InvPutItem"
+addr = 0x41E3E4
+
+[[func]]
+name = "SyncPutItem"
+addr = 0x41E639
+
+[[func]]
+name = "CheckInvHLight"
+addr = 0x41E8DD
+
+[[func]]
+name = "RemoveScroll"
+addr = 0x41EAEA
+
+[[func]]
+name = "UseScroll"
+addr = 0x41EB8B
+
+[[func]]
+name = "UseStaffCharge"
+addr = 0x41EC42
+
+[[func]]
+name = "UseStaff"
+addr = 0x41EC7F
+
+[[func]]
+name = "StartGoldDrop"
+addr = 0x41ECC3
+
+[[func]]
+name = "UseInvItem"
+addr = 0x41ED29
+
+[[func]]
+name = "DoTelekinesis"
+addr = 0x41EFA1
+
+[[func]]
+name = "CalculateGold"
+addr = 0x41F013
+
+[[func]]
+name = "DropItemBeforeTrig"
+addr = 0x41F068
+
+
+# ITEMS.CPP
+
+[[func]]
+name = "InitItemGFX"
+addr = 0x41F096
+
+[[func]]
+name = "ItemPlace"
+addr = 0x41F0E8
+
+[[func]]
+name = "AddInitItems"
+addr = 0x41F13A
+
+[[func]]
+name = "InitItems"
+addr = 0x41F24E
+
+[[func]]
+name = "CalcPlrItemVals"
+addr = 0x41F320
+
+[[func]]
+name = "CalcPlrScrolls"
+addr = 0x41F953
+
+[[func]]
+name = "CalcPlrStaff"
+addr = 0x41FA4A
+
+[[func]]
+name = "CalcSelfItems"
+addr = 0x41FA97
+
+[[func]]
+name = "CalcPlrItemMin"
+addr = 0x41FB91
+
+[[func]]
+name = "ItemMinStats"
+addr = 0x41FBF6
+
+[[func]]
+name = "CalcPlrBookVals"
+addr = 0x41FC2C
+
+[[func]]
+name = "CalcPlrInv"
+addr = 0x41FD3E
+
+[[func]]
+name = "SetPlrHandItem"
+addr = 0x41FD98
+
+[[func]]
+name = "GetPlrHandSeed"
+addr = 0x41FE98
+
+[[func]]
+name = "GetGoldSeed"
+addr = 0x41FEA4
+
+[[func]]
+name = "SetPlrHandSeed"
+addr = 0x41FF16
+
+[[func]]
+name = "SetPlrHandGoldCurs"
+addr = 0x41FF19
+
+[[func]]
+name = "CreatePlrItems"
+addr = 0x41FF4E
+
+[[func]]
+name = "ItemSpaceOk"
+addr = 0x4200F8
+
+[[func]]
+name = "GetItemSpace"
+addr = 0x4201F2
+
+[[func]]
+name = "GetSuperItemSpace"
+addr = 0x4202E8
+
+[[func]]
+name = "GetSuperItemLoc"
+addr = 0x420376
+
+[[func]]
+name = "CalcItemValue"
+addr = 0x4203E0
+
+[[func]]
+name = "GetBookSpell"
+addr = 0x42042C
+
+[[func]]
+name = "GetStaffPower"
+addr = 0x420514
+
+[[func]]
+name = "GetStaffSpell"
+addr = 0x4206E5
+
+[[func]]
+name = "GetItemAttrs"
+addr = 0x42084A
+
+[[func]]
+name = "RndPL"
+addr = 0x420B17
+
+[[func]]
+name = "PLVal"
+addr = 0x420B28
+
+[[func]]
+name = "SaveItemPower"
+addr = 0x420B68
+
+[[func]]
+name = "GetItemPower"
+addr = 0x4215EF
+
+[[func]]
+name = "GetItemBonus"
+addr = 0x42191C
+
+[[func]]
+name = "SetupItem"
+addr = 0x4219C1
+
+[[func]]
+name = "RndItem"
+addr = 0x421A4B
+
+[[func]]
+name = "RndUItem"
+addr = 0x421B32
+
+[[func]]
+name = "RndAllItems"
+addr = 0x421C2A
+
+[[func]]
+name = "RndTypeItems"
+addr = 0x421CB7
+
+[[func]]
+name = "CheckUnique"
+addr = 0x421D41
+
+[[func]]
+name = "GetUniqueItem"
+addr = 0x421E11
+
+[[func]]
+name = "SpawnUnique"
+addr = 0x421F5C
+
+[[func]]
+name = "ItemRndDur"
+addr = 0x421FE6
+
+[[func]]
+name = "SetupAllItems"
+addr = 0x422024
+
+[[func]]
+name = "SpawnItem"
+addr = 0x42217A
+
+[[func]]
+name = "CreateItem"
+addr = 0x422290
+
+[[func]]
+name = "CreateRndItem"
+addr = 0x42232B
+
+[[func]]
+name = "SetupAllUseful"
+addr = 0x4223D0
+
+[[func]]
+name = "CreateRndUseful"
+addr = 0x42243D
+
+[[func]]
+name = "CreateTypeItem"
+addr = 0x4224A6
+
+[[func]]
+name = "RecreateItem"
+addr = 0x42254A
+
+[[func]]
+name = "RecreateEar"
+addr = 0x42265C
+
+[[func]]
+name = "SpawnQuestItem"
+addr = 0x422795
+
+[[func]]
+name = "SpawnRock"
+addr = 0x4228B1
+
+[[func]]
+name = "RespawnItem"
+addr = 0x422989
+
+[[func]]
+name = "DeleteItem"
+addr = 0x422A50
+
+[[func]]
+name = "ItemDoppel"
+addr = 0x422A84
+
+[[func]]
+name = "ProcessItems"
+addr = 0x422ADE
+
+[[func]]
+name = "FreeItemGFX"
+addr = 0x422BB2
+
+[[func]]
+name = "GetItemFrm"
+addr = 0x422BCF
+
+[[func]]
+name = "GetItemStr"
+addr = 0x422BF0
+
+[[func]]
+name = "CheckIdentify"
+addr = 0x422C63
+
+[[func]]
+name = "DoRepair"
+addr = 0x422C9C
+
+[[func]]
+name = "RepairItem"
+addr = 0x422CF6
+
+[[func]]
+name = "DoRecharge"
+addr = 0x422D6C
+
+[[func]]
+name = "RechargeItem"
+addr = 0x422DDD
+
+[[func]]
+name = "PrintItemOil"
+addr = 0x422E14
+
+[[func]]
+name = "PrintItemPower"
+addr = 0x422EF4
+
+[[func]]
+name = "DrawUBack"
+addr = 0x423530
+
+[[func]]
+name = "PrintUString"
+addr = 0x42358C
+
+[[func]]
+name = "DrawULine"
+addr = 0x42365B
+
+[[func]]
+name = "DrawUniqueInfo"
+addr = 0x4236A6
+
+[[func]]
+name = "PrintItemMisc"
+addr = 0x4237DC
+
+[[func]]
+name = "PrintItemDetails"
+addr = 0x4238D4
+
+[[func]]
+name = "PrintItemDur"
+addr = 0x423AE1
+
+[[func]]
+name = "UseItem"
+addr = 0x423CE0
+
+[[func]]
+name = "StoreStatOk"
+addr = 0x4241D7
+
+[[func]]
+name = "SmithItemOk"
+addr = 0x42421C
+
+[[func]]
+name = "RndSmithItem"
+addr = 0x424252
+
+[[func]]
+name = "BubbleSwapItem"
+addr = 0x4242C1
+
+[[func]]
+name = "SortSmith"
+addr = 0x4242F5
+
+[[func]]
+name = "SpawnSmith"
+addr = 0x424351
+
+[[func]]
+name = "PremiumItemOk"
+addr = 0x424420
+
+[[func]]
+name = "RndPremiumItem"
+addr = 0x42445F
+
+[[func]]
+name = "SpawnOnePremium"
+addr = 0x4244C6
+
+[[func]]
+name = "SpawnPremium"
+addr = 0x4245A0
+
+[[func]]
+name = "WitchItemOk"
+addr = 0x42466C
+
+[[func]]
+name = "RndWitchItem"
+addr = 0x4246D2
+
+[[func]]
+name = "SortWitch"
+addr = 0x424735
+
+[[func]]
+name = "WitchBookLevel"
+addr = 0x424795
+
+[[func]]
+name = "SpawnWitch"
+addr = 0x424815
+
+[[func]]
+name = "RndBoyItem"
+addr = 0x4249A4
+
+[[func]]
+name = "SpawnBoy"
+addr = 0x424A03
+
+[[func]]
+name = "HealerItemOk"
+addr = 0x424A9B
+
+[[func]]
+name = "RndHealerItem"
+addr = 0x424B49
+
+[[func]]
+name = "SortHealer"
+addr = 0x424BAC
+
+[[func]]
+name = "SpawnHealer"
+addr = 0x424C0C
+
+[[func]]
+name = "SpawnStoreGold"
+addr = 0x424D57
+
+[[func]]
+name = "RecreateSmithItem"
+addr = 0x424D80
+
+[[func]]
+name = "RecreatePremiumItem"
+addr = 0x424DD1
+
+[[func]]
+name = "RecreateBoyItem"
+addr = 0x424E3C
+
+[[func]]
+name = "RecreateWitchItem"
+addr = 0x424EA1
+
+[[func]]
+name = "RecreateHealerItem"
+addr = 0x424F52
+
+[[func]]
+name = "RecreateTownItem"
+addr = 0x424FB8
+
+[[func]]
+name = "RecalcStoreStats"
+addr = 0x42501F
+
+[[func]]
+name = "ItemNoFlippy"
+addr = 0x4250C0
+
+[[func]]
+name = "CreateSpellBook"
+addr = 0x4250EF
+
+[[func]]
+name = "CreateMagicItem"
+addr = 0x4251B8
+
+[[func]]
+name = "GetItemRecord"
+addr = 0x42526E
+
+[[func]]
+name = "NextItemRecord"
+addr = 0x425311
+
+[[func]]
+name = "SetItemRecord"
+addr = 0x425357
+
+[[func]]
+name = "PutItemRecord"
+addr = 0x42539E
+
+
+# LIGHTING.CPP
+
+[[func]]
+name = "SetLightFX"
+addr = 0x425443
+
+[[func]]
+name = "DoLighting"
+addr = 0x4254BA
+
+[[func]]
+name = "DoUnLight"
+addr = 0x4258B0
+
+[[func]]
+name = "DoUnVision"
+addr = 0x425930
+
+[[func]]
+name = "DoVision"
+addr = 0x42598A
+
+[[func]]
+name = "FreeLightTable"
+addr = 0x425C13
+
+[[func]]
+name = "InitLightTable"
+addr = 0x425C25
+
+[[func]]
+name = "MakeLightTable"
+addr = 0x425C35
+
+[[func]]
+name = "InitLightMax"
+addr = 0x425FB8
+
+[[func]]
+name = "InitLighting"
+addr = 0x425FCE
+
+[[func]]
+name = "AddLight"
+addr = 0x425FEC
+
+[[func]]
+name = "AddUnLight"
+addr = 0x426056
+
+[[func]]
+name = "ChangeLightRadius"
+addr = 0x426076
+
+[[func]]
+name = "ChangeLightXY"
+addr = 0x4260C5
+
+[[func]]
+name = "ChangeLightOff"
+addr = 0x426120
+
+[[func]]
+name = "ChangeLight"
+addr = 0x42617B
+
+[[func]]
+name = "ProcessLightList"
+addr = 0x4261E7
+
+[[func]]
+name = "SavePreLighting"
+addr = 0x4262E0
+
+[[func]]
+name = "InitVision"
+addr = 0x4262F8
+
+[[func]]
+name = "AddVision"
+addr = 0x426333
+
+[[func]]
+name = "ChangeVisionRadius"
+addr = 0x4263A0
+
+[[func]]
+name = "ChangeVisionXY"
+addr = 0x4263E1
+
+[[func]]
+name = "ProcessVisionList"
+addr = 0x42642B
+
+[[func]]
+name = "lighting_color_cycling"
+addr = 0x42651F
+
+
+# LOADSAVE.CPP
+
+[[func]]
+name = "LoadGame"
+addr = 0x426564
+
+[[func]]
+name = "BLoad"
+addr = 0x426AE2
+
+[[func]]
+name = "ILoad"
+addr = 0x426AF0
+
+[[func]]
+name = "ILoad_2"
+addr = 0x426B2C
+
+[[func]]
+name = "OLoad"
+addr = 0x426B68
+
+[[func]]
+name = "LoadPlayer"
+addr = 0x426B7F
+
+[[func]]
+name = "LoadMonster"
+addr = 0x426BA9
+
+[[func]]
+name = "LoadMissile"
+addr = 0x426BDE
+
+[[func]]
+name = "LoadObject"
+addr = 0x426C08
+
+[[func]]
+name = "LoadItem"
+addr = 0x426C2A
+
+[[func]]
+name = "LoadPremium"
+addr = 0x426C5F
+
+[[func]]
+name = "LoadQuest"
+addr = 0x426C89
+
+[[func]]
+name = "LoadLighting"
+addr = 0x426CDE
+
+[[func]]
+name = "LoadVision"
+addr = 0x426D00
+
+[[func]]
+name = "LoadPortal"
+addr = 0x426D22
+
+[[func]]
+name = "SaveGame"
+addr = 0x426D45
+
+[[func]]
+name = "BSave"
+addr = 0x427203
+
+[[func]]
+name = "ISave"
+addr = 0x427211
+
+[[func]]
+name = "ISave_2"
+addr = 0x427258
+
+[[func]]
+name = "OSave"
+addr = 0x42729F
+
+[[func]]
+name = "SavePlayer"
+addr = 0x4272B7
+
+[[func]]
+name = "SaveMonster"
+addr = 0x4272E1
+
+[[func]]
+name = "SaveMissile"
+addr = 0x42730B
+
+[[func]]
+name = "SaveObject"
+addr = 0x427335
+
+[[func]]
+name = "SaveItem"
+addr = 0x427357
+
+[[func]]
+name = "SavePremium"
+addr = 0x427381
+
+[[func]]
+name = "SaveQuest"
+addr = 0x4273AB
+
+[[func]]
+name = "SaveLighting"
+addr = 0x427404
+
+[[func]]
+name = "SaveVision"
+addr = 0x427426
+
+[[func]]
+name = "SavePortal"
+addr = 0x427448
+
+[[func]]
+name = "SaveLevel"
+addr = 0x42746B
+
+[[func]]
+name = "LoadLevel"
+addr = 0x42772F
+
+
+# LOGGING.CPP
+
+[[func]]
+name = "j_log_cpp_init_1"
+addr = 0x4279F2
+
+[[func]]
+name = "log_cpp_init_1"
+addr = 0x4279F7
+
+[[func]]
+name = "log_cpp_init_2"
+addr = 0x427A02
+
+[[func]]
+name = "log_init_mutex"
+addr = 0x427A0C
+
+[[func]]
+name = "j_log_cleanup_mutex"
+addr = 0x427A18
+
+[[func]]
+name = "log_cleanup_mutex"
+addr = 0x427A24
+
+[[func]]
+name = "log_flush"
+addr = 0x427A30
+
+[[func]]
+name = "log_create"
+addr = 0x427AC2
+
+[[func]]
+name = "log_get_version"
+addr = 0x427C18
+
+[[func]]
+name = "log_printf"
+addr = 0x427CC9
+
+[[func]]
+name = "log_dump_computer_info"
+addr = 0x427D75
+
+
+# MAINMENU.CPP
+
+[[func]]
+name = "j_mainmenu_cpp_init"
+addr = 0x427E0E
+
+[[func]]
+name = "mainmenu_cpp_init"
+addr = 0x427E13
+
+[[func]]
+name = "mainmenu_refresh_music"
+addr = 0x427E1E
+
+[[func]]
+name = "mainmenu_create_hero"
+addr = 0x427E45
+
+[[func]]
+name = "mainmenu_select_hero_dialog"
+addr = 0x427E62
+
+[[func]]
+name = "mainmenu_action"
+addr = 0x427F76
+
+[[func]]
+name = "mainmenu_single_player"
+addr = 0x427FEC
+
+[[func]]
+name = "mainmenu_init_menu"
+addr = 0x427FFA
+
+[[func]]
+name = "mainmenu_multi_player"
+addr = 0x428030
+
+[[func]]
+name = "mainmenu_play_intro"
+addr = 0x42803F
+
+
+# MINITEXT.CPP
+
+[[func]]
+name = "FreeQuestText"
+addr = 0x428056
+
+[[func]]
+name = "InitQuestText"
+addr = 0x42807A
+
+[[func]]
+name = "InitQTextMsg"
+addr = 0x4280A4
+
+[[func]]
+name = "DrawQTextBack"
+addr = 0x428104
+
+[[func]]
+name = "PrintQTextChr"
+addr = 0x428160
+
+[[func]]
+name = "DrawQText"
+addr = 0x428202
+
+
+# MISSILES.CPP
+
+[[func]]
+name = "GetDamageAmt"
+addr = 0x4283C0
+
+[[func]]
+name = "CheckBlock"
+addr = 0x428921
+
+[[func]]
+name = "FindClosest"
+addr = 0x42897A
+
+[[func]]
+name = "GetSpellLevel"
+addr = 0x428A99
+
+[[func]]
+name = "GetDirection8"
+addr = 0x428AC4
+
+[[func]]
+name = "GetDirection16"
+addr = 0x4290EE
+
+[[func]]
+name = "DeleteMissile"
+addr = 0x42977E
+
+[[func]]
+name = "GetMissileVel"
+addr = 0x4297EE
+
+[[func]]
+name = "PutMissile"
+addr = 0x4298AD
+
+[[func]]
+name = "GetMissilePos"
+addr = 0x429918
+
+[[func]]
+name = "MoveMissilePos"
+addr = 0x4299EA
+
+[[func]]
+name = "MonsterTrapHit"
+addr = 0x429A99
+
+[[func]]
+name = "MonsterMHit"
+addr = 0x429C3B
+
+[[func]]
+name = "PlayerMHit"
+addr = 0x429F4E
+
+[[func]]
+name = "Plr2PlrMHit"
+addr = 0x42A307
+
+[[func]]
+name = "CheckMissileCol"
+addr = 0x42A5DB
+
+[[func]]
+name = "SetMissAnim"
+addr = 0x42A8D5
+
+[[func]]
+name = "SetMissDir"
+addr = 0x42A959
+
+[[func]]
+name = "LoadMissileGFX"
+addr = 0x42A973
+
+[[func]]
+name = "InitMissileGFX"
+addr = 0x42AA5C
+
+[[func]]
+name = "FreeMissileGFX"
+addr = 0x42AA89
+
+[[func]]
+name = "FreeMissiles"
+addr = 0x42AAF2
+
+[[func]]
+name = "FreeMissiles2"
+addr = 0x42AB20
+
+[[func]]
+name = "InitMissiles"
+addr = 0x42AB4E
+
+[[func]]
+name = "AddLArrow"
+addr = 0x42AC0C
+
+[[func]]
+name = "AddArrow"
+addr = 0x42ACD9
+
+[[func]]
+name = "GetVileMissPos"
+addr = 0x42ADAA
+
+[[func]]
+name = "AddRndTeleport"
+addr = 0x42AE48
+
+[[func]]
+name = "AddFirebolt"
+addr = 0x42AF8B
+
+[[func]]
+name = "AddMagmaball"
+addr = 0x42B09A
+
+[[func]]
+name = "miss_null_33"
+addr = 0x42B113
+
+[[func]]
+name = "AddTeleport"
+addr = 0x42B159
+
+[[func]]
+name = "AddLightball"
+addr = 0x42B284
+
+[[func]]
+name = "AddFirewall"
+addr = 0x42B303
+
+[[func]]
+name = "AddFireball"
+addr = 0x42B3C0
+
+[[func]]
+name = "AddLightctrl"
+addr = 0x42B4E7
+
+[[func]]
+name = "AddLightning"
+addr = 0x42B553
+
+[[func]]
+name = "AddMisexp"
+addr = 0x42B620
+
+[[func]]
+name = "AddWeapexp"
+addr = 0x42B711
+
+[[func]]
+name = "CheckIfTrig"
+addr = 0x42B77C
+
+[[func]]
+name = "AddTown"
+addr = 0x42B7DF
+
+[[func]]
+name = "AddFlash"
+addr = 0x42B9FC
+
+[[func]]
+name = "AddFlash2"
+addr = 0x42BAC1
+
+[[func]]
+name = "AddManashield"
+addr = 0x42BB83
+
+[[func]]
+name = "AddFiremove"
+addr = 0x42BBFA
+
+[[func]]
+name = "AddGuardian"
+addr = 0x42BC76
+
+[[func]]
+name = "AddChain"
+addr = 0x42BE98
+
+[[func]]
+name = "miss_null_11"
+addr = 0x42BECB
+
+[[func]]
+name = "miss_null_12"
+addr = 0x42BEFE
+
+[[func]]
+name = "miss_null_13"
+addr = 0x42BF3B
+
+[[func]]
+name = "AddRhino"
+addr = 0x42BF7A
+
+[[func]]
+name = "miss_null_32"
+addr = 0x42C08B
+
+[[func]]
+name = "AddFlare"
+addr = 0x42C167
+
+[[func]]
+name = "AddAcid"
+addr = 0x42C276
+
+[[func]]
+name = "miss_null_1D"
+addr = 0x42C2EE
+
+[[func]]
+name = "AddAcidpud"
+addr = 0x42C32A
+
+[[func]]
+name = "AddStone"
+addr = 0x42C38E
+
+[[func]]
+name = "AddGolem"
+addr = 0x42C518
+
+[[func]]
+name = "AddEtherealize"
+addr = 0x42C5DA
+
+[[func]]
+name = "miss_null_1F"
+addr = 0x42C664
+
+[[func]]
+name = "miss_null_23"
+addr = 0x42C677
+
+[[func]]
+name = "AddBoom"
+addr = 0x42C6D9
+
+[[func]]
+name = "AddHeal"
+addr = 0x42C72C
+
+[[func]]
+name = "AddHealOther"
+addr = 0x42C80C
+
+[[func]]
+name = "AddElement"
+addr = 0x42C83F
+
+[[func]]
+name = "AddIdentify"
+addr = 0x42C942
+
+[[func]]
+name = "AddFirewallC"
+addr = 0x42C993
+
+[[func]]
+name = "AddInfra"
+addr = 0x42CAF5
+
+[[func]]
+name = "AddWave"
+addr = 0x42CB5C
+
+[[func]]
+name = "AddNova"
+addr = 0x42CBA7
+
+[[func]]
+name = "AddRepair"
+addr = 0x42CC98
+
+[[func]]
+name = "AddRecharge"
+addr = 0x42CCE9
+
+[[func]]
+name = "AddDisarm"
+addr = 0x42CD3A
+
+[[func]]
+name = "AddApoca"
+addr = 0x42CD6D
+
+[[func]]
+name = "AddFlame"
+addr = 0x42CE32
+
+[[func]]
+name = "AddFlamec"
+addr = 0x42CF35
+
+[[func]]
+name = "AddCbolt"
+addr = 0x42CFAD
+
+[[func]]
+name = "AddHbolt"
+addr = 0x42D098
+
+[[func]]
+name = "AddResurrect"
+addr = 0x42D178
+
+[[func]]
+name = "AddResurrectBeam"
+addr = 0x42D1AF
+
+[[func]]
+name = "AddTelekinesis"
+addr = 0x42D1F3
+
+[[func]]
+name = "AddBoneSpirit"
+addr = 0x42D226
+
+[[func]]
+name = "AddRportal"
+addr = 0x42D311
+
+[[func]]
+name = "AddDiabApoca"
+addr = 0x42D35B
+
+[[func]]
+name = "AddMissile"
+addr = 0x42D3DA
+
+[[func]]
+name = "Sentfire"
+addr = 0x42D5A3
+
+[[func]]
+name = "MI_Dummy"
+addr = 0x42D67F
+
+[[func]]
+name = "MI_Golem"
+addr = 0x42D680
+
+[[func]]
+name = "MI_SetManashield"
+addr = 0x42D7C7
+
+[[func]]
+name = "MI_LArrow"
+addr = 0x42D7D2
+
+[[func]]
+name = "MI_Arrow"
+addr = 0x42DAD0
+
+[[func]]
+name = "MI_Firebolt"
+addr = 0x42DBA1
+
+[[func]]
+name = "MI_Lightball"
+addr = 0x42DE5A
+
+[[func]]
+name = "mi_null_33"
+addr = 0x42DF42
+
+[[func]]
+name = "MI_Acidpud"
+addr = 0x42DFAB
+
+[[func]]
+name = "MI_Firewall"
+addr = 0x42E01E
+
+[[func]]
+name = "MI_Fireball"
+addr = 0x42E18F
+
+[[func]]
+name = "MI_Lightctrl"
+addr = 0x42E5A7
+
+[[func]]
+name = "MI_Lightning"
+addr = 0x42E79B
+
+[[func]]
+name = "MI_Town"
+addr = 0x42E820
+
+[[func]]
+name = "MI_Flash"
+addr = 0x42E9CB
+
+[[func]]
+name = "MI_Flash2"
+addr = 0x42EAF1
+
+[[func]]
+name = "MI_Manashield"
+addr = 0x42EBBF
+
+[[func]]
+name = "MI_Etherealize"
+addr = 0x42EE19
+
+[[func]]
+name = "MI_Firemove"
+addr = 0x42EEFD
+
+[[func]]
+name = "MI_Guardian"
+addr = 0x42F0C8
+
+[[func]]
+name = "MI_Chain"
+addr = 0x42F2C2
+
+[[func]]
+name = "mi_null_11"
+addr = 0x42F475
+
+[[func]]
+name = "MI_Weapexp"
+addr = 0x42F4A9
+
+[[func]]
+name = "MI_Misexp"
+addr = 0x42F5D6
+
+[[func]]
+name = "MI_Acidsplat"
+addr = 0x42F692
+
+[[func]]
+name = "MI_Teleport"
+addr = 0x42F723
+
+[[func]]
+name = "MI_Stone"
+addr = 0x42F82C
+
+[[func]]
+name = "MI_Boom"
+addr = 0x42F8EE
+
+[[func]]
+name = "MI_Rhino"
+addr = 0x42F94F
+
+[[func]]
+name = "mi_null_32"
+addr = 0x42FAD0
+
+[[func]]
+name = "MI_FirewallC"
+addr = 0x42FC74
+
+[[func]]
+name = "MI_Infra"
+addr = 0x42FDE3
+
+[[func]]
+name = "MI_Apoca"
+addr = 0x42FE20
+
+[[func]]
+name = "MI_Wave"
+addr = 0x42FF0B
+
+[[func]]
+name = "MI_Nova"
+addr = 0x430154
+
+[[func]]
+name = "MI_Blodboil"
+addr = 0x4302A7
+
+[[func]]
+name = "MI_Flame"
+addr = 0x4302B8
+
+[[func]]
+name = "MI_Flamec"
+addr = 0x43037E
+
+[[func]]
+name = "MI_Cbolt"
+addr = 0x43045C
+
+[[func]]
+name = "MI_Hbolt"
+addr = 0x4305E2
+
+[[func]]
+name = "MI_Element"
+addr = 0x43071F
+
+[[func]]
+name = "MI_Bonespirit"
+addr = 0x430A98
+
+[[func]]
+name = "MI_ResurrectBeam"
+addr = 0x430C8D
+
+[[func]]
+name = "MI_Rportal"
+addr = 0x430CAC
+
+[[func]]
+name = "ProcessMissiles"
+addr = 0x430DDA
+
+[[func]]
+name = "missiles_process_charge"
+addr = 0x430F35
+
+[[func]]
+name = "ClearMissileSpot"
+addr = 0x430FB9
+
+
+# MONSTER.CPP
+
+[[func]]
+name = "j_monster_cpp_init"
+addr = 0x430FDF
+
+[[func]]
+name = "monster_cpp_init"
+addr = 0x430FE4
+
+[[func]]
+name = "InitMonsterTRN"
+addr = 0x430FEF
+
+[[func]]
+name = "InitLevelMonsters"
+addr = 0x43107B
+
+[[func]]
+name = "AddMonsterType"
+addr = 0x4310CF
+
+[[func]]
+name = "GetLevelMTypes"
+addr = 0x43114F
+
+[[func]]
+name = "InitMonsterGFX"
+addr = 0x4313F9
+
+[[func]]
+name = "ClearMVars"
+addr = 0x4316AE
+
+[[func]]
+name = "InitMonster"
+addr = 0x4316E7
+
+[[func]]
+name = "ClrAllMonsters"
+addr = 0x431A6B
+
+[[func]]
+name = "MonstPlace"
+addr = 0x431B10
+
+[[func]]
+name = "PlaceMonster"
+addr = 0x431B5D
+
+[[func]]
+name = "PlaceUniqueMonst"
+addr = 0x431B99
+
+[[func]]
+name = "PlaceQuestMonsters"
+addr = 0x432088
+
+[[func]]
+name = "PlaceGroup"
+addr = 0x4322FA
+
+[[func]]
+name = "LoadDiabMonsts"
+addr = 0x432585
+
+[[func]]
+name = "InitMonsters"
+addr = 0x432637
+
+[[func]]
+name = "PlaceUniques"
+addr = 0x43283D
+
+[[func]]
+name = "SetMapMonsters"
+addr = 0x43290E
+
+[[func]]
+name = "DeleteMonster"
+addr = 0x432A4D
+
+[[func]]
+name = "AddMonster"
+addr = 0x432A71
+
+[[func]]
+name = "NewMonsterAnim"
+addr = 0x432AC1
+
+[[func]]
+name = "M_Ranged"
+addr = 0x432AFF
+
+[[func]]
+name = "M_Talker"
+addr = 0x432B26
+
+[[func]]
+name = "M_Enemy"
+addr = 0x432B5C
+
+[[func]]
+name = "M_GetDir"
+addr = 0x432E15
+
+[[func]]
+name = "M_CheckEFlag"
+addr = 0x432E3D
+
+[[func]]
+name = "M_StartStand"
+addr = 0x432E9D
+
+[[func]]
+name = "M_StartDelay"
+addr = 0x432F29
+
+[[func]]
+name = "M_StartSpStand"
+addr = 0x432F4F
+
+[[func]]
+name = "M_StartWalk"
+addr = 0x432FBC
+
+[[func]]
+name = "M_StartWalk2"
+addr = 0x43308F
+
+[[func]]
+name = "M_StartWalk3"
+addr = 0x4331AA
+
+[[func]]
+name = "M_StartAttack"
+addr = 0x4332F6
+
+[[func]]
+name = "M_StartRAttack"
+addr = 0x433367
+
+[[func]]
+name = "M_StartRSpAttack"
+addr = 0x4333EF
+
+[[func]]
+name = "M_StartSpAttack"
+addr = 0x433480
+
+[[func]]
+name = "M_StartEat"
+addr = 0x4334F4
+
+[[func]]
+name = "M_ClearSquares"
+addr = 0x43355C
+
+[[func]]
+name = "M_GetKnockback"
+addr = 0x43361B
+
+[[func]]
+name = "M_StartHit"
+addr = 0x4336E5
+
+[[func]]
+name = "M_DiabloDeath"
+addr = 0x43385A
+
+[[func]]
+name = "M2MStartHit"
+addr = 0x433A4C
+
+[[func]]
+name = "MonstStartKill"
+addr = 0x433BCC
+
+[[func]]
+name = "M2MStartKill"
+addr = 0x433DC2
+
+[[func]]
+name = "M_StartKill"
+addr = 0x433FC7
+
+[[func]]
+name = "M_SyncStartKill"
+addr = 0x434045
+
+[[func]]
+name = "M_StartFadein"
+addr = 0x4340E0
+
+[[func]]
+name = "M_StartFadeout"
+addr = 0x4341AD
+
+[[func]]
+name = "M_StartHeal"
+addr = 0x434272
+
+[[func]]
+name = "M_ChangeLightOffset"
+addr = 0x43430A
+
+[[func]]
+name = "M_DoStand"
+addr = 0x434374
+
+[[func]]
+name = "M_DoWalk"
+addr = 0x4343F3
+
+[[func]]
+name = "M_DoWalk2"
+addr = 0x434509
+
+[[func]]
+name = "M_DoWalk3"
+addr = 0x4345FC
+
+[[func]]
+name = "M_TryM2MHit"
+addr = 0x434722
+
+[[func]]
+name = "M_TryH2HHit"
+addr = 0x43482C
+
+[[func]]
+name = "M_DoAttack"
+addr = 0x434C3B
+
+[[func]]
+name = "M_DoRAttack"
+addr = 0x434DBD
+
+[[func]]
+name = "M_DoRSpAttack"
+addr = 0x434EB2
+
+[[func]]
+name = "M_DoSAttack"
+addr = 0x434FC7
+
+[[func]]
+name = "M_DoFadein"
+addr = 0x43507E
+
+[[func]]
+name = "M_DoFadeout"
+addr = 0x4350E3
+
+[[func]]
+name = "M_DoHeal"
+addr = 0x435165
+
+[[func]]
+name = "M_DoTalk"
+addr = 0x4351F5
+
+[[func]]
+name = "M_Teleport"
+addr = 0x43547A
+
+[[func]]
+name = "M_DoGotHit"
+addr = 0x4355BB
+
+[[func]]
+name = "M_UpdateLeader"
+addr = 0x43561E
+
+[[func]]
+name = "DoEnding"
+addr = 0x435697
+
+[[func]]
+name = "PrepDoEnding"
+addr = 0x43575C
+
+[[func]]
+name = "M_DoDeath"
+addr = 0x4357DF
+
+[[func]]
+name = "M_DoSpStand"
+addr = 0x4358EC
+
+[[func]]
+name = "M_DoDelay"
+addr = 0x43596B
+
+[[func]]
+name = "M_DoStone"
+addr = 0x435A14
+
+[[func]]
+name = "M_WalkDir"
+addr = 0x435A62
+
+[[func]]
+name = "GroupUnity"
+addr = 0x435BB5
+
+[[func]]
+name = "M_CallWalk"
+addr = 0x435DA8
+
+[[func]]
+name = "M_PathWalk"
+addr = 0x435EB5
+
+[[func]]
+name = "M_CallWalk2"
+addr = 0x435F35
+
+[[func]]
+name = "M_DumbWalk"
+addr = 0x435FBA
+
+[[func]]
+name = "M_RoundWalk"
+addr = 0x435FDB
+
+[[func]]
+name = "MAI_Zombie"
+addr = 0x4360B1
+
+[[func]]
+name = "MAI_SkelSd"
+addr = 0x4361F7
+
+[[func]]
+name = "MAI_Path"
+addr = 0x436331
+
+[[func]]
+name = "MAI_Snake"
+addr = 0x4363F9
+
+[[func]]
+name = "MAI_Bat"
+addr = 0x43668F
+
+[[func]]
+name = "MAI_SkelBow"
+addr = 0x4368F7
+
+[[func]]
+name = "MAI_Fat"
+addr = 0x436A38
+
+[[func]]
+name = "MAI_Sneak"
+addr = 0x436B60
+
+[[func]]
+name = "MAI_Fireman"
+addr = 0x436DC8
+
+[[func]]
+name = "MAI_Fallen"
+addr = 0x436FEC
+
+[[func]]
+name = "MAI_Cleaver"
+addr = 0x4371D7
+
+[[func]]
+name = "MAI_Round"
+addr = 0x437285
+
+[[func]]
+name = "MAI_GoatMc"
+addr = 0x437520
+
+[[func]]
+name = "MAI_Ranged"
+addr = 0x437528
+
+[[func]]
+name = "MAI_GoatBow"
+addr = 0x4376B3
+
+[[func]]
+name = "MAI_Succ"
+addr = 0x4376BD
+
+[[func]]
+name = "MAI_AcidUniq"
+addr = 0x4376C8
+
+[[func]]
+name = "MAI_Scav"
+addr = 0x4376D3
+
+[[func]]
+name = "MAI_Garg"
+addr = 0x437957
+
+[[func]]
+name = "MAI_RoundRanged"
+addr = 0x437A8B
+
+[[func]]
+name = "MAI_Magma"
+addr = 0x437D93
+
+[[func]]
+name = "MAI_Storm"
+addr = 0x437DA2
+
+[[func]]
+name = "MAI_Acid"
+addr = 0x437DB1
+
+[[func]]
+name = "MAI_Diablo"
+addr = 0x437DC0
+
+[[func]]
+name = "MAI_RR2"
+addr = 0x437DCF
+
+[[func]]
+name = "MAI_Mega"
+addr = 0x4380DE
+
+[[func]]
+name = "MAI_Golum"
+addr = 0x4380E9
+
+[[func]]
+name = "MAI_SkelKing"
+addr = 0x438304
+
+[[func]]
+name = "MAI_Rhino"
+addr = 0x43862D
+
+[[func]]
+name = "MAI_Counselor"
+addr = 0x43891F
+
+[[func]]
+name = "MAI_Garbud"
+addr = 0x438C79
+
+[[func]]
+name = "MAI_Zhar"
+addr = 0x438D7E
+
+[[func]]
+name = "MAI_SnotSpil"
+addr = 0x438EC2
+
+[[func]]
+name = "MAI_Lazurus"
+addr = 0x439016
+
+[[func]]
+name = "MAI_Lazhelp"
+addr = 0x439196
+
+[[func]]
+name = "MAI_Lachdanan"
+addr = 0x439253
+
+[[func]]
+name = "MAI_Warlord"
+addr = 0x439338
+
+[[func]]
+name = "DeleteMonsterList"
+addr = 0x439419
+
+[[func]]
+name = "ProcessMonsters"
+addr = 0x43947E
+
+[[func]]
+name = "FreeMonsters"
+addr = 0x4397C5
+
+[[func]]
+name = "DirOK"
+addr = 0x439831
+
+[[func]]
+name = "PosOkMissile"
+addr = 0x439A32
+
+[[func]]
+name = "CheckNoSolid"
+addr = 0x439A57
+
+[[func]]
+name = "LineClearF"
+addr = 0x439A71
+
+[[func]]
+name = "LineClear"
+addr = 0x439BE0
+
+[[func]]
+name = "LineClearF1"
+addr = 0x439BFA
+
+[[func]]
+name = "SyncMonsterAnim"
+addr = 0x439D75
+
+[[func]]
+name = "M_FallenFear"
+addr = 0x439EA8
+
+[[func]]
+name = "PrintMonstHistory"
+addr = 0x439F92
+
+[[func]]
+name = "PrintUniqueHistory"
+addr = 0x43A13A
+
+[[func]]
+name = "MissToMonst"
+addr = 0x43A1C1
+
+[[func]]
+name = "PosOkMonst"
+addr = 0x43A45E
+
+[[func]]
+name = "PosOkMonst2"
+addr = 0x43A547
+
+[[func]]
+name = "PosOkMonst3"
+addr = 0x43A613
+
+[[func]]
+name = "IsSkel"
+addr = 0x43A73B
+
+[[func]]
+name = "IsGoat"
+addr = 0x43A760
+
+[[func]]
+name = "M_SpawnSkel"
+addr = 0x43A77B
+
+[[func]]
+name = "ActivateSpawn"
+addr = 0x43A828
+
+[[func]]
+name = "SpawnSkeleton"
+addr = 0x43A879
+
+[[func]]
+name = "PreSpawnSkeleton"
+addr = 0x43A979
+
+[[func]]
+name = "TalktoMonster"
+addr = 0x43AA0C
+
+[[func]]
+name = "SpawnGolum"
+addr = 0x43AADA
+
+[[func]]
+name = "CanTalkToMonst"
+addr = 0x43AC0C
+
+[[func]]
+name = "CheckMonsterHit"
+addr = 0x43AC43
+
+[[func]]
+name = "encode_enemy"
+addr = 0x43ACB5
+
+[[func]]
+name = "decode_enemy"
+addr = 0x43ACCE
+
+
+# MOVIE.CPP
+
+[[func]]
+name = "j_movie_cpp_init"
+addr = 0x43AD33
+
+[[func]]
+name = "movie_cpp_init"
+addr = 0x43AD38
+
+[[func]]
+name = "play_movie"
+addr = 0x43AD43
+
+[[func]]
+name = "MovieWndProc"
+addr = 0x43AE3E
+
+
+# MPQAPI.CPP
+
+[[func]]
+name = "j_mpqapi_cpp_init"
+addr = 0x43AE90
+
+[[func]]
+name = "mpqapi_cpp_init"
+addr = 0x43AE95
+
+[[func]]
+name = "mpqapi_set_hidden"
+addr = 0x43AEA0
+
+[[func]]
+name = "mpqapi_store_creation_time"
+addr = 0x43AEDC
+
+[[func]]
+name = "mpqapi_reg_load_modification_time"
+addr = 0x43AF4F
+
+[[func]]
+name = "mpqapi_xor_buf"
+addr = 0x43AFA5
+
+[[func]]
+name = "mpqapi_reg_store_modification_time"
+addr = 0x43AFC4
+
+[[func]]
+name = "j_mpqapi_remove_hash_entry"
+addr = 0x43AFFD
+
+[[func]]
+name = "mpqapi_remove_hash_entry"
+addr = 0x43B002
+
+[[func]]
+name = "mpqapi_alloc_block"
+addr = 0x43B054
+
+[[func]]
+name = "mpqapi_new_block"
+addr = 0x43B0E4
+
+[[func]]
+name = "mpqapi_get_hash_index_of_path"
+addr = 0x43B123
+
+[[func]]
+name = "mpqapi_get_hash_index"
+addr = 0x43B153
+
+[[func]]
+name = "mpqapi_remove_hash_entries"
+addr = 0x43B1BD
+
+[[func]]
+name = "mpqapi_write_file"
+addr = 0x43B1F8
+
+[[func]]
+name = "mpqapi_add_file"
+addr = 0x43B23D
+
+[[func]]
+name = "mpqapi_write_file_contents"
+addr = 0x43B317
+
+[[func]]
+name = "mpqapi_find_free_block"
+addr = 0x43B51C
+
+[[func]]
+name = "mpqapi_rename"
+addr = 0x43B570
+
+[[func]]
+name = "mpqapi_has_file"
+addr = 0x43B5AF
+
+[[func]]
+name = "mpqapi_open_archive"
+addr = 0x43B5BF
+
+[[func]]
+name = "mpqapi_parse_archive_header"
+addr = 0x43B791
+
+[[func]]
+name = "mpqapi_close_archive"
+addr = 0x43B882
+
+[[func]]
+name = "mpqapi_store_modified_time"
+addr = 0x43B8FD
+
+[[func]]
+name = "mpqapi_flush_and_close"
+addr = 0x43B970
+
+[[func]]
+name = "mpqapi_write_header"
+addr = 0x43B9CA
+
+[[func]]
+name = "mpqapi_write_block_table"
+addr = 0x43BA60
+
+[[func]]
+name = "mpqapi_write_hash_table"
+addr = 0x43BAEB
+
+[[func]]
+name = "mpqapi_can_seek"
+addr = 0x43BB79
+
+
+# MSG.CPP
+
+[[func]]
+name = "j_msg_cpp_init"
+addr = 0x43BBA4
+
+[[func]]
+name = "msg_cpp_init"
+addr = 0x43BBA9
+
+[[func]]
+name = "msg_send_drop_pkt"
+addr = 0x43BBB4
+
+[[func]]
+name = "msg_send_packet"
+addr = 0x43BBCF
+
+[[func]]
+name = "msg_get_next_packet"
+addr = 0x43BC31
+
+[[func]]
+name = "msg_wait_resync"
+addr = 0x43BC6D
+
+[[func]]
+name = "msg_free_packets"
+addr = 0x43BCED
+
+[[func]]
+name = "msg_wait_for_turns"
+addr = 0x43BD19
+
+[[func]]
+name = "msg_process_net_packets"
+addr = 0x43BDEB
+
+[[func]]
+name = "msg_pre_packet"
+addr = 0x43BE0D
+
+[[func]]
+name = "DeltaExportData"
+addr = 0x43BE74
+
+[[func]]
+name = "DeltaExportItem"
+addr = 0x43BF2B
+
+[[func]]
+name = "DeltaExportObject"
+addr = 0x43BF5B
+
+[[func]]
+name = "DeltaExportMonster"
+addr = 0x43BF6F
+
+[[func]]
+name = "DeltaExportJunk"
+addr = 0x43BFA1
+
+[[func]]
+name = "msg_comp_level"
+addr = 0x43C019
+
+[[func]]
+name = "delta_init"
+addr = 0x43C035
+
+[[func]]
+name = "delta_kill_monster"
+addr = 0x43C07C
+
+[[func]]
+name = "delta_monster_hp"
+addr = 0x43C0C2
+
+[[func]]
+name = "delta_sync_monster"
+addr = 0x43C0F2
+
+[[func]]
+name = "delta_sync_golem"
+addr = 0x43C134
+
+[[func]]
+name = "delta_leave_sync"
+addr = 0x43C17D
+
+[[func]]
+name = "delta_portal_inited"
+addr = 0x43C24F
+
+[[func]]
+name = "delta_quest_inited"
+addr = 0x43C25D
+
+[[func]]
+name = "DeltaAddItem"
+addr = 0x43C26B
+
+[[func]]
+name = "DeltaSaveLevel"
+addr = 0x43C372
+
+[[func]]
+name = "DeltaLoadLevel"
+addr = 0x43C3BA
+
+[[func]]
+name = "NetSendCmd"
+addr = 0x43C873
+
+[[func]]
+name = "NetSendCmdGolem"
+addr = 0x43C891
+
+[[func]]
+name = "NetSendCmdLoc"
+addr = 0x43C8C7
+
+[[func]]
+name = "NetSendCmdLocParam1"
+addr = 0x43C8F3
+
+[[func]]
+name = "NetSendCmdLocParam2"
+addr = 0x43C928
+
+[[func]]
+name = "NetSendCmdLocParam3"
+addr = 0x43C965
+
+[[func]]
+name = "NetSendCmdParam1"
+addr = 0x43C9AB
+
+[[func]]
+name = "NetSendCmdParam2"
+addr = 0x43C9D3
+
+[[func]]
+name = "NetSendCmdParam3"
+addr = 0x43CA04
+
+[[func]]
+name = "NetSendCmdQuest"
+addr = 0x43CA3D
+
+[[func]]
+name = "NetSendCmdGItem"
+addr = 0x43CA84
+
+[[func]]
+name = "NetSendCmdGItem2"
+addr = 0x43CC09
+
+[[func]]
+name = "NetSendCmdReq2"
+addr = 0x43CC74
+
+[[func]]
+name = "NetSendCmdExtra"
+addr = 0x43CCCF
+
+[[func]]
+name = "NetSendCmdPItem"
+addr = 0x43CCF8
+
+[[func]]
+name = "NetSendCmdChItem"
+addr = 0x43CE5B
+
+[[func]]
+name = "NetSendCmdDelItem"
+addr = 0x43CEB2
+
+[[func]]
+name = "NetSendCmdDItem"
+addr = 0x43CED4
+
+[[func]]
+name = "NetSendCmdDamage"
+addr = 0x43D039
+
+[[func]]
+name = "NetSendCmdString"
+addr = 0x43D064
+
+[[func]]
+name = "RemovePlrPortal"
+addr = 0x43D09D
+
+[[func]]
+name = "ParseCmd"
+addr = 0x43D0BC
+
+[[func]]
+name = "DeltaImportData"
+addr = 0x43D632
+
+[[func]]
+name = "DeltaImportItem"
+addr = 0x43D6BA
+
+[[func]]
+name = "DeltaImportObject"
+addr = 0x43D6F5
+
+[[func]]
+name = "DeltaImportMonster"
+addr = 0x43D709
+
+[[func]]
+name = "DeltaImportJunk"
+addr = 0x43D746
+
+[[func]]
+name = "On_SYNCDATA"
+addr = 0x43D7F1
+
+[[func]]
+name = "On_WALKXY"
+addr = 0x43D7FC
+
+[[func]]
+name = "On_ADDSTR"
+addr = 0x43D84A
+
+[[func]]
+name = "On_ADDMAG"
+addr = 0x43D87B
+
+[[func]]
+name = "On_ADDDEX"
+addr = 0x43D8AC
+
+[[func]]
+name = "On_ADDVIT"
+addr = 0x43D8DD
+
+[[func]]
+name = "On_SBSPELL"
+addr = 0x43D90E
+
+[[func]]
+name = "msg_errorf"
+addr = 0x43D97D
+
+[[func]]
+name = "On_GOTOGETITEM"
+addr = 0x43D9C4
+
+[[func]]
+name = "On_REQUESTGITEM"
+addr = 0x43DA16
+
+[[func]]
+name = "i_own_level"
+addr = 0x43DAE6
+
+[[func]]
+name = "On_GETITEM"
+addr = 0x43DB2D
+
+[[func]]
+name = "delta_get_item"
+addr = 0x43DC3D
+
+[[func]]
+name = "On_GOTOAGETITEM"
+addr = 0x43DD40
+
+[[func]]
+name = "On_REQUESTAGITEM"
+addr = 0x43DD92
+
+[[func]]
+name = "On_AGETITEM"
+addr = 0x43DE60
+
+[[func]]
+name = "On_ITEMEXTRA"
+addr = 0x43DF6E
+
+[[func]]
+name = "On_PUTITEM"
+addr = 0x43DFC9
+
+[[func]]
+name = "delta_put_item"
+addr = 0x43E0CE
+
+[[func]]
+name = "check_update_plr"
+addr = 0x43E179
+
+[[func]]
+name = "On_SYNCPUTITEM"
+addr = 0x43E193
+
+[[func]]
+name = "On_RESPAWNITEM"
+addr = 0x43E284
+
+[[func]]
+name = "On_ATTACKXY"
+addr = 0x43E32A
+
+[[func]]
+name = "On_SATTACKXY"
+addr = 0x43E386
+
+[[func]]
+name = "On_RATTACKXY"
+addr = 0x43E3D5
+
+[[func]]
+name = "On_SPELLXYD"
+addr = 0x43E424
+
+[[func]]
+name = "On_SPELLXY"
+addr = 0x43E4D2
+
+[[func]]
+name = "On_TSPELLXY"
+addr = 0x43E576
+
+[[func]]
+name = "On_OPOBJXY"
+addr = 0x43E61A
+
+[[func]]
+name = "On_DISARMXY"
+addr = 0x43E68A
+
+[[func]]
+name = "On_OPOBJT"
+addr = 0x43E6FA
+
+[[func]]
+name = "On_ATTACKID"
+addr = 0x43E732
+
+[[func]]
+name = "On_ATTACKPID"
+addr = 0x43E7DF
+
+[[func]]
+name = "On_RATTACKID"
+addr = 0x43E840
+
+[[func]]
+name = "On_RATTACKPID"
+addr = 0x43E885
+
+[[func]]
+name = "On_SPELLID"
+addr = 0x43E8CA
+
+[[func]]
+name = "On_SPELLPID"
+addr = 0x43E964
+
+[[func]]
+name = "On_TSPELLID"
+addr = 0x43E9FE
+
+[[func]]
+name = "On_TSPELLPID"
+addr = 0x43EA98
+
+[[func]]
+name = "On_KNOCKBACK"
+addr = 0x43EB32
+
+[[func]]
+name = "On_RESURRECT"
+addr = 0x43EB74
+
+[[func]]
+name = "On_HEALOTHER"
+addr = 0x43EBA4
+
+[[func]]
+name = "On_TALKXY"
+addr = 0x43EBD5
+
+[[func]]
+name = "On_NEWLVL"
+addr = 0x43EC27
+
+[[func]]
+name = "On_WARP"
+addr = 0x43EC5B
+
+[[func]]
+name = "On_MONSTDEATH"
+addr = 0x43ECBA
+
+[[func]]
+name = "On_KILLGOLEM"
+addr = 0x43ED23
+
+[[func]]
+name = "On_AWAKEGOLEM"
+addr = 0x43ED89
+
+[[func]]
+name = "On_MONSTDAMAGE"
+addr = 0x43EE3D
+
+[[func]]
+name = "On_PLRDEAD"
+addr = 0x43EEF5
+
+[[func]]
+name = "On_PLRDAMAGE"
+addr = 0x43EF2D
+
+[[func]]
+name = "On_OPENDOOR"
+addr = 0x43EFDD
+
+[[func]]
+name = "delta_sync_object"
+addr = 0x43F033
+
+[[func]]
+name = "On_CLOSEDOOR"
+addr = 0x43F058
+
+[[func]]
+name = "On_OPERATEOBJ"
+addr = 0x43F0AE
+
+[[func]]
+name = "On_PLROPOBJ"
+addr = 0x43F104
+
+[[func]]
+name = "On_BREAKOBJ"
+addr = 0x43F15C
+
+[[func]]
+name = "On_CHANGEPLRITEMS"
+addr = 0x43F1B0
+
+[[func]]
+name = "On_DELPLRITEMS"
+addr = 0x43F1F0
+
+[[func]]
+name = "On_PLRLEVEL"
+addr = 0x43F21E
+
+[[func]]
+name = "On_DROPITEM"
+addr = 0x43F258
+
+[[func]]
+name = "On_SEND_PLRINFO"
+addr = 0x43F28F
+
+[[func]]
+name = "On_ACK_PLRINFO"
+addr = 0x43F2C9
+
+[[func]]
+name = "On_PLAYER_JOINLEVEL"
+addr = 0x43F2CE
+
+[[func]]
+name = "On_ACTIVATEPORTAL"
+addr = 0x43F448
+
+[[func]]
+name = "delta_open_portal"
+addr = 0x43F521
+
+[[func]]
+name = "On_DEACTIVATEPORTAL"
+addr = 0x43F55C
+
+[[func]]
+name = "On_RETOWN"
+addr = 0x43F59A
+
+[[func]]
+name = "On_SETSTR"
+addr = 0x43F5D3
+
+[[func]]
+name = "On_SETDEX"
+addr = 0x43F60C
+
+[[func]]
+name = "On_SETMAG"
+addr = 0x43F645
+
+[[func]]
+name = "On_SETVIT"
+addr = 0x43F67E
+
+[[func]]
+name = "On_STRING"
+addr = 0x43F6B7
+
+[[func]]
+name = "On_SYNCQUEST"
+addr = 0x43F6EC
+
+[[func]]
+name = "On_ENDSHIELD"
+addr = 0x43F72E
+
+[[func]]
+name = "On_DEBUG"
+addr = 0x43F7A5
+
+[[func]]
+name = "On_NOVA"
+addr = 0x43F7A9
+
+[[func]]
+name = "On_SETSHIELD"
+addr = 0x43F818
+
+[[func]]
+name = "On_REMSHIELD"
+addr = 0x43F830
+
+
+# MSGCMD.CPP
+
+[[func]]
+name = "j_msgcmd_cpp_init_1"
+addr = 0x43F849
+
+[[func]]
+name = "msgcmd_cpp_init_1"
+addr = 0x43F84E
+
+[[func]]
+name = "msgcmd_cpp_init_2"
+addr = 0x43F859
+
+[[func]]
+name = "msgcmd_init_event"
+addr = 0x43F863
+
+[[func]]
+name = "msgcmd_cleanup_chatcmd_atexit"
+addr = 0x43F86D
+
+[[func]]
+name = "msgcmd_cleanup_chatcmd"
+addr = 0x43F879
+
+[[func]]
+name = "msgcmd_cmd_cleanup"
+addr = 0x43F88D
+
+[[func]]
+name = "msgcmd_send_chat"
+addr = 0x43F897
+
+[[func]]
+name = "msgcmd_add_server_cmd_W"
+addr = 0x43F8D4
+
+[[func]]
+name = "msgcmd_add_server_cmd"
+addr = 0x43F8E5
+
+[[func]]
+name = "msgcmd_init_chatcmd"
+addr = 0x43F920
+
+[[func]]
+name = "msgcmd_free_event"
+addr = 0x43F936
+
+[[func]]
+name = "msgcmd_delete_server_cmd_W"
+addr = 0x43F95E
+
+[[func]]
+name = "msgcmd_alloc_event"
+addr = 0x43F999
+
+[[func]]
+name = "msgcmd_remove_event"
+addr = 0x43F9E5
+
+[[func]]
+name = "msgcmd_event_type"
+addr = 0x43FA14
+
+[[func]]
+name = "msgcmd_cleanup_chatcmd_1"
+addr = 0x43FA85
+
+[[func]]
+name = "msgcmd_cleanup_extern_msg"
+addr = 0x43FA98
+
+
+# MULTI.CPP
+
+[[func]]
+name = "j_multi_cpp_init"
+addr = 0x43FAC4
+
+[[func]]
+name = "multi_cpp_init"
+addr = 0x43FAC9
+
+[[func]]
+name = "multi_msg_add"
+addr = 0x43FAD4
+
+[[func]]
+name = "NetSendLoPri"
+addr = 0x43FAE2
+
+[[func]]
+name = "multi_copy_packet"
+addr = 0x43FB0B
+
+[[func]]
+name = "multi_send_packet"
+addr = 0x43FB4D
+
+[[func]]
+name = "NetRecvPlrData"
+addr = 0x43FBB5
+
+[[func]]
+name = "NetSendHiPri"
+addr = 0x43FC6F
+
+[[func]]
+name = "multi_recv_packet"
+addr = 0x43FD27
+
+[[func]]
+name = "multi_send_msg_packet"
+addr = 0x43FD90
+
+[[func]]
+name = "multi_msg_countdown"
+addr = 0x43FE0E
+
+[[func]]
+name = "multi_parse_turn"
+addr = 0x43FE3D
+
+[[func]]
+name = "multi_handle_turn_upper_bit"
+addr = 0x43FE85
+
+[[func]]
+name = "multi_player_left"
+addr = 0x43FEB7
+
+[[func]]
+name = "multi_clear_left_tbl"
+addr = 0x43FECA
+
+[[func]]
+name = "multi_player_left_msg"
+addr = 0x43FF0E
+
+[[func]]
+name = "multi_net_ping"
+addr = 0x43FF9D
+
+[[func]]
+name = "multi_handle_delta"
+addr = 0x43FFB0
+
+[[func]]
+name = "multi_check_pkt_valid"
+addr = 0x440058
+
+[[func]]
+name = "multi_mon_seeds"
+addr = 0x440060
+
+[[func]]
+name = "multi_begin_timeout"
+addr = 0x440093
+
+[[func]]
+name = "multi_check_drop_player"
+addr = 0x440128
+
+[[func]]
+name = "multi_process_network_packets"
+addr = 0x440153
+
+[[func]]
+name = "multi_handle_all_packets"
+addr = 0x44041D
+
+[[func]]
+name = "multi_process_tmsgs"
+addr = 0x440444
+
+[[func]]
+name = "multi_send_zero_packet"
+addr = 0x440477
+
+[[func]]
+name = "NetClose"
+addr = 0x44055D
+
+[[func]]
+name = "multi_event_handler"
+addr = 0x4405A4
+
+[[func]]
+name = "multi_handle_events"
+addr = 0x4405EC
+
+[[func]]
+name = "NetInit"
+addr = 0x440694
+
+[[func]]
+name = "multi_clear_pkt"
+addr = 0x440992
+
+[[func]]
+name = "multi_send_pinfo"
+addr = 0x44099A
+
+[[func]]
+name = "InitNewSeed"
+addr = 0x4409D5
+
+[[func]]
+name = "SetupLocalCoords"
+addr = 0x440A05
+
+[[func]]
+name = "multi_init_single"
+addr = 0x440A9B
+
+[[func]]
+name = "multi_init_multi"
+addr = 0x440B09
+
+[[func]]
+name = "multi_upgrade"
+addr = 0x440BDB
+
+[[func]]
+name = "multi_player_joins"
+addr = 0x440C17
+
+
+# NTHREAD.CPP
+
+[[func]]
+name = "j_nthread_cpp_init_1"
+addr = 0x440DAE
+
+[[func]]
+name = "nthread_cpp_init_1"
+addr = 0x440DB3
+
+[[func]]
+name = "nthread_cpp_init_2"
+addr = 0x440DBE
+
+[[func]]
+name = "nthread_init_mutex"
+addr = 0x440DC8
+
+[[func]]
+name = "nthread_cleanup_mutex_atexit"
+addr = 0x440DD4
+
+[[func]]
+name = "nthread_cleanup_mutex"
+addr = 0x440DE0
+
+[[func]]
+name = "nthread_terminate_game"
+addr = 0x440DEC
+
+[[func]]
+name = "nthread_send_and_recv_turn"
+addr = 0x440E28
+
+[[func]]
+name = "nthread_recv_turns"
+addr = 0x440EAA
+
+[[func]]
+name = "nthread_set_turn_upper_bit"
+addr = 0x440F56
+
+[[func]]
+name = "nthread_start"
+addr = 0x440F61
+
+[[func]]
+name = "nthread_handler"
+addr = 0x4410CF
+
+[[func]]
+name = "nthread_cleanup"
+addr = 0x441145
+
+[[func]]
+name = "nthread_ignore_mutex"
+addr = 0x4411C4
+
+[[func]]
+name = "nthread_has_500ms_passed"
+addr = 0x4411EF
+
+
+# OBJECTS.CPP
+
+[[func]]
+name = "InitObjectGFX"
+addr = 0x44121D
+
+[[func]]
+name = "FreeObjectGFX"
+addr = 0x441317
+
+[[func]]
+name = "RndLocOk"
+addr = 0x441345
+
+[[func]]
+name = "InitRndLocObj"
+addr = 0x4413A0
+
+[[func]]
+name = "InitRndLocBigObj"
+addr = 0x441477
+
+[[func]]
+name = "InitRndLocObj5x5"
+addr = 0x441584
+
+[[func]]
+name = "ClrAllObjects"
+addr = 0x44163B
+
+[[func]]
+name = "AddTortures"
+addr = 0x4416A8
+
+[[func]]
+name = "AddCandles"
+addr = 0x44179F
+
+[[func]]
+name = "AddBookLever"
+addr = 0x4417E8
+
+[[func]]
+name = "InitRndBarrels"
+addr = 0x441904
+
+[[func]]
+name = "AddL1Objs"
+addr = 0x441A00
+
+[[func]]
+name = "AddL2Objs"
+addr = 0x441A98
+
+[[func]]
+name = "AddL3Objs"
+addr = 0x441B16
+
+[[func]]
+name = "WallTrapLocOk"
+addr = 0x441B8A
+
+[[func]]
+name = "AddL2Torches"
+addr = 0x441BA0
+
+[[func]]
+name = "TorchLocOK"
+addr = 0x441C8C
+
+[[func]]
+name = "AddObjTraps"
+addr = 0x441CB3
+
+[[func]]
+name = "AddChestTraps"
+addr = 0x441E58
+
+[[func]]
+name = "LoadMapObjects"
+addr = 0x441EE4
+
+[[func]]
+name = "LoadMapObjs"
+addr = 0x441FAF
+
+[[func]]
+name = "AddDiabObjs"
+addr = 0x442036
+
+[[func]]
+name = "AddStoryBooks"
+addr = 0x4420F2
+
+[[func]]
+name = "AddHookedBodies"
+addr = 0x4421CA
+
+[[func]]
+name = "AddL4Goodies"
+addr = 0x44229F
+
+[[func]]
+name = "AddLazStand"
+addr = 0x442316
+
+[[func]]
+name = "InitObjects"
+addr = 0x442418
+
+[[func]]
+name = "SetMapObjects"
+addr = 0x4427C5
+
+[[func]]
+name = "DeleteObject"
+addr = 0x44292B
+
+[[func]]
+name = "SetupObject"
+addr = 0x44297B
+
+[[func]]
+name = "SetObjMapRange"
+addr = 0x442A9D
+
+[[func]]
+name = "SetBookMsg"
+addr = 0x442AD1
+
+[[func]]
+name = "AddL1Door"
+addr = 0x442ADB
+
+[[func]]
+name = "AddSCambBook"
+addr = 0x442B2C
+
+[[func]]
+name = "AddChest"
+addr = 0x442B75
+
+[[func]]
+name = "AddL2Door"
+addr = 0x442C27
+
+[[func]]
+name = "AddL3Door"
+addr = 0x442C62
+
+[[func]]
+name = "AddSarc"
+addr = 0x442C9D
+
+[[func]]
+name = "AddFlameTrap"
+addr = 0x442CEE
+
+[[func]]
+name = "AddFlameLvr"
+addr = 0x442D16
+
+[[func]]
+name = "AddTrap"
+addr = 0x442D2F
+
+[[func]]
+name = "AddObjLight"
+addr = 0x442D8A
+
+[[func]]
+name = "AddBarrel"
+addr = 0x442DC1
+
+[[func]]
+name = "AddShrine"
+addr = 0x442E0F
+
+[[func]]
+name = "AddBookcase"
+addr = 0x442EB2
+
+[[func]]
+name = "AddPurifyingFountain"
+addr = 0x442ECF
+
+[[func]]
+name = "AddArmorStand"
+addr = 0x442F08
+
+[[func]]
+name = "AddDecap"
+addr = 0x442F3A
+
+[[func]]
+name = "AddVilebook"
+addr = 0x442F68
+
+[[func]]
+name = "AddMagicCircle"
+addr = 0x442F88
+
+[[func]]
+name = "AddBookstand"
+addr = 0x442FB1
+
+[[func]]
+name = "AddPedistal"
+addr = 0x442FC4
+
+[[func]]
+name = "AddStoryBook"
+addr = 0x442FFC
+
+[[func]]
+name = "AddWeaponRack"
+addr = 0x44308E
+
+[[func]]
+name = "AddTorturedBody"
+addr = 0x4430C0
+
+[[func]]
+name = "GetRndObjLoc"
+addr = 0x4430EE
+
+[[func]]
+name = "AddMushPatch"
+addr = 0x443178
+
+[[func]]
+name = "AddSlainHero"
+addr = 0x4431D4
+
+[[func]]
+name = "AddObject"
+addr = 0x4431FF
+
+[[func]]
+name = "Obj_Light"
+addr = 0x4434CB
+
+[[func]]
+name = "Obj_Circle"
+addr = 0x4435B5
+
+[[func]]
+name = "Obj_StopAnim"
+addr = 0x443727
+
+[[func]]
+name = "Obj_Door"
+addr = 0x44374A
+
+[[func]]
+name = "Obj_Sarc"
+addr = 0x4437CD
+
+[[func]]
+name = "ActivateTrapLine"
+addr = 0x4437E6
+
+[[func]]
+name = "Obj_FlameTrap"
+addr = 0x443855
+
+[[func]]
+name = "Obj_Trap"
+addr = 0x443966
+
+[[func]]
+name = "Obj_BCrossDamage"
+addr = 0x443AD5
+
+[[func]]
+name = "ProcessObjects"
+addr = 0x443BD2
+
+[[func]]
+name = "ObjSetMicro"
+addr = 0x443D69
+
+[[func]]
+name = "objects_set_door_piece"
+addr = 0x443DEA
+
+[[func]]
+name = "ObjSetMini"
+addr = 0x443E62
+
+[[func]]
+name = "ObjL1Special"
+addr = 0x443EDA
+
+[[func]]
+name = "ObjL2Special"
+addr = 0x443FC6
+
+[[func]]
+name = "DoorSet"
+addr = 0x4440C2
+
+[[func]]
+name = "RedoPlayerVision"
+addr = 0x444246
+
+[[func]]
+name = "OperateL1RDoor"
+addr = 0x44427B
+
+[[func]]
+name = "OperateL1LDoor"
+addr = 0x44443C
+
+[[func]]
+name = "OperateL2RDoor"
+addr = 0x444613
+
+[[func]]
+name = "OperateL2LDoor"
+addr = 0x444775
+
+[[func]]
+name = "OperateL3RDoor"
+addr = 0x4448D7
+
+[[func]]
+name = "OperateL3LDoor"
+addr = 0x444A3C
+
+[[func]]
+name = "MonstCheckDoors"
+addr = 0x444BA1
+
+[[func]]
+name = "ObjChangeMap"
+addr = 0x444DC3
+
+[[func]]
+name = "ObjChangeMapResync"
+addr = 0x444E9E
+
+[[func]]
+name = "OperateL1Door"
+addr = 0x444F4F
+
+[[func]]
+name = "OperateLever"
+addr = 0x444FDE
+
+[[func]]
+name = "OperateBook"
+addr = 0x4450AC
+
+[[func]]
+name = "OperateBookLever"
+addr = 0x4452D1
+
+[[func]]
+name = "OperateSChambBk"
+addr = 0x445483
+
+[[func]]
+name = "OperateChest"
+addr = 0x44555A
+
+[[func]]
+name = "OperateMushPatch"
+addr = 0x4456E3
+
+[[func]]
+name = "OperateInnSignChest"
+addr = 0x4457B8
+
+[[func]]
+name = "OperateSlainHero"
+addr = 0x445880
+
+[[func]]
+name = "OperateTrapLvr"
+addr = 0x445954
+
+[[func]]
+name = "OperateSarc"
+addr = 0x445A0B
+
+[[func]]
+name = "OperateL2Door"
+addr = 0x445ADC
+
+[[func]]
+name = "OperateL3Door"
+addr = 0x445B6C
+
+[[func]]
+name = "OperatePedistal"
+addr = 0x445BFC
+
+[[func]]
+name = "TryDisarm"
+addr = 0x445D5F
+
+[[func]]
+name = "ItemMiscIdIdx"
+addr = 0x445E33
+
+[[func]]
+name = "OperateShrine"
+addr = 0x445E4B
+
+[[func]]
+name = "OperateSkelBook"
+addr = 0x446E6A
+
+[[func]]
+name = "OperateBookCase"
+addr = 0x446F08
+
+[[func]]
+name = "OperateDecap"
+addr = 0x446FE8
+
+[[func]]
+name = "OperateArmorStand"
+addr = 0x447046
+
+[[func]]
+name = "FindValidShrine"
+addr = 0x44710C
+
+[[func]]
+name = "OperateGoatShrine"
+addr = 0x44715F
+
+[[func]]
+name = "OperateCauldron"
+addr = 0x4471AA
+
+[[func]]
+name = "OperateFountains"
+addr = 0x4471FC
+
+[[func]]
+name = "OperateWeaponRack"
+addr = 0x4474AD
+
+[[func]]
+name = "OperateStoryBook"
+addr = 0x447558
+
+[[func]]
+name = "OperateLazStand"
+addr = 0x4475BB
+
+[[func]]
+name = "OperateObject"
+addr = 0x447620
+
+[[func]]
+name = "SyncOpL1Door"
+addr = 0x447932
+
+[[func]]
+name = "SyncOpL2Door"
+addr = 0x4479A3
+
+[[func]]
+name = "SyncOpL3Door"
+addr = 0x447A15
+
+[[func]]
+name = "SyncOpObject"
+addr = 0x447A87
+
+[[func]]
+name = "BreakCrux"
+addr = 0x447C2D
+
+[[func]]
+name = "BreakBarrel"
+addr = 0x447CEF
+
+[[func]]
+name = "BreakObject"
+addr = 0x447F63
+
+[[func]]
+name = "SyncBreakObj"
+addr = 0x447FEF
+
+[[func]]
+name = "SyncL1Doors"
+addr = 0x448010
+
+[[func]]
+name = "SyncCrux"
+addr = 0x4480BB
+
+[[func]]
+name = "SyncLever"
+addr = 0x448139
+
+[[func]]
+name = "SyncQSTLever"
+addr = 0x448163
+
+[[func]]
+name = "SyncPedistal"
+addr = 0x4481D2
+
+[[func]]
+name = "SyncL2Doors"
+addr = 0x448298
+
+[[func]]
+name = "SyncL3Doors"
+addr = 0x44831E
+
+[[func]]
+name = "SyncObjectAnim"
+addr = 0x4483B0
+
+[[func]]
+name = "GetObjectStr"
+addr = 0x44845E
+
+
+# PACK.CPP
+
+[[func]]
+name = "j_pack_cpp_init"
+addr = 0x448755
+
+[[func]]
+name = "pack_cpp_init"
+addr = 0x44875A
+
+[[func]]
+name = "PackPlayer"
+addr = 0x448765
+
+[[func]]
+name = "PackItem"
+addr = 0x448953
+
+[[func]]
+name = "VerifyGoldSeeds"
+addr = 0x448A5E
+
+[[func]]
+name = "UnPackPlayer"
+addr = 0x448AD0
+
+[[func]]
+name = "UnPackItem"
+addr = 0x448D48
+
+
+# PALETTE.CPP
+
+[[func]]
+name = "j_palette_cpp_init"
+addr = 0x448DF5
+
+[[func]]
+name = "palette_cpp_init"
+addr = 0x448DFA
+
+[[func]]
+name = "palette_save_gamme"
+addr = 0x448E05
+
+[[func]]
+name = "palette_init"
+addr = 0x448E33
+
+[[func]]
+name = "palette_load_gamma"
+addr = 0x448EAB
+
+[[func]]
+name = "LoadSysPal"
+addr = 0x448F20
+
+[[func]]
+name = "LoadPalette"
+addr = 0x448FC9
+
+[[func]]
+name = "LoadRndLvlPal"
+addr = 0x449025
+
+[[func]]
+name = "ResetPal"
+addr = 0x44906C
+
+[[func]]
+name = "palette_inc_gamma"
+addr = 0x449097
+
+[[func]]
+name = "palette_update"
+addr = 0x4490D0
+
+[[func]]
+name = "palette_apply_gamma_correction"
+addr = 0x449107
+
+[[func]]
+name = "palette_dec_gamma"
+addr = 0x4491D0
+
+[[func]]
+name = "palette_update_gamma"
+addr = 0x449209
+
+[[func]]
+name = "BlackPalette"
+addr = 0x44923E
+
+[[func]]
+name = "SetFadeLevel"
+addr = 0x449245
+
+[[func]]
+name = "PaletteFadeIn"
+addr = 0x4492B0
+
+[[func]]
+name = "PaletteFadeOut"
+addr = 0x449306
+
+[[func]]
+name = "palette_update_caves"
+addr = 0x449336
+
+[[func]]
+name = "palette_update_quest_palette"
+addr = 0x449398
+
+[[func]]
+name = "palette_get_colour_cycling"
+addr = 0x4493C6
+
+[[func]]
+name = "palette_set_color_cycling"
+addr = 0x4493CC
+
+
+# PATH.CPP
+
+[[func]]
+name = "FindPath"
+addr = 0x4493D4
+
+[[func]]
+name = "path_get_h_cost"
+addr = 0x4494D3
+
+[[func]]
+name = "path_check_equal"
+addr = 0x449504
+
+[[func]]
+name = "GetNextPath"
+addr = 0x44951C
+
+[[func]]
+name = "path_solid_pieces"
+addr = 0x449546
+
+[[func]]
+name = "path_get_path"
+addr = 0x4495ED
+
+[[func]]
+name = "path_parent_path"
+addr = 0x44966F
+
+[[func]]
+name = "path_get_node1"
+addr = 0x44979A
+
+[[func]]
+name = "path_get_node2"
+addr = 0x4497B3
+
+[[func]]
+name = "path_next_node"
+addr = 0x4497CC
+
+[[func]]
+name = "path_set_coords"
+addr = 0x4497F7
+
+[[func]]
+name = "path_push_active_step"
+addr = 0x449890
+
+[[func]]
+name = "path_pop_active_step"
+addr = 0x4498A3
+
+[[func]]
+name = "path_new_step"
+addr = 0x4498B6
+
+
+# PFILE.CPP
+
+[[func]]
+name = "j_pfile_cpp_init"
+addr = 0x4498EC
+
+[[func]]
+name = "pfile_cpp_init"
+addr = 0x4498F1
+
+[[func]]
+name = "pfile_init_save_directory"
+addr = 0x4498FC
+
+[[func]]
+name = "pfile_check_available_space"
+addr = 0x44995B
+
+[[func]]
+name = "pfile_write_hero"
+addr = 0x4499C3
+
+[[func]]
+name = "pfile_get_save_num_from_name"
+addr = 0x449A33
+
+[[func]]
+name = "pfile_encode_hero"
+addr = 0x449A5B
+
+[[func]]
+name = "pfile_open_archive"
+addr = 0x449ADF
+
+[[func]]
+name = "pfile_get_save_path"
+addr = 0x449B30
+
+[[func]]
+name = "pfile_flush"
+addr = 0x449BB2
+
+[[func]]
+name = "pfile_create_player_description"
+addr = 0x449BE4
+
+[[func]]
+name = "pfile_create_save_file"
+addr = 0x449C5A
+
+[[func]]
+name = "pfile_flush_W"
+addr = 0x449D22
+
+[[func]]
+name = "game_2_ui_player"
+addr = 0x449D43
+
+[[func]]
+name = "game_2_ui_class"
+addr = 0x449DD0
+
+[[func]]
+name = "pfile_ui_set_hero_infos"
+addr = 0x449DE3
+
+[[func]]
+name = "pfile_get_archive_path"
+addr = 0x449FAA
+
+[[func]]
+name = "pfile_read_hero"
+addr = 0x44A036
+
+[[func]]
+name = "pfile_open_save_archive"
+addr = 0x44A158
+
+[[func]]
+name = "pfile_SFileCloseArchive"
+addr = 0x44A192
+
+[[func]]
+name = "pfile_archive_contains_game"
+addr = 0x44A199
+
+[[func]]
+name = "pfile_ui_set_class_stats"
+addr = 0x44A1CC
+
+[[func]]
+name = "pfile_get_player_class"
+addr = 0x44A210
+
+[[func]]
+name = "pfile_ui_save_create"
+addr = 0x44A220
+
+[[func]]
+name = "pfile_get_file_name"
+addr = 0x44A2FF
+
+[[func]]
+name = "pfile_delete_save"
+addr = 0x44A356
+
+[[func]]
+name = "pfile_read_player_from_save"
+addr = 0x44A3A0
+
+[[func]]
+name = "GetTempLevelNames"
+addr = 0x44A419
+
+[[func]]
+name = "GetPermLevelNames"
+addr = 0x44A463
+
+[[func]]
+name = "pfile_get_game_name"
+addr = 0x44A4E9
+
+[[func]]
+name = "pfile_remove_temp_files"
+addr = 0x44A512
+
+[[func]]
+name = "GetTempSaveNames"
+addr = 0x44A563
+
+[[func]]
+name = "pfile_rename_temp_to_perm"
+addr = 0x44A598
+
+[[func]]
+name = "GetPermSaveNames"
+addr = 0x44A644
+
+[[func]]
+name = "pfile_write_save_file"
+addr = 0x44A679
+
+[[func]]
+name = "pfile_strcpy"
+addr = 0x44A727
+
+[[func]]
+name = "pfile_read"
+addr = 0x44A731
+
+[[func]]
+name = "pfile_update"
+addr = 0x44A8B3
+
+
+# PLAYER.CPP
+
+[[func]]
+name = "j_player_cpp_init"
+addr = 0x44A8E6
+
+[[func]]
+name = "player_cpp_init"
+addr = 0x44A8EB
+
+[[func]]
+name = "player_init_cl2_hdrs"
+addr = 0x44A8F6
+
+[[func]]
+name = "LoadPlrGFX"
+addr = 0x44A911
+
+[[func]]
+name = "InitPlayerGFX"
+addr = 0x44AB70
+
+[[func]]
+name = "InitPlrGFXMem"
+addr = 0x44ABB4
+
+[[func]]
+name = "GetPlrGFXSize"
+addr = 0x44ADC8
+
+[[func]]
+name = "FreePlayerGFX"
+addr = 0x44AE89
+
+[[func]]
+name = "NewPlrAnim"
+addr = 0x44AF37
+
+[[func]]
+name = "ClearPlrPVars"
+addr = 0x44AF9C
+
+[[func]]
+name = "SetPlrAnims"
+addr = 0x44AFED
+
+[[func]]
+name = "ClearPlrRVars"
+addr = 0x44B1FD
+
+[[func]]
+name = "CreatePlayer"
+addr = 0x44B274
+
+[[func]]
+name = "CalcStatDiff"
+addr = 0x44B582
+
+[[func]]
+name = "NextPlrLevel"
+addr = 0x44B5C3
+
+[[func]]
+name = "AddPlrExperience"
+addr = 0x44B6C8
+
+[[func]]
+name = "AddPlrMonstExper"
+addr = 0x44B7F8
+
+[[func]]
+name = "InitPlayer"
+addr = 0x44B83C
+
+[[func]]
+name = "InitMultiView"
+addr = 0x44BB33
+
+[[func]]
+name = "InitPlayerLoc"
+addr = 0x44BB6D
+
+[[func]]
+name = "SolidLoc"
+addr = 0x44BCC2
+
+[[func]]
+name = "PlrDirOK"
+addr = 0x44BCEB
+
+[[func]]
+name = "PlrClrTrans"
+addr = 0x44BD9A
+
+[[func]]
+name = "PlrDoTrans"
+addr = 0x44BDDD
+
+[[func]]
+name = "SetPlayerOld"
+addr = 0x44BE5E
+
+[[func]]
+name = "FixPlayerLocation"
+addr = 0x44BE95
+
+[[func]]
+name = "StartStand"
+addr = 0x44BF2D
+
+[[func]]
+name = "StartWalkStand"
+addr = 0x44BFE8
+
+[[func]]
+name = "PM_ChangeLightOff"
+addr = 0x44C070
+
+[[func]]
+name = "PM_ChangeOffset"
+addr = 0x44C13D
+
+[[func]]
+name = "StartWalk"
+addr = 0x44C1E2
+
+[[func]]
+name = "StartWalk2"
+addr = 0x44C3AC
+
+[[func]]
+name = "StartWalk3"
+addr = 0x44C5CF
+
+[[func]]
+name = "StartAttack"
+addr = 0x44C81E
+
+[[func]]
+name = "StartRangeAttack"
+addr = 0x44C8BB
+
+[[func]]
+name = "StartPlrBlock"
+addr = 0x44C973
+
+[[func]]
+name = "StartSpell"
+addr = 0x44CA26
+
+[[func]]
+name = "FixPlrWalkTags"
+addr = 0x44CB95
+
+[[func]]
+name = "RemovePlrFromMap"
+addr = 0x44CC62
+
+[[func]]
+name = "StartPlrHit"
+addr = 0x44CCD8
+
+[[func]]
+name = "RespawnDeadItem"
+addr = 0x44CDFD
+
+[[func]]
+name = "StartPlayerKill"
+addr = 0x44CEC9
+
+[[func]]
+name = "PlrDeadItem"
+addr = 0x44D1F4
+
+[[func]]
+name = "DropHalfPlayersGold"
+addr = 0x44D2F3
+
+[[func]]
+name = "SyncPlrKill"
+addr = 0x44D70B
+
+[[func]]
+name = "j_StartPlayerKill"
+addr = 0x44D79B
+
+[[func]]
+name = "RemovePlrMissiles"
+addr = 0x44D7A0
+
+[[func]]
+name = "InitLevelChange"
+addr = 0x44D8D1
+
+[[func]]
+name = "StartNewLvl"
+addr = 0x44D973
+
+[[func]]
+name = "RestartTownLvl"
+addr = 0x44DA6F
+
+[[func]]
+name = "StartWarpLvl"
+addr = 0x44DAFC
+
+[[func]]
+name = "PM_DoStand"
+addr = 0x44DB74
+
+[[func]]
+name = "PM_DoWalk"
+addr = 0x44DB77
+
+[[func]]
+name = "PM_DoWalk2"
+addr = 0x44DCE5
+
+[[func]]
+name = "PM_DoWalk3"
+addr = 0x44DE30
+
+[[func]]
+name = "WeaponDur"
+addr = 0x44DFB1
+
+[[func]]
+name = "PlrHitMonst"
+addr = 0x44E0BC
+
+[[func]]
+name = "PlrHitPlr"
+addr = 0x44E442
+
+[[func]]
+name = "PlrHitObj"
+addr = 0x44E669
+
+[[func]]
+name = "PM_DoAttack"
+addr = 0x44E6A6
+
+[[func]]
+name = "PM_DoRangeAttack"
+addr = 0x44E8B8
+
+[[func]]
+name = "ShieldDur"
+addr = 0x44E9AC
+
+[[func]]
+name = "PM_DoBlock"
+addr = 0x44EA4D
+
+[[func]]
+name = "PM_DoSpell"
+addr = 0x44EAC6
+
+[[func]]
+name = "PM_DoGotHit"
+addr = 0x44EC06
+
+[[func]]
+name = "ArmorDur"
+addr = 0x44ECBC
+
+[[func]]
+name = "PM_DoDeath"
+addr = 0x44ED7B
+
+[[func]]
+name = "CheckNewPath"
+addr = 0x44EE22
+
+[[func]]
+name = "PlrDeathModeOK"
+addr = 0x44F9BA
+
+[[func]]
+name = "ValidatePlayer"
+addr = 0x44F9FC
+
+[[func]]
+name = "ProcessPlayers"
+addr = 0x44FB32
+
+[[func]]
+name = "CheckCheatStats"
+addr = 0x44FD31
+
+[[func]]
+name = "ClrPlrPath"
+addr = 0x44FD8A
+
+[[func]]
+name = "PosOkPlayer"
+addr = 0x44FDBA
+
+[[func]]
+name = "MakePlrPath"
+addr = 0x44FE9E
+
+[[func]]
+name = "CheckPlrSpell"
+addr = 0x44FF6F
+
+[[func]]
+name = "SyncPlrAnim"
+addr = 0x450217
+
+[[func]]
+name = "SyncInitPlrPos"
+addr = 0x45036D
+
+[[func]]
+name = "SyncInitPlr"
+addr = 0x4504E4
+
+[[func]]
+name = "CheckStats"
+addr = 0x450508
+
+[[func]]
+name = "ModifyPlrStr"
+addr = 0x450621
+
+[[func]]
+name = "ModifyPlrMag"
+addr = 0x4506DB
+
+[[func]]
+name = "ModifyPlrDex"
+addr = 0x450788
+
+[[func]]
+name = "ModifyPlrVit"
+addr = 0x45082C
+
+[[func]]
+name = "SetPlayerHitPoints"
+addr = 0x4508CF
+
+[[func]]
+name = "SetPlrStr"
+addr = 0x45091E
+
+[[func]]
+name = "SetPlrMag"
+addr = 0x450993
+
+[[func]]
+name = "SetPlrDex"
+addr = 0x4509DF
+
+[[func]]
+name = "SetPlrVit"
+addr = 0x450A54
+
+[[func]]
+name = "InitDungMsgs"
+addr = 0x450AA0
+
+[[func]]
+name = "PlayDungMsgs"
+addr = 0x450AC4
+
+
+# PLRMSG.CPP
+
+[[func]]
+name = "plrmsg_delay"
+addr = 0x450D33
+
+[[func]]
+name = "ErrorPlrMsg"
+addr = 0x450D6A
+
+[[func]]
+name = "EventPlrMsg"
+addr = 0x450DB3
+
+[[func]]
+name = "SendPlrMsg"
+addr = 0x450DFA
+
+[[func]]
+name = "ClearPlrMsg"
+addr = 0x450E64
+
+[[func]]
+name = "InitPlrMsg"
+addr = 0x450E8E
+
+[[func]]
+name = "DrawPlrMsg"
+addr = 0x450EAA
+
+[[func]]
+name = "PrintPlrMsg"
+addr = 0x450F37
+
+
+# PORTALS.CPP
+
+[[func]]
+name = "InitPortals"
+addr = 0x450FFE
+
+[[func]]
+name = "SetPortalStats"
+addr = 0x451024
+
+[[func]]
+name = "AddWarpMissile"
+addr = 0x451062
+
+[[func]]
+name = "SyncPortals"
+addr = 0x4510D6
+
+[[func]]
+name = "AddInTownPortal"
+addr = 0x451131
+
+[[func]]
+name = "ActivatePortal"
+addr = 0x451145
+
+[[func]]
+name = "DeactivatePortal"
+addr = 0x45118A
+
+[[func]]
+name = "PortalOnLevel"
+addr = 0x451196
+
+[[func]]
+name = "RemovePortalMissile"
+addr = 0x4511B8
+
+[[func]]
+name = "SetCurrentPortal"
+addr = 0x451234
+
+[[func]]
+name = "GetPortalLevel"
+addr = 0x45123B
+
+[[func]]
+name = "GetPortalLvlPos"
+addr = 0x4512E3
+
+[[func]]
+name = "portal_pos_ok"
+addr = 0x451346
+
+
+# QUESTS.CPP
+
+[[func]]
+name = "InitQuests"
+addr = 0x45138E
+
+[[func]]
+name = "CheckQuests"
+addr = 0x45155C
+
+[[func]]
+name = "ForceQuests"
+addr = 0x45178F
+
+[[func]]
+name = "QuestStatus"
+addr = 0x451831
+
+[[func]]
+name = "CheckQuestKill"
+addr = 0x451871
+
+[[func]]
+name = "DrawButcher"
+addr = 0x451BEA
+
+[[func]]
+name = "DrawSkelKing"
+addr = 0x451C11
+
+[[func]]
+name = "DrawWarLord"
+addr = 0x451C32
+
+[[func]]
+name = "DrawSChamber"
+addr = 0x451CC2
+
+[[func]]
+name = "DrawLTBanner"
+addr = 0x451D7C
+
+[[func]]
+name = "DrawBlind"
+addr = 0x451E08
+
+[[func]]
+name = "DrawBlood"
+addr = 0x451E94
+
+[[func]]
+name = "DRLG_CheckQuests"
+addr = 0x451F20
+
+[[func]]
+name = "SetReturnLvlPos"
+addr = 0x451FB1
+
+[[func]]
+name = "GetReturnLvlPos"
+addr = 0x452064
+
+[[func]]
+name = "ResyncMPQuests"
+addr = 0x45209D
+
+[[func]]
+name = "ResyncQuests"
+addr = 0x452159
+
+[[func]]
+name = "PrintQLString"
+addr = 0x45247F
+
+[[func]]
+name = "DrawQuestLog"
+addr = 0x4525CD
+
+[[func]]
+name = "StartQuestlog"
+addr = 0x452659
+
+[[func]]
+name = "QuestlogUp"
+addr = 0x4526C9
+
+[[func]]
+name = "QuestlogDown"
+addr = 0x452710
+
+[[func]]
+name = "QuestlogEnter"
+addr = 0x45275A
+
+[[func]]
+name = "QuestlogESC"
+addr = 0x45279C
+
+[[func]]
+name = "SetMultiQuest"
+addr = 0x4527F1
+
+
+# RESTRICT.CPP
+
+[[func]]
+name = "SystemSupported"
+addr = 0x452831
+
+[[func]]
+name = "RestrictedTest"
+addr = 0x452885
+
+[[func]]
+name = "ReadOnlyTest"
+addr = 0x4528F7
+
+
+# SCROLLRT.CPP
+
+[[func]]
+name = "j_scrollrt_cpp_init"
+addr = 0x452975
+
+[[func]]
+name = "scrollrt_cpp_init"
+addr = 0x45297A
+
+[[func]]
+name = "ClearCursor"
+addr = 0x452985
+
+[[func]]
+name = "DrawMissile"
+addr = 0x452994
+
+[[func]]
+name = "DrawClippedMissile"
+addr = 0x452B2A
+
+[[func]]
+name = "DrawDeadPlayer"
+addr = 0x452CC0
+
+[[func]]
+name = "DrawPlayer"
+addr = 0x452DA0
+
+[[func]]
+name = "DrawClippedPlayer"
+addr = 0x452F8B
+
+[[func]]
+name = "DrawView"
+addr = 0x453160
+
+[[func]]
+name = "DrawGame"
+addr = 0x453272
+
+[[func]]
+name = "scrollrt_draw_lower"
+addr = 0x453477
+
+[[func]]
+name = "scrollrt_draw_clipped_dungeon"
+addr = 0x4538E2
+
+[[func]]
+name = "DrawClippedMonster"
+addr = 0x453ED9
+
+[[func]]
+name = "DrawClippedObject"
+addr = 0x453FCC
+
+[[func]]
+name = "scrollrt_draw_clipped_e_flag"
+addr = 0x4540E5
+
+[[func]]
+name = "scrollrt_draw_lower_2"
+addr = 0x454229
+
+[[func]]
+name = "scrollrt_draw_clipped_dungeon_2"
+addr = 0x4545D2
+
+[[func]]
+name = "scrollrt_draw_clipped_e_flag_2"
+addr = 0x454C09
+
+[[func]]
+name = "scrollrt_draw_upper"
+addr = 0x454D9D
+
+[[func]]
+name = "scrollrt_draw_dungeon"
+addr = 0x455217
+
+[[func]]
+name = "DrawMonster"
+addr = 0x455844
+
+[[func]]
+name = "DrawObject"
+addr = 0x455937
+
+[[func]]
+name = "scrollrt_draw_e_flag"
+addr = 0x455A7D
+
+[[func]]
+name = "DrawZoom"
+addr = 0x455BD4
+
+[[func]]
+name = "ClearScreenBuffer"
+addr = 0x455E32
+
+[[func]]
+name = "scrollrt_draw_game_screen"
+addr = 0x455E65
+
+[[func]]
+name = "scrollrt_draw_cursor_back_buffer"
+addr = 0x455EC7
+
+[[func]]
+name = "scrollrt_draw_cursor_item"
+addr = 0x455F56
+
+[[func]]
+name = "DrawMain"
+addr = 0x456124
+
+[[func]]
+name = "DoBlitScreen"
+addr = 0x4563B3
+
+[[func]]
+name = "DrawAndBlit"
+addr = 0x4564F9
+
+
+# SETMAPS.CPP
+
+[[func]]
+name = "ObjIndex"
+addr = 0x456625
+
+[[func]]
+name = "AddSKingObjs"
+addr = 0x45666B
+
+[[func]]
+name = "AddSChamObjs"
+addr = 0x45671A
+
+[[func]]
+name = "AddVileObjs"
+addr = 0x456755
+
+[[func]]
+name = "DRLG_SetMapTrans"
+addr = 0x4567AD
+
+[[func]]
+name = "LoadSetMap"
+addr = 0x456819
+
+
+# SHA.CPP
+
+[[func]]
+name = "SHA1Clear"
+addr = 0x456A16
+
+[[func]]
+name = "SHA1Result"
+addr = 0x456A2B
+
+[[func]]
+name = "SHA1Calculate"
+addr = 0x456A4D
+
+[[func]]
+name = "SHA1Input"
+addr = 0x456A73
+
+[[func]]
+name = "SHA1ProcessMessageBlock"
+addr = 0x456AC4
+
+[[func]]
+name = "SHA1Reset"
+addr = 0x456C82
+
+
+# SOUND.CPP
+
+[[func]]
+name = "j_sound_cpp_init"
+addr = 0x456CBB
+
+[[func]]
+name = "sound_cpp_init"
+addr = 0x456CC0
+
+[[func]]
+name = "snd_update"
+addr = 0x456CCB
+
+[[func]]
+name = "snd_stop_snd"
+addr = 0x456D22
+
+[[func]]
+name = "snd_playing"
+addr = 0x456D34
+
+[[func]]
+name = "snd_play_snd"
+addr = 0x456D60
+
+[[func]]
+name = "sound_dup_channel"
+addr = 0x456E39
+
+[[func]]
+name = "sound_file_reload"
+addr = 0x456E74
+
+[[func]]
+name = "sound_file_load"
+addr = 0x456F07
+
+[[func]]
+name = "sound_CreateSoundBuffer"
+addr = 0x457003
+
+[[func]]
+name = "sound_file_cleanup"
+addr = 0x457060
+
+[[func]]
+name = "snd_init"
+addr = 0x45708B
+
+[[func]]
+name = "sound_load_volume"
+addr = 0x45712B
+
+[[func]]
+name = "sound_create_primary_buffer"
+addr = 0x45717C
+
+[[func]]
+name = "sound_DirectSoundCreate"
+addr = 0x45727E
+
+[[func]]
+name = "sound_cleanup"
+addr = 0x4572FF
+
+[[func]]
+name = "sound_store_volume"
+addr = 0x457358
+
+[[func]]
+name = "music_stop"
+addr = 0x457367
+
+[[func]]
+name = "music_start"
+addr = 0x457393
+
+[[func]]
+name = "sound_disable_music"
+addr = 0x4573FE
+
+[[func]]
+name = "sound_get_or_set_music_volume"
+addr = 0x457418
+
+[[func]]
+name = "sound_get_or_set_sound_volume"
+addr = 0x45743B
+
+
+# SPELLS.CPP
+
+[[func]]
+name = "GetManaAmount"
+addr = 0x45744E
+
+[[func]]
+name = "UseMana"
+addr = 0x45753A
+
+[[func]]
+name = "CheckSpell"
+addr = 0x457584
+
+[[func]]
+name = "CastSpell"
+addr = 0x4575D5
+
+[[func]]
+name = "DoResurrect"
+addr = 0x4576B1
+
+[[func]]
+name = "PlacePlayer"
+addr = 0x4577CB
+
+[[func]]
+name = "DoHealOther"
+addr = 0x4578EE
+
+
+# STORES.CPP
+
+[[func]]
+name = "InitStores"
+addr = 0x457A01
+
+[[func]]
+name = "SetupTownStores"
+addr = 0x457A87
+
+[[func]]
+name = "FreeStoreMem"
+addr = 0x457B42
+
+[[func]]
+name = "DrawSTextBack"
+addr = 0x457B78
+
+[[func]]
+name = "PrintSString"
+addr = 0x457BD6
+
+[[func]]
+name = "DrawSLine"
+addr = 0x457DE2
+
+[[func]]
+name = "DrawSArrows"
+addr = 0x457E62
+
+[[func]]
+name = "DrawSTextHelp"
+addr = 0x457F52
+
+[[func]]
+name = "ClearSText"
+addr = 0x457F61
+
+[[func]]
+name = "AddSLine"
+addr = 0x457FA6
+
+[[func]]
+name = "AddSTextVal"
+addr = 0x457FCB
+
+[[func]]
+name = "OffsetSTextY"
+addr = 0x457FD8
+
+[[func]]
+name = "AddSText"
+addr = 0x457FE5
+
+[[func]]
+name = "StoreAutoPlace"
+addr = 0x458036
+
+[[func]]
+name = "S_StartSmith"
+addr = 0x4582B3
+
+[[func]]
+name = "S_ScrollSBuy"
+addr = 0x45837D
+
+[[func]]
+name = "PrintStoreItem"
+addr = 0x458439
+
+[[func]]
+name = "S_StartSBuy"
+addr = 0x4586B3
+
+[[func]]
+name = "S_ScrollSPBuy"
+addr = 0x458773
+
+[[func]]
+name = "S_StartSPBuy"
+addr = 0x458851
+
+[[func]]
+name = "SmithSellOk"
+addr = 0x458931
+
+[[func]]
+name = "S_ScrollSSell"
+addr = 0x458972
+
+[[func]]
+name = "S_StartSSell"
+addr = 0x458A59
+
+[[func]]
+name = "SmithRepairOk"
+addr = 0x458C0B
+
+[[func]]
+name = "S_StartSRepair"
+addr = 0x458C4E
+
+[[func]]
+name = "AddStoreHoldRepair"
+addr = 0x458E9A
+
+[[func]]
+name = "S_StartWitch"
+addr = 0x458F3D
+
+[[func]]
+name = "S_ScrollWBuy"
+addr = 0x458FE3
+
+[[func]]
+name = "S_StartWBuy"
+addr = 0x45909F
+
+[[func]]
+name = "WitchSellOk"
+addr = 0x459169
+
+[[func]]
+name = "S_StartWSell"
+addr = 0x4591C4
+
+[[func]]
+name = "WitchRechargeOk"
+addr = 0x459431
+
+[[func]]
+name = "AddStoreHoldRecharge"
+addr = 0x459460
+
+[[func]]
+name = "S_StartWRecharge"
+addr = 0x4594E6
+
+[[func]]
+name = "S_StartNoMoney"
+addr = 0x459693
+
+[[func]]
+name = "S_StartNoRoom"
+addr = 0x4596CD
+
+[[func]]
+name = "S_StartConfirm"
+addr = 0x459700
+
+[[func]]
+name = "S_StartBoy"
+addr = 0x459873
+
+[[func]]
+name = "S_StartBBoy"
+addr = 0x459930
+
+[[func]]
+name = "S_StartHealer"
+addr = 0x4599FD
+
+[[func]]
+name = "S_ScrollHBuy"
+addr = 0x459AA5
+
+[[func]]
+name = "S_StartHBuy"
+addr = 0x459B55
+
+[[func]]
+name = "S_StartStory"
+addr = 0x459C15
+
+[[func]]
+name = "IdItemOk"
+addr = 0x459C8E
+
+[[func]]
+name = "AddStoreHoldId"
+addr = 0x459CA2
+
+[[func]]
+name = "S_StartSIdentify"
+addr = 0x459CE6
+
+[[func]]
+name = "S_StartIdShow"
+addr = 0x459F95
+
+[[func]]
+name = "S_StartTalk"
+addr = 0x45A046
+
+[[func]]
+name = "S_StartTavern"
+addr = 0x45A168
+
+[[func]]
+name = "S_StartBarMaid"
+addr = 0x45A1EC
+
+[[func]]
+name = "S_StartDrunk"
+addr = 0x45A25E
+
+[[func]]
+name = "StartStore"
+addr = 0x45A2D0
+
+[[func]]
+name = "DrawSText"
+addr = 0x45A48F
+
+[[func]]
+name = "STextESC"
+addr = 0x45A584
+
+[[func]]
+name = "STextUp"
+addr = 0x45A6AF
+
+[[func]]
+name = "STextDown"
+addr = 0x45A757
+
+[[func]]
+name = "STextPrior"
+addr = 0x45A804
+
+[[func]]
+name = "STextNext"
+addr = 0x45A84E
+
+[[func]]
+name = "S_SmithEnter"
+addr = 0x45A89B
+
+[[func]]
+name = "SetGoldCurs"
+addr = 0x45A904
+
+[[func]]
+name = "SetSpdbarGoldCurs"
+addr = 0x45A94A
+
+[[func]]
+name = "TakePlrsMoney"
+addr = 0x45A990
+
+[[func]]
+name = "SmithBuyItem"
+addr = 0x45AB69
+
+[[func]]
+name = "S_SBuyEnter"
+addr = 0x45AC14
+
+[[func]]
+name = "SmithBuyPItem"
+addr = 0x45ACE9
+
+[[func]]
+name = "S_SPBuyEnter"
+addr = 0x45AD7E
+
+[[func]]
+name = "StoreGoldFit"
+addr = 0x45AE72
+
+[[func]]
+name = "PlaceStoreGold"
+addr = 0x45AF48
+
+[[func]]
+name = "StoreSellItem"
+addr = 0x45B010
+
+[[func]]
+name = "S_SSellEnter"
+addr = 0x45B160
+
+[[func]]
+name = "SmithRepairItem"
+addr = 0x45B1DF
+
+[[func]]
+name = "S_SRepairEnter"
+addr = 0x45B2B6
+
+[[func]]
+name = "S_WitchEnter"
+addr = 0x45B337
+
+[[func]]
+name = "WitchBuyItem"
+addr = 0x45B39F
+
+[[func]]
+name = "S_WBuyEnter"
+addr = 0x45B457
+
+[[func]]
+name = "S_WSellEnter"
+addr = 0x45B52C
+
+[[func]]
+name = "WitchRechargeItem"
+addr = 0x45B5AB
+
+[[func]]
+name = "S_WRechargeEnter"
+addr = 0x45B634
+
+[[func]]
+name = "S_BoyEnter"
+addr = 0x45B6B5
+
+[[func]]
+name = "BoyBuyItem"
+addr = 0x45B757
+
+[[func]]
+name = "HealerBuyItem"
+addr = 0x45B791
+
+[[func]]
+name = "S_BBuyEnter"
+addr = 0x45B895
+
+[[func]]
+name = "StoryIdItem"
+addr = 0x45B968
+
+[[func]]
+name = "S_ConfirmEnter"
+addr = 0x45BA57
+
+[[func]]
+name = "S_HealerEnter"
+addr = 0x45BAF7
+
+[[func]]
+name = "S_HBuyEnter"
+addr = 0x45BB9F
+
+[[func]]
+name = "S_StoryEnter"
+addr = 0x45BC74
+
+[[func]]
+name = "S_SIDEnter"
+addr = 0x45BCCA
+
+[[func]]
+name = "S_TalkEnter"
+addr = 0x45BD4B
+
+[[func]]
+name = "S_TavernEnter"
+addr = 0x45BE4A
+
+[[func]]
+name = "S_BarmaidEnter"
+addr = 0x45BE98
+
+[[func]]
+name = "S_DrunkEnter"
+addr = 0x45BEE6
+
+[[func]]
+name = "STextEnter"
+addr = 0x45BF34
+
+[[func]]
+name = "CheckStoreBtn"
+addr = 0x45C053
+
+[[func]]
+name = "ReleaseStoreBtn"
+addr = 0x45C18A
+
+
+# SYNC.CPP
+
+[[func]]
+name = "sync_all_monsters"
+addr = 0x45C199
+
+[[func]]
+name = "sync_one_monster"
+addr = 0x45C21E
+
+[[func]]
+name = "sync_monster_active"
+addr = 0x45C2C4
+
+[[func]]
+name = "sync_monster_pos"
+addr = 0x45C317
+
+[[func]]
+name = "sync_monster_active2"
+addr = 0x45C386
+
+[[func]]
+name = "SyncPlrInv"
+addr = 0x45C3E6
+
+[[func]]
+name = "SyncData"
+addr = 0x45C5C7
+
+[[func]]
+name = "sync_monster_data"
+addr = 0x45C63B
+
+[[func]]
+name = "sync_clear_pkt"
+addr = 0x45C84B
+
+
+# THEMES.CPP
+
+[[func]]
+name = "TFit_Shrine"
+addr = 0x45C870
+
+[[func]]
+name = "TFit_Obj5"
+addr = 0x45C993
+
+[[func]]
+name = "TFit_SkelRoom"
+addr = 0x45CA72
+
+[[func]]
+name = "TFit_GoatShrine"
+addr = 0x45CAC4
+
+[[func]]
+name = "CheckThemeObj3"
+addr = 0x45CB09
+
+[[func]]
+name = "TFit_Obj3"
+addr = 0x45CB88
+
+[[func]]
+name = "CheckThemeReqs"
+addr = 0x45CBE4
+
+[[func]]
+name = "SpecialThemeFit"
+addr = 0x45CC64
+
+[[func]]
+name = "CheckThemeRoom"
+addr = 0x45CD9A
+
+[[func]]
+name = "InitThemes"
+addr = 0x45CED2
+
+[[func]]
+name = "HoldThemeRooms"
+addr = 0x45D087
+
+[[func]]
+name = "PlaceThemeMonsts"
+addr = 0x45D0E1
+
+[[func]]
+name = "Theme_Barrel"
+addr = 0x45D1C2
+
+[[func]]
+name = "Theme_Shrine"
+addr = 0x45D29A
+
+[[func]]
+name = "Theme_MonstPit"
+addr = 0x45D34D
+
+[[func]]
+name = "Theme_SkelRoom"
+addr = 0x45D3E6
+
+[[func]]
+name = "Theme_Treasure"
+addr = 0x45D5BC
+
+[[func]]
+name = "Theme_Library"
+addr = 0x45D707
+
+[[func]]
+name = "Theme_Torture"
+addr = 0x45D88A
+
+[[func]]
+name = "Theme_BloodFountain"
+addr = 0x45D95D
+
+[[func]]
+name = "Theme_Decap"
+addr = 0x45D9A3
+
+[[func]]
+name = "Theme_PurifyingFountain"
+addr = 0x45DA76
+
+[[func]]
+name = "Theme_ArmorStand"
+addr = 0x45DABC
+
+[[func]]
+name = "Theme_GoatShrine"
+addr = 0x45DBAD
+
+[[func]]
+name = "Theme_Cauldron"
+addr = 0x45DC7B
+
+[[func]]
+name = "Theme_MurkyFountain"
+addr = 0x45DCC1
+
+[[func]]
+name = "Theme_TearFountain"
+addr = 0x45DD07
+
+[[func]]
+name = "Theme_BrnCross"
+addr = 0x45DD4D
+
+[[func]]
+name = "Theme_WeaponRack"
+addr = 0x45DE20
+
+[[func]]
+name = "UpdateL4Trans"
+addr = 0x45DF11
+
+[[func]]
+name = "CreateThemeRooms"
+addr = 0x45DF31
+
+
+# TMSG.CPP
+
+[[func]]
+name = "tmsg_get"
+addr = 0x45E08C
+
+[[func]]
+name = "tmsg_add"
+addr = 0x45E0D7
+
+[[func]]
+name = "tmsg_cleanup"
+addr = 0x45E12A
+
+
+# TOWN.CPP
+
+[[func]]
+name = "town_clear_upper_buf"
+addr = 0x45E151
+
+[[func]]
+name = "town_clear_low_buf"
+addr = 0x45E1B7
+
+[[func]]
+name = "town_draw_clipped_e_flag"
+addr = 0x45E226
+
+[[func]]
+name = "town_draw_clipped_town"
+addr = 0x45E2A5
+
+[[func]]
+name = "town_draw_lower"
+addr = 0x45E5B0
+
+[[func]]
+name = "town_draw_clipped_e_flag_2"
+addr = 0x45E898
+
+[[func]]
+name = "town_draw_clipped_town_2"
+addr = 0x45E939
+
+[[func]]
+name = "town_draw_lower_2"
+addr = 0x45EC49
+
+[[func]]
+name = "town_draw_e_flag"
+addr = 0x45EF8A
+
+[[func]]
+name = "town_draw_town_all"
+addr = 0x45F013
+
+[[func]]
+name = "town_draw_upper"
+addr = 0x45F323
+
+[[func]]
+name = "T_DrawGame"
+addr = 0x45F65D
+
+[[func]]
+name = "T_DrawZoom"
+addr = 0x45F856
+
+[[func]]
+name = "T_DrawView"
+addr = 0x45FAAB
+
+[[func]]
+name = "town_init_dpiece_defs_map"
+addr = 0x45FBD7
+
+[[func]]
+name = "T_FillSector"
+addr = 0x45FCBF
+
+[[func]]
+name = "T_FillTile"
+addr = 0x45FD75
+
+[[func]]
+name = "T_Pass3"
+addr = 0x45FDE6
+
+[[func]]
+name = "CreateTown"
+addr = 0x45FF83
+
+
+# TOWNERS.CPP
+
+[[func]]
+name = "GetActiveTowner"
+addr = 0x46019B
+
+[[func]]
+name = "SetTownerGPtrs"
+addr = 0x4601C1
+
+[[func]]
+name = "NewTownerAnim"
+addr = 0x4601FB
+
+[[func]]
+name = "InitTownerInfo"
+addr = 0x46022F
+
+[[func]]
+name = "InitQstSnds"
+addr = 0x4602C4
+
+[[func]]
+name = "InitSmith"
+addr = 0x460311
+
+[[func]]
+name = "InitBarOwner"
+addr = 0x4603A0
+
+[[func]]
+name = "InitTownDead"
+addr = 0x460436
+
+[[func]]
+name = "InitWitch"
+addr = 0x4604C6
+
+[[func]]
+name = "InitBarmaid"
+addr = 0x460555
+
+[[func]]
+name = "InitBoy"
+addr = 0x4605E4
+
+[[func]]
+name = "InitHealer"
+addr = 0x46067A
+
+[[func]]
+name = "InitTeller"
+addr = 0x460709
+
+[[func]]
+name = "InitDrunk"
+addr = 0x460798
+
+[[func]]
+name = "InitCows"
+addr = 0x460827
+
+[[func]]
+name = "InitTowners"
+addr = 0x460976
+
+[[func]]
+name = "FreeTownerGFX"
+addr = 0x4609C3
+
+[[func]]
+name = "TownCtrlMsg"
+addr = 0x460A05
+
+[[func]]
+name = "TownBlackSmith"
+addr = 0x460A78
+
+[[func]]
+name = "TownBarOwner"
+addr = 0x460A86
+
+[[func]]
+name = "TownDead"
+addr = 0x460A95
+
+[[func]]
+name = "TownHealer"
+addr = 0x460B0D
+
+[[func]]
+name = "TownStory"
+addr = 0x460B1C
+
+[[func]]
+name = "TownDrunk"
+addr = 0x460B2B
+
+[[func]]
+name = "TownBoy"
+addr = 0x460B3A
+
+[[func]]
+name = "TownWitch"
+addr = 0x460B49
+
+[[func]]
+name = "TownBarMaid"
+addr = 0x460B58
+
+[[func]]
+name = "TownCow"
+addr = 0x460B67
+
+[[func]]
+name = "ProcessTowners"
+addr = 0x460B76
+
+[[func]]
+name = "PlrHasItem"
+addr = 0x460C5C
+
+[[func]]
+name = "TownerTalk"
+addr = 0x460CAC
+
+[[func]]
+name = "TalkToTowner"
+addr = 0x460CC9
+
+[[func]]
+name = "CowSFX"
+addr = 0x4617E8
+
+
+# TRACK.CPP
+
+[[func]]
+name = "j_track_cpp_init"
+addr = 0x4618A5
+
+[[func]]
+name = "track_cpp_init"
+addr = 0x4618AA
+
+[[func]]
+name = "track_process"
+addr = 0x4618B5
+
+[[func]]
+name = "track_repeat_walk"
+addr = 0x461953
+
+[[func]]
+name = "track_isscrolling"
+addr = 0x46199F
+
+
+# TRIGS.CPP
+
+[[func]]
+name = "InitNoTriggers"
+addr = 0x4619A7
+
+[[func]]
+name = "InitTownTriggers"
+addr = 0x4619B6
+
+[[func]]
+name = "InitL1Triggers"
+addr = 0x461B45
+
+[[func]]
+name = "InitL2Triggers"
+addr = 0x461BEE
+
+[[func]]
+name = "InitL3Triggers"
+addr = 0x461CF6
+
+[[func]]
+name = "InitL4Triggers"
+addr = 0x461DC6
+
+[[func]]
+name = "InitSKingTriggers"
+addr = 0x461F0A
+
+[[func]]
+name = "InitSChambTriggers"
+addr = 0x461F3A
+
+[[func]]
+name = "InitPWaterTriggers"
+addr = 0x461F6A
+
+[[func]]
+name = "InitVPTriggers"
+addr = 0x461F9A
+
+[[func]]
+name = "ForceTownTrig"
+addr = 0x461FCA
+
+[[func]]
+name = "ForceL1Trig"
+addr = 0x462130
+
+[[func]]
+name = "ForceL2Trig"
+addr = 0x46224C
+
+[[func]]
+name = "ForceL3Trig"
+addr = 0x46244F
+
+[[func]]
+name = "ForceL4Trig"
+addr = 0x46262D
+
+[[func]]
+name = "Freeupstairs"
+addr = 0x462876
+
+[[func]]
+name = "ForceSKingTrig"
+addr = 0x4628B7
+
+[[func]]
+name = "ForceSChambTrig"
+addr = 0x46291F
+
+[[func]]
+name = "ForcePWaterTrig"
+addr = 0x462987
+
+[[func]]
+name = "CheckTrigForce"
+addr = 0x4629EF
+
+[[func]]
+name = "CheckTriggers"
+addr = 0x462A9D
+
+
+# WAVE.CPP
+
+[[func]]
+name = "j_wave_cpp_init"
+addr = 0x462C6D
+
+[[func]]
+name = "wave_cpp_init"
+addr = 0x462C72
+
+[[func]]
+name = "WCloseFile"
+addr = 0x462C7D
+
+[[func]]
+name = "WGetFileSize"
+addr = 0x462C84
+
+[[func]]
+name = "WGetFileArchive"
+addr = 0x462CAF
+
+[[func]]
+name = "WOpenFile"
+addr = 0x462D06
+
+[[func]]
+name = "WReadFile"
+addr = 0x462D48
+
+[[func]]
+name = "WSetFilePointer"
+addr = 0x462D9A
+
+[[func]]
+name = "LoadWaveFormat"
+addr = 0x462DCE
+
+[[func]]
+name = "AllocateMemFile"
+addr = 0x462DFC
+
+[[func]]
+name = "FreeMemFile"
+addr = 0x462E45
+
+[[func]]
+name = "ReadWaveFile"
+addr = 0x462E53
+
+[[func]]
+name = "ReadMemFile"
+addr = 0x462F1D
+
+[[func]]
+name = "FillMemFile"
+addr = 0x462F73
+
+[[func]]
+name = "SeekMemFile"
+addr = 0x462FAE
+
+[[func]]
+name = "ReadWaveSection"
+addr = 0x462FCC
+
+[[func]]
+name = "LoadWaveFile"
+addr = 0x463023
+
+[[func]]
+name = "j_mem_free_dbg"
+addr = 0x46305B
+
+
+# RENDER.CPP
+
+[[func]]
+name = "drawTopArchesUpperScreen"
+addr = 0x463060
+
+[[func]]
+name = "drawBottomArchesUpperScreen"
+addr = 0x46468D
+
+[[func]]
+name = "drawUpperScreen"
+addr = 0x4652C5
+
+[[func]]
+name = "drawTopArchesLowerScreen"
+addr = 0x465F38
+
+[[func]]
+name = "drawBottomArchesLowerScreen"
+addr = 0x467949
+
+[[func]]
+name = "drawLowerScreen"
+addr = 0x46886B
+
+[[func]]
+name = "world_draw_black_tile"
+addr = 0x4696BE

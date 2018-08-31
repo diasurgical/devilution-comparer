@@ -3,6 +3,7 @@ use std::ops::Neg;
 
 use num_traits::Signed;
 
+#[derive(Debug)]
 pub struct CustomUpperHexFormat<T: UpperHex + Signed + Copy>(pub T);
 
 impl<T> UpperHex for CustomUpperHexFormat<T>
@@ -11,16 +12,19 @@ where
     <T as Neg>::Output: UpperHex,
 {
     fn fmt(&self, f: &mut Formatter) -> FmtResult {
-        let pos = self.0.is_positive();
-        if f.sign_plus() {
-            write!(f, "{}", if pos {"+"} else {"-"});
-        }
-        if f.alternate() {
-            write!(f, "0x");
-        }
-        if pos {
+        if self.0.is_positive() {
+            if f.sign_plus() {
+                write!(f, "+");
+            }
+            if f.alternate() {
+                write!(f, "0x");
+            }
             write!(f, "{:X}", self.0)
         } else {
+            write!(f, "-");
+            if f.alternate() {
+                write!(f, "0x");
+            }
             write!(f, "{:X}", -self.0)
         }
     }
