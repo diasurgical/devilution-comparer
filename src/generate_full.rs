@@ -90,7 +90,7 @@ fn generate_full_pdb(
     pdb_path.set_extension("pdb");
 
     let pdb = Pdb::new(pdb_path).map_err(PdbError)?;
-    let pdb_funcs: HashMap<&str, FunctionSymbol> =
+    let mut pdb_funcs: HashMap<&str, FunctionSymbol> =
         HashMap::from_iter(pdb.parse_pdb().map(|func| (func.name, func)));
 
     let mut path = std::env::current_dir().map_err(IoError)?;
@@ -106,7 +106,7 @@ fn generate_full_pdb(
         .map(BufWriter::new)
         .and_then(|mut writer| {
             for func in &cfg.func {
-                if let Some(pdb_func) = pdb_funcs.get::<str>(func.name.as_ref()) {
+                if let Some(pdb_func) = pdb_funcs.remove::<str>(func.name.as_ref()) {
                     write_function_head(&mut writer, pdb_func.size, func.name.as_ref())?;
 
                     let offset = (pdb_func.offset + PDB_OFFSET_COMPARE_FILE) as usize;
@@ -129,6 +129,13 @@ fn generate_full_pdb(
                         func.name
                     );
                 }
+            }
+            for func in pdb_funcs {
+                writeln!(
+                    stdout_lock,
+                    "WARN: Function '{}' was not found in the config.",
+                    func.1.name
+                );
             }
             Ok(())
         })?;
