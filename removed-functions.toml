@@ -12,26 +12,29 @@ name = "appfat_cpp_free"
 addr = 0x401010
 size = 0x1A
 
-# Dead `ret` instruction after TermMsg, not a real function
-[[func]]
-name = "nullsub_1"
-addr = 0x401974
-size = 0x1
-
 [[func]]
 name = "j_sha1_reset"
 addr = 0x4035D6
 size = 0x5
 
 [[func]]
+# two different names for this
+name = "InitPanelStr"
+addr = 0x4042C5
+size = 0x5
 name = "j_ClearPanel"
 addr = 0x4042C5
 size = 0x5
 
 [[func]]
+name = "j_diablo_cpp_init"
+addr = 0x4087B1
+size = 0x0005
+
+[[func]]
 name = "diablo_cpp_init"
 addr = 0x4087B6
-size = 0xB
+size = 0x000B
 
 [[func]]
 name = "j_gmenu_run_item"
@@ -39,15 +42,34 @@ addr = 0x409A89
 size = 0x5
 
 [[func]]
+name = "j_dthread_cpp_init_1"
+addr = 0x415098
+size = 0x0005
+
+[[func]]
 name = "dthread_cpp_init_1"
 addr = 0x41509D
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "dthread_cpp_init_2"
+addr = 0x4150A8
+size = 0x000A
+
+[[func]]
+name = "j_dx_cpp_init_1"
+addr = 0x415362
+size = 0x0005
 
 [[func]]
 name = "dx_cpp_init_1"
 addr = 0x415367
-size = 0xB
+size = 0x000B
 
+[[func]]
+name = "dx_cpp_init_2"
+addr = 0x415372
+size = 0x000A
 
 # now called lock_buf_priv
 [[func]]
@@ -64,52 +86,107 @@ size = 0x5
 [[func]]
 name = "j_dx_reinit"
 addr = 0x4158A4
-size = 0x5
+size = 0x0005
+
+[[func]]
+name = "j_effects_cpp_init"
+addr = 0x4158A9
+size = 0x0005
 
 [[func]]
 name = "effects_cpp_init"
 addr = 0x4158AE
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_engine_cpp_init_1"
+addr = 0x4161FC
+size = 0x0005
 
 [[func]]
 name = "engine_cpp_init_1"
 addr = 0x416201
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_gamemenu_previous"
+addr = 0x4188F4
+size = 0x5
+
+[[func]]
+name = "j_init_cpp_init"
+addr = 0x41A7B3
+size = 0x0005
 
 [[func]]
 name = "init_cpp_init"
 addr = 0x41A7B8
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_interfac_cpp_init"
+addr = 0x41B190
+size = 0x0005
 
 [[func]]
 name = "interfac_cpp_init"
 addr = 0x41B195
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_log_cpp_init_1"
+addr = 0x4279F2
+size = 0x0005
 
 [[func]]
 name = "log_cpp_init_1"
 addr = 0x4279F7
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "log_cpp_init_2"
+addr = 0x427A02
+size = 0x000A
+
+[[func]]
+name = "j_mainmenu_cpp_init"
+addr = 0x427E0E
+size = 0x0005
 
 [[func]]
 name = "mainmenu_cpp_init"
 addr = 0x427E13
-size = 0xB
+size = 0x000B
 
 [[func]]
-name = "nullsub_2"
-addr = 0x42D67F
-size = 0x1
+name = "j_monster_cpp_init"
+addr = 0x430FDF
+size = 0x0005
 
 [[func]]
 name = "monster_cpp_init"
 addr = 0x430FE4
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_movie_cpp_init"
+addr = 0x43AD33
+size = 0x0005
+
+[[func]]
+name = "movie_cpp_init"
+addr = 0x43AD38
+size = 0x000B
+
+[[func]]
+name = "j_mpqapi_cpp_init"
+addr = 0x43AE90
+size = 0x0005
 
 [[func]]
 name = "mpqapi_cpp_init"
 addr = 0x43AE95
-size = 0xB
+size = 0x000B
 
 [[func]]
 name = "j_mpqapi_remove_hash_entry"
@@ -117,76 +194,142 @@ addr = 0x43AFFD
 size = 0x5
 
 [[func]]
+name = "j_msg_cpp_init"
+addr = 0x43BBA4
+size = 0x0005
+
+[[func]]
 name = "msg_cpp_init"
 addr = 0x43BBA9
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_msgcmd_cpp_init_1"
+addr = 0x43F849
+size = 0x0005
 
 [[func]]
 name = "msgcmd_cpp_init_1"
 addr = 0x43F84E
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "msgcmd_cpp_init_2"
+addr = 0x43F859
+size = 0x000A
+
+[[func]]
+name = "j_multi_cpp_init"
+addr = 0x43FAC4
+size = 0x0005
 
 [[func]]
 name = "multi_cpp_init"
 addr = 0x43FAC9
-size = 0xB
+size = 0x000B
 
 [[func]]
-name = "movie_cpp_init"
-addr = 0x43AD38
-size = 0xB
+name = "j_nthread_cpp_init_1"
+addr = 0x440DAE
+size = 0x0005
 
 [[func]]
 name = "nthread_cpp_init_1"
 addr = 0x440DB3
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "nthread_cpp_init_2"
+addr = 0x440DBE
+size = 0x000A
+
+[[func]]
+name = "j_pack_cpp_init"
+addr = 0x448755
+size = 0x0005
 
 [[func]]
 name = "pack_cpp_init"
 addr = 0x44875A
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_palette_cpp_init"
+addr = 0x448DF5
+size = 0x0005
 
 [[func]]
 name = "palette_cpp_init"
 addr = 0x448DFA
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_pfile_cpp_init"
+addr = 0x4498EC
+size = 0x0005
 
 [[func]]
 name = "pfile_cpp_init"
 addr = 0x4498F1
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_player_cpp_init"
+addr = 0x44A8E6
+size = 0x0005
 
 [[func]]
 name = "player_cpp_init"
 addr = 0x44A8EB
-size = 0xB
+size = 0x000B
 
 [[func]]
 name = "j_StartPlayerKill"
 addr = 0x44D79B
-size = 0x5
+size = 0x0005
+
+[[func]]
+name = "j_scrollrt_cpp_init"
+addr = 0x452975
+size = 0x0005
 
 [[func]]
 name = "scrollrt_cpp_init"
 addr = 0x45297A
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_sound_cpp_init"
+addr = 0x456CBB
+size = 0x0005
 
 [[func]]
 name = "sound_cpp_init"
 addr = 0x456CC0
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_track_cpp_init"
+addr = 0x4618A5
+size = 0x0005
 
 [[func]]
 name = "track_cpp_init"
 addr = 0x4618AA
-size = 0xB
+size = 0x000B
+
+[[func]]
+name = "j_wave_cpp_init"
+addr = 0x462C6D
+size = 0x0005
 
 [[func]]
 name = "wave_cpp_init"
 addr = 0x462C72
-size = 0xB
+size = 0x000B
 
 [[func]]
+name = "j_engine_mem_free"
 name = "j_mem_free_dbg"
 addr = 0x46305B
 size = 0x5
