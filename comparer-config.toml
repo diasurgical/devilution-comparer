@@ -4,16 +4,6 @@ address_offset = 0x400C00
 
 
 [[func]]
-name = "appfat_cpp_init"
-addr = 0x401005
-size = 0xB
-
-[[func]]
-name = "appfat_cpp_free"
-addr = 0x401010
-size = 0x1A
-
-[[func]]
 name = "GetErr"
 addr = 0x40102A
 size = 0xA4
@@ -39,11 +29,6 @@ addr = 0x401947
 size = 0x24
 
 [[func]]
-name = "nullsub_1"
-addr = 0x401974
-size = 0x1
-
-[[func]]
 name = "MsgBox"
 addr = 0x401975
 size = 0x52
@@ -59,17 +44,17 @@ addr = 0x401A30
 size = 0x35
 
 [[func]]
-name = "DDErrDlg"
+name = "DDErrMsg"
 addr = 0x401A65
 size = 0x23
 
 [[func]]
-name = "DSErrDlg"
+name = "DSErrMsg"
 addr = 0x401A88
 size = 0x23
 
 [[func]]
-name = "CenterDlg"
+name = "center_window"
 addr = 0x401AAB
 size = 0x92
 
@@ -79,7 +64,7 @@ addr = 0x401B3D
 size = 0x85
 
 [[func]]
-name = "DialogFunc"
+name = "FuncDlg"
 addr = 0x401BCA
 size = 0x45
 
@@ -89,7 +74,7 @@ addr = 0x401C0F
 size = 0x1F
 
 [[func]]
-name = "sub_401C2E"
+name = "ErrOkDlg"
 addr = 0x401C2E
 size = 0x6E
 
@@ -109,7 +94,7 @@ addr = 0x401D1D
 size = 0x4B
 
 [[func]]
-name = "DirErrDlg"
+name = "DirErrorDlg"
 addr = 0x401D68
 size = 0x3A
 
@@ -189,7 +174,7 @@ addr = 0x4033A8
 size = 0xC8
 
 [[func]]
-name = "CaptureRedPal"
+name = "RedPalette"
 addr = 0x403470
 size = 0x69
 
@@ -197,11 +182,6 @@ size = 0x69
 name = "codec_decode"
 addr = 0x4034D9
 size = 0xFD
-
-[[func]]
-name = "j_sha1_reset"
-addr = 0x4035D6
-size = 0x5
 
 [[func]]
 name = "codec_init_key"
@@ -262,11 +242,6 @@ size = 0xF
 name = "DrawPanelBox"
 addr = 0x404259
 size = 0x6C
-
-[[func]]
-name = "j_ClearPanel"
-addr = 0x4042C5
-size = 0x5
 
 [[func]]
 name = "SetFlaskHeight"
@@ -594,19 +569,14 @@ addr = 0x4086F4
 size = 0x1B
 
 [[func]]
-name = "FreeDebug"
+name = "FreeDebugGFX"
 addr = 0x40870F
 size = 0x12
 
 [[func]]
-name = "CheckClearDbg"
+name = "CheckDungeonClear"
 addr = 0x408721
 size = 0x90
-
-[[func]]
-name = "diablo_cpp_init"
-addr = 0x4087B6
-size = 0xB
 
 [[func]]
 name = "FreeGameMem"
@@ -654,7 +624,7 @@ addr = 0x408D61
 size = 0x50
 
 [[func]]
-name = "diablo_focus_window"
+name = "diablo_find_window"
 addr = 0x408DB1
 size = 0x43
 
@@ -699,17 +669,12 @@ addr = 0x4099A8
 size = 0xE1
 
 [[func]]
-name = "j_gmenu_run_item"
-addr = 0x409A89
-size = 0x5
-
-[[func]]
 name = "PressSysKey"
 addr = 0x409A8E
 size = 0x22
 
 [[func]]
-name = "NetMsg"
+name = "diablo_hotkey_msg"
 addr = 0x409AB0
 size = 0xA1
 
@@ -1509,11 +1474,6 @@ addr = 0x414F90
 size = 0x108
 
 [[func]]
-name = "dthread_cpp_init_1"
-addr = 0x41509D
-size = 0xB
-
-[[func]]
 name = "dthread_init_mutex"
 addr = 0x4150B2
 size = 0xC
@@ -1547,11 +1507,6 @@ size = 0x13A
 name = "dthread_cleanup"
 addr = 0x4152C0
 size = 0xA2
-
-[[func]]
-name = "dx_cpp_init_1"
-addr = 0x415367
-size = 0xB
 
 [[func]]
 name = "dx_init_mutex"
@@ -1589,22 +1544,12 @@ addr = 0x41561A
 size = 0x7B
 
 [[func]]
-name = "j_dx_lock_mutex"
-addr = 0x415695
-size = 0x5
-
-[[func]]
-name = "dx_lock_mutex"
+name = "lock_buf_priv"
 addr = 0x41569A
 size = 0x86
 
 [[func]]
-name = "j_dx_unlock_mutex"
-addr = 0x415720
-size = 0x5
-
-[[func]]
-name = "dx_unlock_mutex"
+name = "unlock_buf_priv"
 addr = 0x415725
 size = 0x7B
 
@@ -1617,16 +1562,6 @@ size = 0xA8
 name = "dx_reinit"
 addr = 0x415848
 size = 0x5C
-
-[[func]]
-name = "j_dx_reinit"
-addr = 0x4158A4
-size = 0x5
-
-[[func]]
-name = "effects_cpp_init"
-addr = 0x4158AE
-size = 0xB
 
 [[func]]
 name = "effect_is_playing"
@@ -1759,11 +1694,6 @@ addr = 0x41618E
 size = 0x6E
 
 [[func]]
-name = "engine_cpp_init_1"
-addr = 0x416201
-size = 0xB
-
-[[func]]
 name = "CelDrawDatOnly"
 addr = 0x41620C
 size = 0x68
@@ -1894,7 +1824,7 @@ addr = 0x417034
 size = 0x89
 
 [[func]]
-name = "engine_draw_automap_pixels"
+name = "DrawLine"
 addr = 0x4170BD
 size = 0x3F6
 
@@ -2294,7 +2224,7 @@ addr = 0x419F70
 size = 0x78
 
 [[func]]
-name = "__uncaught_exception"
+name = "gmenu_exception"
 addr = 0x419FE8
 size = 0xC
 
@@ -2314,7 +2244,7 @@ addr = 0x41A0B6
 size = 0x8F
 
 [[func]]
-name = "gmenu_spinners"
+name = "gmenu_draw_menu_item"
 addr = 0x41A145
 size = 0xF4
 
@@ -2339,7 +2269,7 @@ addr = 0x41A32A
 size = 0x50
 
 [[func]]
-name = "gmenu_run_item"
+name = "gmenu_on_mouse_move"
 addr = 0x41A37A
 size = 0x58
 
@@ -2392,11 +2322,6 @@ size = 0x79
 name = "DisplayHelp"
 addr = 0x41A773
 size = 0x1C
-
-[[func]]
-name = "init_cpp_init"
-addr = 0x41A7B8
-size = 0xB
 
 [[func]]
 name = "init_cleanup"
@@ -2482,11 +2407,6 @@ size = 0x25
 name = "SetWindowProc"
 addr = 0x41B184
 size = 0xC
-
-[[func]]
-name = "interfac_cpp_init"
-addr = 0x41B195
-size = 0xB
 
 [[func]]
 name = "interface_msg_pump"
@@ -2659,7 +2579,7 @@ addr = 0x41E2F9
 size = 0xC3
 
 [[func]]
-name = "DupeInvMsg"
+name = "DrawInvMsg"
 addr = 0x41E3BC
 size = 0x28
 
@@ -3514,11 +3434,6 @@ addr = 0x42772F
 size = 0x2C3
 
 [[func]]
-name = "log_cpp_init_1"
-addr = 0x4279F7
-size = 0xB
-
-[[func]]
 name = "log_init_mutex"
 addr = 0x427A0C
 size = 0xC
@@ -3552,11 +3467,6 @@ size = 0xAC
 name = "log_dump_computer_info"
 addr = 0x427D75
 size = 0x99
-
-[[func]]
-name = "mainmenu_cpp_init"
-addr = 0x427E13
-size = 0xB
 
 [[func]]
 name = "mainmenu_refresh_music"
@@ -3764,11 +3674,6 @@ addr = 0x42D5A3
 size = 0xDC
 
 [[func]]
-name = "nullsub_2"
-addr = 0x42D67F
-size = 0x1
-
-[[func]]
 name = "MI_Arrow"
 addr = 0x42DAD0
 size = 0xD1
@@ -3792,11 +3697,6 @@ size = 0x84
 name = "ClearMissileSpot"
 addr = 0x430FB9
 size = 0x26
-
-[[func]]
-name = "monster_cpp_init"
-addr = 0x430FE4
-size = 0xB
 
 [[func]]
 name = "InitMonsterTRN"
@@ -4514,11 +4414,6 @@ addr = 0x43ACCE
 size = 0x65
 
 [[func]]
-name = "movie_cpp_init"
-addr = 0x43AD38
-size = 0xB
-
-[[func]]
 name = "play_movie"
 addr = 0x43AD43
 size = 0xFB
@@ -4527,11 +4422,6 @@ size = 0xFB
 name = "MovieWndProc"
 addr = 0x43AE3E
 size = 0x52
-
-[[func]]
-name = "mpqapi_cpp_init"
-addr = 0x43AE95
-size = 0xB
 
 [[func]]
 name = "mpqapi_set_hidden"
@@ -4557,11 +4447,6 @@ size = 0x1F
 name = "mpqapi_reg_store_modification_time"
 addr = 0x43AFC4
 size = 0x39
-
-[[func]]
-name = "j_mpqapi_remove_hash_entry"
-addr = 0x43AFFD
-size = 0x5
 
 [[func]]
 name = "mpqapi_remove_hash_entry"
@@ -4667,11 +4552,6 @@ size = 0x8E
 name = "mpqapi_can_seek"
 addr = 0x43BB79
 size = 0x2B
-
-[[func]]
-name = "msg_cpp_init"
-addr = 0x43BBA9
-size = 0xB
 
 [[func]]
 name = "msg_send_drop_pkt"
@@ -4964,11 +4844,6 @@ addr = 0x43F521
 size = 0x3B
 
 [[func]]
-name = "msgcmd_cpp_init_1"
-addr = 0x43F84E
-size = 0xB
-
-[[func]]
 name = "msgcmd_init_event"
 addr = 0x43F863
 size = 0xA
@@ -5034,11 +4909,6 @@ addr = 0x43FA98
 size = 0x2C
 
 [[func]]
-name = "multi_cpp_init"
-addr = 0x43FAC9
-size = 0xB
-
-[[func]]
 name = "multi_msg_add"
 addr = 0x43FAD4
 size = 0xE
@@ -5084,12 +4954,12 @@ addr = 0x43FE0E
 size = 0x2F
 
 [[func]]
-name = "multi_start_countdown"
+name = "multi_parse_turn"
 addr = 0x43FE3D
 size = 0x48
 
 [[func]]
-name = "multi_wait_delta_send"
+name = "multi_handle_turn_upper_bit"
 addr = 0x43FE85
 size = 0x32
 
@@ -5149,7 +5019,7 @@ addr = 0x44041D
 size = 0x27
 
 [[func]]
-name = "multi_start_packets"
+name = "multi_process_tmsgs"
 addr = 0x440444
 size = 0x33
 
@@ -5212,11 +5082,6 @@ size = 0x3C
 name = "multi_player_joins"
 addr = 0x440C17
 size = 0x197
-
-[[func]]
-name = "nthread_cpp_init_1"
-addr = 0x440DB3
-size = 0xB
 
 [[func]]
 name = "nthread_init_mutex"
@@ -5879,11 +5744,6 @@ addr = 0x44845E
 size = 0x20E
 
 [[func]]
-name = "pack_cpp_init"
-addr = 0x44875A
-size = 0xB
-
-[[func]]
 name = "PackPlayer"
 addr = 0x448765
 size = 0x1EE
@@ -5909,12 +5769,7 @@ addr = 0x448D48
 size = 0xAD
 
 [[func]]
-name = "palette_cpp_init"
-addr = 0x448DFA
-size = 0xB
-
-[[func]]
-name = "palette_save_gamme"
+name = "SaveGamma"
 addr = 0x448E05
 size = 0x2E
 
@@ -5924,12 +5779,12 @@ addr = 0x448E33
 size = 0x78
 
 [[func]]
-name = "palette_load_gamma"
+name = "LoadGamma"
 addr = 0x448EAB
 size = 0x75
 
 [[func]]
-name = "palette_load_system_palette"
+name = "LoadSysPal"
 addr = 0x448F20
 size = 0xA9
 
@@ -5949,17 +5804,27 @@ addr = 0x44906C
 size = 0x2B
 
 [[func]]
+name = "IncreaseGamma"
+addr = 0x449097
+size = 0x39
+
+[[func]]
 name = "palette_update"
 addr = 0x4490D0
 size = 0x37
 
 [[func]]
-name = "palette_apply_gamma_correction"
+name = "ApplyGamma"
 addr = 0x449107
 size = 0xC9
 
 [[func]]
-name = "palette_update_gamma"
+name = "DecreaseGamma"
+addr = 0x4491D0
+size = 0x39
+
+[[func]]
+name = "UpdateGamma"
 addr = 0x449209
 size = 0x35
 
@@ -5969,7 +5834,7 @@ addr = 0x44923E
 size = 0x7
 
 [[func]]
-name = "palette_set_brightness"
+name = "SetFadeLevel"
 addr = 0x449245
 size = 0x6B
 
@@ -6009,7 +5874,7 @@ addr = 0x4493D4
 size = 0xFF
 
 [[func]]
-name = "path_xycoord"
+name = "path_get_h_cost"
 addr = 0x4494D3
 size = 0x31
 
@@ -6039,17 +5904,17 @@ addr = 0x44966F
 size = 0x12B
 
 [[func]]
-name = "path_get_node_xy"
+name = "path_get_node1"
 addr = 0x44979A
 size = 0x19
 
 [[func]]
-name = "path_get_node_xyptr"
+name = "path_get_node2"
 addr = 0x4497B3
 size = 0x19
 
 [[func]]
-name = "path_get_node2"
+name = "path_next_node"
 addr = 0x4497CC
 size = 0x2B
 
@@ -6059,24 +5924,19 @@ addr = 0x4497F7
 size = 0x99
 
 [[func]]
-name = "path_set_node_ptr"
+name = "path_push_active_step"
 addr = 0x449890
 size = 0x13
 
 [[func]]
-name = "path_decrease_node"
+name = "path_pop_active_step"
 addr = 0x4498A3
 size = 0x13
 
 [[func]]
-name = "path_clear_node"
+name = "path_new_step"
 addr = 0x4498B6
 size = 0x36
-
-[[func]]
-name = "pfile_cpp_init"
-addr = 0x4498F1
-size = 0xB
 
 [[func]]
 name = "pfile_init_save_directory"
@@ -6149,7 +6009,7 @@ addr = 0x449DE3
 size = 0x1C7
 
 [[func]]
-name = "pfile_get_archive_path"
+name = "GetSaveDirectory"
 addr = 0x449FAA
 size = 0x8C
 
@@ -6199,12 +6059,12 @@ addr = 0x44A3A0
 size = 0x79
 
 [[func]]
-name = "pfile_get_temp_level_name"
+name = "GetTempLevelNames"
 addr = 0x44A419
 size = 0x4A
 
 [[func]]
-name = "pfile_get_perm_level_name"
+name = "GetPermLevelNames"
 addr = 0x44A463
 size = 0x86
 
@@ -6219,7 +6079,7 @@ addr = 0x44A512
 size = 0x51
 
 [[func]]
-name = "pfile_get_temp_name"
+name = "GetTempSaveNames"
 addr = 0x44A563
 size = 0x35
 
@@ -6249,12 +6109,7 @@ addr = 0x44A731
 size = 0x182
 
 [[func]]
-name = "player_cpp_init"
-addr = 0x44A8EB
-size = 0xB
-
-[[func]]
-name = "player_init_cl2_hdrs"
+name = "SetPlayerGPtrs"
 addr = 0x44A8F6
 size = 0x1B
 
@@ -6339,7 +6194,7 @@ addr = 0x44BB33
 size = 0x3A
 
 [[func]]
-name = "CheckLeighSolid"
+name = "InitPlayerLoc"
 addr = 0x44BB6D
 size = 0x155
 
@@ -6444,7 +6299,7 @@ addr = 0x44CCD8
 size = 0x125
 
 [[func]]
-name = "DestroyDupeItem"
+name = "RespawnDeadItem"
 addr = 0x44CDFD
 size = 0xCC
 
@@ -6467,11 +6322,6 @@ size = 0x418
 name = "SyncPlrKill"
 addr = 0x44D70B
 size = 0x90
-
-[[func]]
-name = "j_StartPlayerKill"
-addr = 0x44D79B
-size = 0x5
 
 [[func]]
 name = "RemovePlrMissiles"
@@ -6499,7 +6349,7 @@ addr = 0x44DAFC
 size = 0x78
 
 [[func]]
-name = "PM_DoNothing"
+name = "PM_DoStand"
 addr = 0x44DB74
 size = 0x3
 
@@ -6794,7 +6644,7 @@ addr = 0x4512E3
 size = 0x63
 
 [[func]]
-name = "portal_pos_ok"
+name = "PosOkPortal"
 addr = 0x451346
 size = 0x48
 
@@ -6927,11 +6777,6 @@ size = 0x72
 name = "ReadOnlyTest"
 addr = 0x4528F7
 size = 0x7E
-
-[[func]]
-name = "scrollrt_cpp_init"
-addr = 0x45297A
-size = 0xB
 
 [[func]]
 name = "ClearCursor"
@@ -7137,11 +6982,6 @@ size = 0x1BE
 name = "SHA1Reset"
 addr = 0x456C82
 size = 0x39
-
-[[func]]
-name = "sound_cpp_init"
-addr = 0x456CC0
-size = 0xB
 
 [[func]]
 name = "snd_update"
@@ -8099,17 +7939,12 @@ addr = 0x4617E8
 size = 0xBD
 
 [[func]]
-name = "track_cpp_init"
-addr = 0x4618AA
-size = 0xB
-
-[[func]]
-name = "track_repeat_walk"
+name = "track_process"
 addr = 0x4618B5
 size = 0x9E
 
 [[func]]
-name = "track_mouse_stance"
+name = "track_repeat_walk"
 addr = 0x461953
 size = 0x4C
 
@@ -8204,11 +8039,6 @@ addr = 0x462A9D
 size = 0x1D0
 
 [[func]]
-name = "wave_cpp_init"
-addr = 0x462C72
-size = 0xB
-
-[[func]]
 name = "WCloseFile"
 addr = 0x462C7D
 size = 0x7
@@ -8282,11 +8112,6 @@ size = 0x57
 name = "LoadWaveFile"
 addr = 0x463023
 size = 0x38
-
-[[func]]
-name = "j_mem_free_dbg"
-addr = 0x46305B
-size = 0x5
 
 [[func]]
 name = "drawTopArchesUpperScreen"

@@ -1,0 +1,192 @@
+#
+# This file contains the functions defined in surgery.xls that can't/couldn't be mapped to devilution functions.
+#
+
+[[func]]
+name = "appfat_cpp_init"
+addr = 0x401005
+size = 0xB
+
+[[func]]
+name = "appfat_cpp_free"
+addr = 0x401010
+size = 0x1A
+
+# Dead `ret` instruction after TermMsg, not a real function
+[[func]]
+name = "nullsub_1"
+addr = 0x401974
+size = 0x1
+
+[[func]]
+name = "j_sha1_reset"
+addr = 0x4035D6
+size = 0x5
+
+[[func]]
+name = "j_ClearPanel"
+addr = 0x4042C5
+size = 0x5
+
+[[func]]
+name = "diablo_cpp_init"
+addr = 0x4087B6
+size = 0xB
+
+[[func]]
+name = "j_gmenu_run_item"
+addr = 0x409A89
+size = 0x5
+
+[[func]]
+name = "dthread_cpp_init_1"
+addr = 0x41509D
+size = 0xB
+
+[[func]]
+name = "dx_cpp_init_1"
+addr = 0x415367
+size = 0xB
+
+
+# now called lock_buf_priv
+[[func]]
+name = "j_dx_lock_mutex"
+addr = 0x415695
+size = 0x5
+
+# now called unlock_buf_priv
+[[func]]
+name = "j_dx_unlock_mutex"
+addr = 0x415720
+size = 0x5
+
+[[func]]
+name = "j_dx_reinit"
+addr = 0x4158A4
+size = 0x5
+
+[[func]]
+name = "effects_cpp_init"
+addr = 0x4158AE
+size = 0xB
+
+[[func]]
+name = "engine_cpp_init_1"
+addr = 0x416201
+size = 0xB
+
+[[func]]
+name = "init_cpp_init"
+addr = 0x41A7B8
+size = 0xB
+
+[[func]]
+name = "interfac_cpp_init"
+addr = 0x41B195
+size = 0xB
+
+[[func]]
+name = "log_cpp_init_1"
+addr = 0x4279F7
+size = 0xB
+
+[[func]]
+name = "mainmenu_cpp_init"
+addr = 0x427E13
+size = 0xB
+
+[[func]]
+name = "nullsub_2"
+addr = 0x42D67F
+size = 0x1
+
+[[func]]
+name = "monster_cpp_init"
+addr = 0x430FE4
+size = 0xB
+
+[[func]]
+name = "mpqapi_cpp_init"
+addr = 0x43AE95
+size = 0xB
+
+[[func]]
+name = "j_mpqapi_remove_hash_entry"
+addr = 0x43AFFD
+size = 0x5
+
+[[func]]
+name = "msg_cpp_init"
+addr = 0x43BBA9
+size = 0xB
+
+[[func]]
+name = "msgcmd_cpp_init_1"
+addr = 0x43F84E
+size = 0xB
+
+[[func]]
+name = "multi_cpp_init"
+addr = 0x43FAC9
+size = 0xB
+
+[[func]]
+name = "movie_cpp_init"
+addr = 0x43AD38
+size = 0xB
+
+[[func]]
+name = "nthread_cpp_init_1"
+addr = 0x440DB3
+size = 0xB
+
+[[func]]
+name = "pack_cpp_init"
+addr = 0x44875A
+size = 0xB
+
+[[func]]
+name = "palette_cpp_init"
+addr = 0x448DFA
+size = 0xB
+
+[[func]]
+name = "pfile_cpp_init"
+addr = 0x4498F1
+size = 0xB
+
+[[func]]
+name = "player_cpp_init"
+addr = 0x44A8EB
+size = 0xB
+
+[[func]]
+name = "j_StartPlayerKill"
+addr = 0x44D79B
+size = 0x5
+
+[[func]]
+name = "scrollrt_cpp_init"
+addr = 0x45297A
+size = 0xB
+
+[[func]]
+name = "sound_cpp_init"
+addr = 0x456CC0
+size = 0xB
+
+[[func]]
+name = "track_cpp_init"
+addr = 0x4618AA
+size = 0xB
+
+[[func]]
+name = "wave_cpp_init"
+addr = 0x462C72
+size = 0xB
+
+[[func]]
+name = "j_mem_free_dbg"
+addr = 0x46305B
+size = 0x5
