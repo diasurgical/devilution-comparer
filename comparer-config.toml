@@ -2,6 +2,10 @@
 # = (0x401000 - PE header offset) (0x400 for VC5 linker)
 address_offset = 0x400C00
 
+[[func]]
+name = "operator delete"
+addr = 0x401010
+size = 0x1A
 
 [[func]]
 name = "GetErr"
