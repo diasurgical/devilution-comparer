@@ -63,7 +63,7 @@ addr = 0x401AAB
 size = 0x92
 
 [[func]]
-name = "TermDlg"
+name = "ErrDlg"
 addr = 0x401B3D
 size = 0x8D
 
@@ -1923,11 +1923,6 @@ addr = 0x41754B
 size = 0x22
 
 [[func]]
-name = "engine_cpp_init_2"
-addr = 0x41756D
-size = 0xA
-
-[[func]]
 name = "mem_init_mutex"
 addr = 0x417577
 size = 0xC
@@ -2056,11 +2051,6 @@ size = 0x1B
 name = "DrawDiabloMsg"
 addr = 0x4180AA
 size = 0x203
-
-[[func]]
-name = "exception_cpp_init"
-addr = 0x4182AD
-size = 0xA
 
 [[func]]
 name = "exception_install_filter"

@@ -109,6 +109,16 @@ addr = 0x416201
 size = 0x000B
 
 [[func]]
+name = "engine_cpp_init_2"
+addr = 0x41756D
+size = 0xA
+
+[[func]]
+name = "exception_cpp_init"
+addr = 0x4182AD
+size = 0xA
+
+[[func]]
 name = "j_gamemenu_previous"
 addr = 0x4188F4
 size = 0x5
