@@ -27,6 +27,7 @@ pub enum PdbError {
 pub struct CvDumpError {
     pub error_code: i32,
     pub stdout: String,
+    pub stderr: String,
 }
 
 #[derive(Debug)]
@@ -64,6 +65,7 @@ impl Pdb {
             return Err(PdbError::CvDumpUnsuccessful(CvDumpError {
                 error_code: cvdump.status.code().unwrap_or(0),
                 stdout,
+                stderr: String::from_utf8(cvdump.stderr).map_err(PdbError::Utf8Error)?
             }));
         }
 
