@@ -2522,7 +2522,7 @@ addr = 0x41AFCE
 size = 0x9E
 
 [[func]]
-name = "init_palette"
+name = "MainWndProc"
 addr = 0x41B06C
 size = 0x99
 
@@ -2532,7 +2532,7 @@ addr = 0x41B105
 size = 0x5A
 
 [[func]]
-name = "init_redraw_window"
+name = "WindowProc"
 addr = 0x41B15F
 size = 0x25
 
