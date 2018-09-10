@@ -1,13 +1,9 @@
-dist: xenial
+dist: trusty
 language: rust
-
-addons:
-  apt:
-    packages:
-      - clang-4.0
 
 env:
   global:
+    - LIBCLANG_PATH=/usr/local/clang-5.0.0/lib
     - CRATE_NAME=devilution-comparer
 
 matrix:
