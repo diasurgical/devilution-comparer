@@ -8,7 +8,6 @@ addons:
       - g++-7
 env:
   global:
-    - CC_EVAL="CC=gcc-7 && CXX=g++-7"
     - LIBCLANG_PATH=/usr/local/clang-5.0.0/lib
     - CRATE_NAME=devilution-comparer
 
@@ -19,7 +18,8 @@ matrix:
 
 before_install:
   - set -e
-  - eval "${CC_EVAL}"
+  - export CC=gcc-7
+  - export CXX=g++-7
   - rustup self update
 
 install:
