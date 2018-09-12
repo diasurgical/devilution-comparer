@@ -19,7 +19,7 @@ matrix:
 
 before_install:
   - set -e
-  - eval "${MATRIX_EVAL}"
+  - eval "${CC_EVAL}"
   - rustup self update
 
 install:
