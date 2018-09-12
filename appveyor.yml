@@ -49,7 +49,7 @@ test_script:
     )
 
 before_deploy:
-  - cargo rustc --target %TARGET% --release --bin devilution-comparer -- -C lto
+  - cargo rustc --target %TARGET% --release --bin devilution-comparer
   - ps: ci\before_deploy.ps1
 
 deploy:

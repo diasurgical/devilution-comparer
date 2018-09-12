@@ -17,7 +17,7 @@ main() {
 
     test -f Cargo.lock || cargo generate-lockfile
 
-    cargo rustc --bin devilution-comparer --target $TARGET --release -- -C lto
+    cargo rustc --bin devilution-comparer --target $TARGET --release
 
     cp target/$TARGET/release/devilution-comparer $stage/
     cp cvdump.exe $stage/
