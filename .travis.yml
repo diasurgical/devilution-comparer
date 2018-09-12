@@ -1,8 +1,14 @@
 dist: trusty
 language: rust
-
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
 env:
   global:
+    - CC_EVAL="CC=gcc-7 && CXX=g++-7"
     - LIBCLANG_PATH=/usr/local/clang-5.0.0/lib
     - CRATE_NAME=devilution-comparer
 
@@ -13,6 +19,7 @@ matrix:
 
 before_install:
   - set -e
+  - eval "${MATRIX_EVAL}"
   - rustup self update
 
 install:
