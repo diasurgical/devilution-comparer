@@ -1,6 +1,6 @@
 [package]
 name = "devilution-comparer"
-version = "0.3.3"
+version = "0.3.4"
 authors = ["Dennis Duda <git@seri.tools>"]
 edition = '2018'
 

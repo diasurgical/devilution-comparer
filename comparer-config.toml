@@ -8,22 +8,22 @@ addr = 0x401010
 size = 0x1A
 
 [[func]]
-name = "GetErr"
+name = "GetErrorStr"
 addr = 0x40102A
 size = 0xA4
 
 [[func]]
-name = "GetDDErr"
+name = "TraceErrorDD"
 addr = 0x4010CE
 size = 0x6B8
 
 [[func]]
-name = "GetDSErr"
+name = "TraceErrorDS"
 addr = 0x401831
 size = 0x109
 
 [[func]]
-name = "GetLastErr"
+name = "TraceLastError"
 addr = 0x40193A
 size = 0xD
 
