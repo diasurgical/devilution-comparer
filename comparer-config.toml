@@ -3662,7 +3662,7 @@ addr = 0x427E62
 size = 0x114
 
 [[func]]
-name = "mainmenu_action"
+name = "mainmenu_loop"
 addr = 0x427F76
 size = 0x76
 
