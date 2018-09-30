@@ -1728,42 +1728,42 @@ addr = 0x415EDF
 size = 0x64
 
 [[func]]
-name = "encrypt_decrypt_block"
+name = "Decrypt"
 addr = 0x415F43
 size = 0x4C
 
 [[func]]
-name = "encrypt_encrypt_block"
+name = "Encrypt"
 addr = 0x415F8F
 size = 0x50
 
 [[func]]
-name = "encrypt_hash"
+name = "Hash"
 addr = 0x415FDF
 size = 0x4F
 
 [[func]]
-name = "encrypt_init_lookup_table"
+name = "InitHash"
 addr = 0x41602E
 size = 0x6F
 
 [[func]]
-name = "encrypt_compress"
+name = "PkwareCompress"
 addr = 0x41609D
 size = 0x96
 
 [[func]]
-name = "encrypt_pkware_read"
+name = "PkwareBufferRead"
 addr = 0x416133
 size = 0x34
 
 [[func]]
-name = "encrypt_pkware_write"
+name = "PkwareBufferWrite"
 addr = 0x416167
 size = 0x27
 
 [[func]]
-name = "encrypt_decompress"
+name = "PkwareDecompress"
 addr = 0x41618E
 size = 0x6E
 
