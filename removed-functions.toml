@@ -229,6 +229,21 @@ addr = 0x43F859
 size = 0x000A
 
 [[func]]
+name = "msgcmd_init_event"
+addr = 0x43F863
+size = 0xA
+
+[[func]]
+name = "msgcmd_cleanup_chatcmd_atexit"
+addr = 0x43F86D
+size = 0xC
+
+[[func]]
+name = "msgcmd_cleanup_chatcmd"
+addr = 0x43F879
+size = 0x14
+
+[[func]]
 name = "j_multi_cpp_init"
 addr = 0x43FAC4
 size = 0x0005

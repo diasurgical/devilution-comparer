@@ -5902,21 +5902,6 @@ addr = 0x43F830
 size = 0x19
 
 [[func]]
-name = "msgcmd_init_event"
-addr = 0x43F863
-size = 0xA
-
-[[func]]
-name = "msgcmd_cleanup_chatcmd_atexit"
-addr = 0x43F86D
-size = 0xC
-
-[[func]]
-name = "msgcmd_cleanup_chatcmd"
-addr = 0x43F879
-size = 0x14
-
-[[func]]
 name = "msgcmd_cmd_cleanup"
 addr = 0x43F88D
 size = 0xA
@@ -5937,42 +5922,42 @@ addr = 0x43F8E5
 size = 0x3B
 
 [[func]]
-name = "msgcmd_init_chatcmd"
+name = "TList<EXTERNMESSAGE>::TList<EXTERNMESSAGE>"
 addr = 0x43F920
 size = 0x16
 
 [[func]]
-name = "msgcmd_free_event"
+name = "TList<EXTERNMESSAGE>::DeleteAll"
 addr = 0x43F936
 size = 0x28
 
 [[func]]
-name = "msgcmd_delete_server_cmd_W"
+name = "TList<EXTERNMESSAGE>::Remove"
 addr = 0x43F95E
 size = 0x3B
 
 [[func]]
-name = "msgcmd_alloc_event"
+name = "TList<EXTERNMESSAGE>::Create"
 addr = 0x43F999
 size = 0x4C
 
 [[func]]
-name = "msgcmd_remove_event"
+name = "EXTERNMESSAGE::`scalar deleting destructor'"
 addr = 0x43F9E5
 size = 0x2F
 
 [[func]]
-name = "msgcmd_event_type"
+name = "TList<EXTERNMESSAGE>::Insert"
 addr = 0x43FA14
 size = 0x71
 
 [[func]]
-name = "msgcmd_cleanup_chatcmd_1"
+name = "TList<EXTERNMESSAGE>::UnlinkAll"
 addr = 0x43FA85
 size = 0x13
 
 [[func]]
-name = "msgcmd_cleanup_extern_msg"
+name = "TLink<EXTERNMESSAGE>::Unlink"
 addr = 0x43FA98
 size = 0x2C
 
