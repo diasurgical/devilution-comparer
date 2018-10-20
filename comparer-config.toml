@@ -5869,7 +5869,12 @@ size = 0x39
 [[func]]
 name = "On_STRING"
 addr = 0x43F6B7
-size = 0x35
+size = 0x0B
+
+[[func]]
+name = "On_STRING2"
+addr = 0x43F6C2
+size = 0x2A
 
 [[func]]
 name = "On_SYNCQUEST"
