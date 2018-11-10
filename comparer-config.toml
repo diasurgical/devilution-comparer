@@ -638,7 +638,7 @@ addr = 0x4087C1
 size = 0x77
 
 [[func]]
-name = "diablo_init_menu"
+name = "StartGame"
 addr = 0x408838
 size = 0xAA
 
