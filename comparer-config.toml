@@ -3302,7 +3302,12 @@ addr = 0x4250EF
 size = 0xC9
 
 [[func]]
-name = "CreateMagicItem"
+name = "CreateMagicArmor"
+addr = 0x4251B8
+size = 0xB6
+
+[[func]]
+name = "CreateMagicWeapon"
 addr = 0x4251B8
 size = 0xB6
 
@@ -5885,6 +5890,16 @@ size = 0x42
 name = "On_ENDSHIELD"
 addr = 0x43F72E
 size = 0x77
+
+[[func]]
+name = "On_CHEAT_EXPERIENCE"
+addr = 0x43F7A5
+size = 0x4
+
+[[func]]
+name = "On_CHEAT_SPELL_LEVEL"
+addr = 0x43F7A5
+size = 0x4
 
 [[func]]
 name = "On_DEBUG"
