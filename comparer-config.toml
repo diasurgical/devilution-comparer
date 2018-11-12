@@ -3462,12 +3462,12 @@ addr = 0x426AE2
 size = 0xE
 
 [[func]]
-name = "ILoad"
+name = "WLoad"
 addr = 0x426AF0
 size = 0x3C
 
 [[func]]
-name = "ILoad_2"
+name = "ILoad"
 addr = 0x426B2C
 size = 0x3C
 
@@ -3537,12 +3537,12 @@ addr = 0x427203
 size = 0xE
 
 [[func]]
-name = "ISave"
+name = "WSave"
 addr = 0x427211
 size = 0x47
 
 [[func]]
-name = "ISave_2"
+name = "ISave"
 addr = 0x427258
 size = 0x47
 
