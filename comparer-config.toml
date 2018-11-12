@@ -3302,7 +3302,12 @@ addr = 0x4250EF
 size = 0xC9
 
 [[func]]
-name = "CreateMagicItem"
+name = "CreateMagicArmor"
+addr = 0x4251B8
+size = 0xB6
+
+[[func]]
+name = "CreateMagicWeapon"
 addr = 0x4251B8
 size = 0xB6
 
@@ -3457,12 +3462,12 @@ addr = 0x426AE2
 size = 0xE
 
 [[func]]
-name = "ILoad"
+name = "WLoad"
 addr = 0x426AF0
 size = 0x3C
 
 [[func]]
-name = "ILoad_2"
+name = "ILoad"
 addr = 0x426B2C
 size = 0x3C
 
@@ -3532,12 +3537,12 @@ addr = 0x427203
 size = 0xE
 
 [[func]]
-name = "ISave"
+name = "WSave"
 addr = 0x427211
 size = 0x47
 
 [[func]]
-name = "ISave_2"
+name = "ISave"
 addr = 0x427258
 size = 0x47
 
@@ -5885,6 +5890,16 @@ size = 0x42
 name = "On_ENDSHIELD"
 addr = 0x43F72E
 size = 0x77
+
+[[func]]
+name = "On_CHEAT_EXPERIENCE"
+addr = 0x43F7A5
+size = 0x4
+
+[[func]]
+name = "On_CHEAT_SPELL_LEVEL"
+addr = 0x43F7A5
+size = 0x4
 
 [[func]]
 name = "On_DEBUG"
