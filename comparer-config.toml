@@ -705,7 +705,12 @@ size = 0x281
 [[func]]
 name = "LeftMouseDown"
 addr = 0x4093B2
-size = 0x43A
+size = 0x1F3
+
+[[func]]
+name = "LeftMouseCmd"
+addr = 0x4095A5
+size = 0x247
 
 [[func]]
 name = "TryIconCurs"
@@ -5484,7 +5489,12 @@ size = 0x1F
 [[func]]
 name = "ParseCmd"
 addr = 0x43D0BC
-size = 0x576
+size = 0x33F
+
+[[func]]
+name = "On_DLEVEL"
+addr = 0x43D56F
+size = 0xC3
 
 [[func]]
 name = "DeltaImportData"
