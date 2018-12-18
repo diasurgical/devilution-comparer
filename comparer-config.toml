@@ -6147,7 +6147,7 @@ addr = 0x440694
 size = 0x2FE
 
 [[func]]
-name = "multi_clear_pkt"
+name = "buffer_init"
 addr = 0x440992
 size = 0x8
 
