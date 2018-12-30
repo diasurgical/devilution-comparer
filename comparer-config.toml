@@ -8164,7 +8164,12 @@ size = 0x1BE
 [[func]]
 name = "SHA1Reset"
 addr = 0x456C82
-size = 0x39
+size = 0xE
+
+[[func]]
+name = "SHA1Init"
+addr = 0x456C90
+size = 0x2B
 
 [[func]]
 name = "snd_update"
