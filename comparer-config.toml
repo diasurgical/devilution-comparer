@@ -573,7 +573,7 @@ addr = 0x407437
 size = 0x34
 
 [[func]]
-name = "SetCursor"
+name = "SetCursor_"
 addr = 0x40746B
 size = 0x23
 
@@ -6387,7 +6387,7 @@ addr = 0x4427C5
 size = 0x166
 
 [[func]]
-name = "DeleteObject"
+name = "DeleteObject_"
 addr = 0x44292B
 size = 0x50
 
