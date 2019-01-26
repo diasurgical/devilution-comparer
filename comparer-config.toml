@@ -30,7 +30,7 @@ size = 0xD
 [[func]]
 name = "TermMsg"
 addr = 0x401947
-size = 0x2E
+size = 0x24
 
 [[func]]
 name = "MsgBox"
