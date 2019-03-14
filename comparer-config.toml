@@ -1810,12 +1810,7 @@ size = 0x53
 [[func]]
 name = "CelDecDatLightOnly"
 addr = 0x4163AC
-size = 0x77
-
-[[func]]
-name = "CelDecDatLightEntry"
-addr = 0x416423
-size = 0x5E
+size = 0xDC
 
 [[func]]
 name = "CelDecDatLightTrans"
@@ -1860,12 +1855,7 @@ size = 0x55
 [[func]]
 name = "Cel2DecDatLightOnly"
 addr = 0x41692A
-size = 0x92
-
-[[func]]
-name = "Cel2DecDatLightEntry"
-addr = 0x4169BC
-size = 0x5E
+size = 0xF7
 
 [[func]]
 name = "Cel2DecDatLightTrans"
