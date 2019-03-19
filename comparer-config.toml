@@ -3112,7 +3112,7 @@ addr = 0x422EF4
 size = 0x4FC
 
 [[func]]
-name = "DrawUBack"
+name = "DrawUTextBack"
 addr = 0x423530
 size = 0x5C
 
