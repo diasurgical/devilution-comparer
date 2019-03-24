@@ -2227,27 +2227,27 @@ addr = 0x418C8B
 size = 0x106
 
 [[func]]
-name = "gendung_418D91"
+name = "MakeSpeedCels"
 addr = 0x418D91
 size = 0x42E
 
 [[func]]
-name = "gendung_4191BF"
+name = "SortTiles"
 addr = 0x4191BF
 size = 0x3C
 
 [[func]]
-name = "gendung_4191FB"
+name = "SwapTile"
 addr = 0x4191FB
 size = 0x7F
 
 [[func]]
-name = "gendung_get_dpiece_num_from_coord"
+name = "IsometricCoord"
 addr = 0x41927A
 size = 0x48
 
 [[func]]
-name = "gendung_4192C2"
+name = "SetSpeedCels"
 addr = 0x4192C2
 size = 0x49
 
@@ -9067,7 +9067,7 @@ addr = 0x45FAAB
 size = 0x12C
 
 [[func]]
-name = "town_init_dpiece_defs_map"
+name = "SetTownMicros"
 addr = 0x45FBD7
 size = 0xE8
 
