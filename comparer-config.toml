@@ -28,7 +28,7 @@ addr = 0x40193A
 size = 0xD
 
 [[func]]
-name = "TermMsg"
+name = "app_fatal"
 addr = 0x401947
 size = 0x24
 
