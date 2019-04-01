@@ -3337,7 +3337,7 @@ addr = 0x42539E
 size = 0xA5
 
 [[func]]
-name = "SetLightFX"
+name = "RotateRadius"
 addr = 0x425443
 size = 0x77
 
