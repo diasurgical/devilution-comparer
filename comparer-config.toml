@@ -2058,17 +2058,17 @@ addr = 0x4180AA
 size = 0x203
 
 [[func]]
-name = "exception_install_filter"
+name = "fault_init_filter"
 addr = 0x4182B7
 size = 0xA
 
 [[func]]
-name = "j_exception_init_filter"
+name = "fault_cleanup_filter_atexit"
 addr = 0x4182C1
 size = 0xC
 
 [[func]]
-name = "exception_init_filter"
+name = "fault_cleanup_filter"
 addr = 0x4182CD
 size = 0xA
 
@@ -2078,37 +2078,37 @@ addr = 0x4182D7
 size = 0x17E
 
 [[func]]
-name = "exception_hex_format"
+name = "fault_hex_format"
 addr = 0x418455
 size = 0xC3
 
 [[func]]
-name = "exception_unknown_module"
+name = "fault_unknown_module"
 addr = 0x418518
 size = 0xE7
 
 [[func]]
-name = "exception_call_stack"
+name = "fault_call_stack"
 addr = 0x4185FF
 size = 0x89
 
 [[func]]
-name = "exception_get_error_type"
+name = "fault_get_error_type"
 addr = 0x418688
 size = 0x190
 
 [[func]]
-name = "exception_set_filter"
+name = "fault_set_filter"
 addr = 0x41883C
 size = 0x17
 
 [[func]]
-name = "exception_set_filter_ptr"
+name = "fault_reset_filter"
 addr = 0x418853
 size = 0xD
 
 [[func]]
-name = "exception_get_filter"
+name = "fault_get_filter"
 addr = 0x418860
 size = 0x6
 
