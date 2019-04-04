@@ -8812,17 +8812,17 @@ addr = 0x45C3E6
 size = 0x1E1
 
 [[func]]
-name = "SyncData"
+name = "sync_update"
 addr = 0x45C5C7
 size = 0x74
 
 [[func]]
-name = "sync_monster_data"
+name = "sync_monster"
 addr = 0x45C63B
 size = 0x210
 
 [[func]]
-name = "sync_clear_pkt"
+name = "sync_init"
 addr = 0x45C84B
 size = 0x25
 
