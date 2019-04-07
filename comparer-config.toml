@@ -7362,7 +7362,7 @@ addr = 0x44BB33
 size = 0x3A
 
 [[func]]
-name = "InitPlayerLoc"
+name = "CheckEFlag"
 addr = 0x44BB6D
 size = 0x155
 
