@@ -2138,6 +2138,11 @@ addr = 0x4188E1
 size = 0x13
 
 [[func]]
+name = "j_gamemenu_previous"
+addr = 0x4188F4
+size = 0x5
+
+[[func]]
 name = "gamemenu_new_game"
 addr = 0x4188F9
 size = 0x42
