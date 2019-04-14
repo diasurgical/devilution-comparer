@@ -1543,21 +1543,6 @@ addr = 0x414F90
 size = 0x108
 
 [[func]]
-name = "dthread_init_mutex"
-addr = 0x4150B2
-size = 0xC
-
-[[func]]
-name = "dthread_cleanup_mutex_atexit"
-addr = 0x4150BE
-size = 0xC
-
-[[func]]
-name = "dthread_cleanup_mutex"
-addr = 0x4150CA
-size = 0xC
-
-[[func]]
 name = "dthread_remove_player"
 addr = 0x4150D6
 size = 0x33
@@ -1581,21 +1566,6 @@ size = 0xCD
 name = "dthread_cleanup"
 addr = 0x4152C0
 size = 0xA2
-
-[[func]]
-name = "dx_init_mutex"
-addr = 0x41537C
-size = 0xC
-
-[[func]]
-name = "dx_cleanup_mutex_atexit"
-addr = 0x415388
-size = 0xC
-
-[[func]]
-name = "dx_cleanup_mutex"
-addr = 0x415394
-size = 0xC
 
 [[func]]
 name = "dx_init"
@@ -1926,21 +1896,6 @@ size = 0x1F
 name = "random"
 addr = 0x41754B
 size = 0x22
-
-[[func]]
-name = "mem_init_mutex"
-addr = 0x417577
-size = 0xC
-
-[[func]]
-name = "mem_atexit_mutex"
-addr = 0x417583
-size = 0xC
-
-[[func]]
-name = "mem_free_mutex"
-addr = 0x41758F
-size = 0xC
 
 [[func]]
 name = "DiabloAllocPtr"
@@ -3620,21 +3575,6 @@ size = 0x2C4
 name = "LoadLevel"
 addr = 0x42772F
 size = 0x2C3
-
-[[func]]
-name = "log_init_mutex"
-addr = 0x427A0C
-size = 0xC
-
-[[func]]
-name = "j_log_cleanup_mutex"
-addr = 0x427A18
-size = 0xC
-
-[[func]]
-name = "log_cleanup_mutex"
-addr = 0x427A24
-size = 0xC
 
 [[func]]
 name = "log_flush"
@@ -5972,42 +5912,42 @@ addr = 0x43F8E5
 size = 0x3B
 
 [[func]]
-name = "msgcmd_init_chatcmd"
+name = "TList<EXTERNMESSAGE>::TList<EXTERNMESSAGE>"
 addr = 0x43F920
 size = 0x16
 
 [[func]]
-name = "msgcmd_free_event"
+name = "TList<EXTERNMESSAGE>::DeleteAll"
 addr = 0x43F936
 size = 0x28
 
 [[func]]
-name = "msgcmd_delete_server_cmd_W"
+name = "TList<EXTERNMESSAGE>::Remove"
 addr = 0x43F95E
 size = 0x3B
 
 [[func]]
-name = "msgcmd_alloc_event"
+name = "TList<EXTERNMESSAGE>::Create"
 addr = 0x43F999
 size = 0x4C
 
 [[func]]
-name = "msgcmd_remove_event"
+name = "EXTERNMESSAGE::scalar_destruct"
 addr = 0x43F9E5
 size = 0x2F
 
 [[func]]
-name = "msgcmd_event_type"
+name = "TList<EXTERNMESSAGE>::Insert"
 addr = 0x43FA14
 size = 0x71
 
 [[func]]
-name = "msgcmd_cleanup_chatcmd_1"
+name = "TList<EXTERNMESSAGE>::UnlinkAll"
 addr = 0x43FA85
 size = 0x13
 
 [[func]]
-name = "msgcmd_cleanup_extern_msg"
+name = "TLink<EXTERNMESSAGE>::Unlink"
 addr = 0x43FA98
 size = 0x2C
 
@@ -6190,21 +6130,6 @@ size = 0x3C
 name = "multi_player_joins"
 addr = 0x440C17
 size = 0x197
-
-[[func]]
-name = "nthread_init_mutex"
-addr = 0x440DC8
-size = 0xC
-
-[[func]]
-name = "nthread_cleanup_mutex_atexit"
-addr = 0x440DD4
-size = 0xC
-
-[[func]]
-name = "nthread_cleanup_mutex"
-addr = 0x440DE0
-size = 0xC
 
 [[func]]
 name = "nthread_terminate_game"
