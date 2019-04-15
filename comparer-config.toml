@@ -5877,21 +5877,6 @@ addr = 0x43F830
 size = 0x19
 
 [[func]]
-name = "msgcmd_init_event"
-addr = 0x43F863
-size = 0xA
-
-[[func]]
-name = "msgcmd_cleanup_chatcmd_atexit"
-addr = 0x43F86D
-size = 0xC
-
-[[func]]
-name = "msgcmd_cleanup_chatcmd"
-addr = 0x43F879
-size = 0x14
-
-[[func]]
 name = "msgcmd_cmd_cleanup"
 addr = 0x43F88D
 size = 0xA
@@ -7525,6 +7510,11 @@ size = 0xBF
 name = "PM_DoDeath"
 addr = 0x44ED7B
 size = 0xA7
+
+[[func]]
+name = "PM_DoNewLvl"
+addr = 0x44DB74
+size = 0x3
 
 [[func]]
 name = "CheckNewPath"
