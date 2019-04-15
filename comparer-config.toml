@@ -9415,3 +9415,68 @@ size = 0xE53
 name = "world_draw_black_tile"
 addr = 0x4696BE
 size = 0x5C
+
+[[func]]
+name = "implode"
+addr = 0x477470
+size = 0x19C
+
+[[func]]
+name = "WriteCmpData"
+addr = 0x477610
+size = 0x374
+
+[[func]]
+name = "FindRep"
+addr = 0x477990
+size = 0x333
+
+[[func]]
+name = "OutputBits"
+addr = 0x477CD0
+size = 0x8B
+
+[[func]]
+name = "FlushBuf"
+addr = 0x477DD0
+size = 0x7B
+
+[[func]]
+name = "SortBuffer"
+addr = 0x477E50
+size = 0xB3
+
+[[func]]
+name = "explode"
+addr = 0x477F10
+size = 0x175
+
+[[func]]
+name = "Expand"
+addr = 0x478090
+size = 0xFA
+
+[[func]]
+name = "DecodeLit"
+addr = 0x478190
+size = 0x1AA
+
+[[func]]
+name = "DecodeDist"
+addr = 0x478340
+size = 0x7E
+
+[[func]]
+name = "WasteBits"
+addr = 0x4783C0
+size = 0x90
+
+[[func]]
+name = "GenDecodeTabs"
+addr = 0x478450
+size = 0x3A
+
+[[func]]
+name = "GenAscTabs"
+addr = 0x478490
+size = 0xF4
