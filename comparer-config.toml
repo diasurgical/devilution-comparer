@@ -1588,7 +1588,7 @@ addr = 0x41561A
 size = 0x7B
 
 [[func]]
-name = "j_lock_buf_priv"
+name = "lock_buf"
 addr = 0x415695
 size = 0x5
 
@@ -1598,7 +1598,7 @@ addr = 0x41569A
 size = 0x86
 
 [[func]]
-name = "j_unlock_buf_priv"
+name = "unlock_buf"
 addr = 0x415720
 size = 0x5
 
