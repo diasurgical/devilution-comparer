@@ -6112,7 +6112,7 @@ addr = 0x440BDB
 size = 0x3C
 
 [[func]]
-name = "multi_player_joins"
+name = "recv_plrinfo"
 addr = 0x440C17
 size = 0x197
 
