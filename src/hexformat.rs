@@ -14,16 +14,16 @@ where
     fn fmt(&self, f: &mut Formatter) -> FmtResult {
         if self.0.is_positive() {
             if f.sign_plus() {
-                write!(f, "+");
+                write!(f, "+")?;
             }
             if f.alternate() {
-                write!(f, "0x");
+                write!(f, "0x")?;
             }
             write!(f, "{:X}", self.0)
         } else {
-            write!(f, "-");
+            write!(f, "-")?;
             if f.alternate() {
-                write!(f, "0x");
+                write!(f, "0x")?;
             }
             write!(f, "{:X}", -self.0)
         }

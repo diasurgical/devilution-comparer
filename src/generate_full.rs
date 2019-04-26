@@ -58,7 +58,7 @@ fn generate_full_orig(
                             stdout_lock,
                             "Note: Skipping '{}' because no size was defined.",
                             func.name
-                        );
+                        ).map_err(IoError)?;
                         continue;
                     }
                     Some(size) => size,
@@ -127,7 +127,7 @@ fn generate_full_pdb(
                         stdout_lock,
                         "WARN: Function '{}' was not found in the PDB.",
                         func.name
-                    );
+                    ).map_err(IoError)?;
                 }
             }
             for func in pdb_funcs {
@@ -135,7 +135,7 @@ fn generate_full_pdb(
                     stdout_lock,
                     "WARN: Function '{}' was not found in the config.",
                     func.1.name
-                );
+                ).map_err(IoError)?;
             }
             Ok(())
         })?;
