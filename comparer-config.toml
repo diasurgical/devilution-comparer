@@ -1685,7 +1685,12 @@ size = 0x20
 [[func]]
 name = "sound_update"
 addr = 0x415DBA
-size = 0x45
+size = 0x16
+
+[[func]]
+name = "effects_update"
+addr = 0x415DD0
+size = 0x2F
 
 [[func]]
 name = "effects_cleanup_sfx"
