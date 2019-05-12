@@ -5112,7 +5112,7 @@ addr = 0x43B0E4
 size = 0x3F
 
 [[func]]
-name = "mpqapi_get_hash_index_of_path"
+name = "FetchHandle"
 addr = 0x43B123
 size = 0x30
 
@@ -5157,17 +5157,17 @@ addr = 0x43B5AF
 size = 0x10
 
 [[func]]
-name = "mpqapi_open_archive"
+name = "OpenMPQ"
 addr = 0x43B5BF
 size = 0x1D2
 
 [[func]]
-name = "mpqapi_parse_archive_header"
+name = "ParseMPQHeader"
 addr = 0x43B791
 size = 0xF1
 
 [[func]]
-name = "mpqapi_close_archive"
+name = "CloseMPQ"
 addr = 0x43B882
 size = 0x7B
 
@@ -5182,7 +5182,7 @@ addr = 0x43B970
 size = 0x5A
 
 [[func]]
-name = "mpqapi_write_header"
+name = "WriteMPQHeader"
 addr = 0x43B9CA
 size = 0x96
 
