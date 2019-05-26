@@ -390,7 +390,12 @@ size = 0x33
 [[func]]
 name = "DrawInfoBox"
 addr = 0x4052C8
-size = 0x2F4
+size = 0x289
+
+[[func]]
+name = "control_draw_info_str"
+addr = 0x405551
+size = 0x6B
 
 [[func]]
 name = "control_print_info_str"
