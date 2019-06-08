@@ -5112,7 +5112,7 @@ addr = 0x43B002
 size = 0x52
 
 [[func]]
-name = "mpqapi_free_block"
+name = "mpqapi_alloc_block"
 addr = 0x43B054
 size = 0x90
 
