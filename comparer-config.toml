@@ -2387,7 +2387,7 @@ addr = 0x41A4B8
 size = 0xE
 
 [[func]]
-name = "gmenu_slider_1"
+name = "gmenu_slider_set"
 addr = 0x41A4C6
 size = 0x42
 
@@ -2397,7 +2397,7 @@ addr = 0x41A508
 size = 0x3D
 
 [[func]]
-name = "gmenu_slider_3"
+name = "gmenu_slider_steps"
 addr = 0x41A545
 size = 0xE
 
