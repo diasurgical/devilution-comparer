@@ -14,6 +14,7 @@ pub struct GenerateFullCommandInfo {
     pub file_path: PathBuf,
     pub orig_file: bool,
     pub disasm_opts: super::DisasmOpts,
+    pub truncate_to_original: bool,
 }
 
 #[derive(Debug)]
@@ -58,7 +59,8 @@ fn generate_full_orig(
                             stdout_lock,
                             "Note: Skipping '{}' because no size was defined.",
                             func.name
-                        ).map_err(IoError)?;
+                        )
+                        .map_err(IoError)?;
                         continue;
                     }
                     Some(size) => size,
@@ -86,6 +88,13 @@ fn generate_full_pdb(
     mut info: GenerateFullCommandInfo,
     cfg: &ComparerConfig,
 ) -> Result<(), GenerateFullCommandError> {
+    let mut line = String::new();
+    {
+        use std::io::BufRead;
+        let stdin = std::io::stdin();
+        stdin.lock().read_line(&mut line).unwrap();
+    }
+
     let mut pdb_path = info.file_path.clone();
     pdb_path.set_extension("pdb");
 
@@ -95,6 +104,8 @@ fn generate_full_pdb(
 
     let mut path = std::env::current_dir().map_err(IoError)?;
     path.push("compare_full.asm");
+
+    // println!("{}", path.to_str().unwrap());
 
     let bytes = std::fs::read(&info.file_path).map_err(IoError)?;
 
@@ -110,7 +121,21 @@ fn generate_full_pdb(
                     write_function_head(&mut writer, pdb_func.size, func.name.as_ref())?;
 
                     let offset = (pdb_func.offset + PDB_OFFSET_COMPARE_FILE) as usize;
-                    let offset_end = offset + pdb_func.size;
+                    let size = if info.truncate_to_original {
+                        if let Some(size) = func.size {
+                            size
+                        } else {
+                            println!(
+                                "WARN: No size defined for the original function '{}', \
+                                 using the PDB function size instead.",
+                                func.name
+                            );
+                            pdb_func.size
+                        }
+                    } else {
+                        pdb_func.size
+                    };
+                    let offset_end = offset + size;
 
                     let func_bytes = bytes
                         .get(offset..offset_end)
@@ -121,13 +146,15 @@ fn generate_full_pdb(
                         func_bytes,
                         &mut info.disasm_opts,
                         pdb_func.offset + PDB_SEGMENT_OFFSET,
-                    ).map_err(DisasmError)?;
+                    )
+                    .map_err(DisasmError)?;
                 } else {
                     writeln!(
                         stdout_lock,
                         "WARN: Function '{}' was not found in the PDB.",
                         func.name
-                    ).map_err(IoError)?;
+                    )
+                    .map_err(IoError)?;
                 }
             }
             for func in pdb_funcs {
@@ -135,8 +162,11 @@ fn generate_full_pdb(
                     stdout_lock,
                     "WARN: Function '{}' was not found in the config.",
                     func.1.name
-                ).map_err(IoError)?;
+                )
+                .map_err(IoError)?;
             }
+            writer.flush().map_err(IoError)?;
+
             Ok(())
         })?;
 

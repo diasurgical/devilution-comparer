@@ -18,6 +18,7 @@ pub struct CompareCommandInfo {
     pub disasm_opts: super::DisasmOpts,
     pub last_offset_size: Option<(u64, usize)>,
     pub enable_watcher: bool,
+    pub truncate_to_original: bool,
 }
 
 #[derive(Debug)]
@@ -36,6 +37,7 @@ pub enum CompareError {
     IoError(std::io::Error),
     DisasmError(super::disasm::DisasmError),
     NotifyError(notify::Error),
+    RequiredFunctionSizeNotFoundError(String),
 }
 
 pub fn print_error(e: &CompareError) {
@@ -46,6 +48,10 @@ pub fn print_error(e: &CompareError) {
         IoError(e) => println!("IO error: {:#?}", e),
         DisasmError(e) => println!("Zydis disassembly engine error: {:#?}", e),
         NotifyError(e) => println!("Watcher error: {:#?}", e),
+        RequiredFunctionSizeNotFoundError(e) => println!(
+            "No size defined for the original function '{}', but truncate_to_original was specified.",
+            e
+        ),
     }
 }
 
@@ -57,9 +63,13 @@ pub fn run(mut info: CompareCommandInfo, cfg: &ComparerConfig) -> Result<(), Com
         .ok_or(ConfigSymbolNotFound)?;
 
     if orig_fn.size == None {
-        println!(
-            "WARN: No size defined for the original function, using the PDB function size instead."
-        );
+        if info.truncate_to_original {
+            return Err(RequiredFunctionSizeNotFoundError(orig_fn.name.clone()));
+        } else {
+            println!(
+                "WARN: No size defined for the original function, using the PDB function size instead."
+            );
+        }
     }
 
     // initial run
@@ -78,7 +88,8 @@ pub fn run(mut info: CompareCommandInfo, cfg: &ComparerConfig) -> Result<(), Com
         .watch(
             &info.compare_opts.compare_pdb_file,
             RecursiveMode::NonRecursive,
-        ).map_err(NotifyError)?;
+        )
+        .map_err(NotifyError)?;
 
     println!(
         "Started watching {} for changes. CTRL+C to quit.",
@@ -154,7 +165,11 @@ fn write_compare(
         vec![0; size]
     };
 
-    let mut compare_function_bytes = vec![0; size];
+    let mut compare_function_bytes = if info.truncate_to_original {
+        vec![0; orig_fn.size.expect("orig size is None even though truncate_to_original is set. Initial check was wrong!")]
+    } else {
+        vec![0; size]
+    };
 
     let orig_offset = orig_fn.addr - orig_addr_offset;
 
@@ -182,7 +197,8 @@ fn write_compare(
                 &orig_function_bytes,
                 &mut info.disasm_opts,
                 orig_fn.addr,
-            ).map_err(DisasmError)?;
+            )
+            .map_err(DisasmError)?;
 
             Ok(())
         })?;
@@ -200,7 +216,8 @@ fn write_compare(
                 &compare_function_bytes,
                 &mut info.disasm_opts,
                 addr,
-            ).map_err(DisasmError)?;
+            )
+            .map_err(DisasmError)?;
 
             Ok(())
         })?;

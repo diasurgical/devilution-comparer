@@ -73,7 +73,7 @@ fn format_addrs(
     insn: &ZydisDecodedInstruction,
     op: &ZydisDecodedOperand,
     _: u64,
-    disasm_opts: Option<&mut Any>,
+    disasm_opts: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
     let opts = disasm_opts.unwrap().downcast_ref::<DisasmOpts>().unwrap();
     match op.type_ {
@@ -120,7 +120,7 @@ fn void_format_disp(
     buf: &mut Buffer,
     _: &ZydisDecodedInstruction,
     op: &ZydisDecodedOperand,
-    _: Option<&mut Any>,
+    _: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
     if op.mem.disp.value != 0 {
         // only write the displacement if it's actually displacing
@@ -136,7 +136,7 @@ fn void_format_imms(
     buf: &mut Buffer,
     _: &ZydisDecodedInstruction,
     op: &ZydisDecodedOperand,
-    _: Option<&mut Any>,
+    _: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
     buf.append(&format!("<imm{}>", op.size))?;
     Ok(())
