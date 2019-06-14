@@ -6,7 +6,7 @@ shallow_clone: true
 
 environment:
   global:
-    RUST_VERSION: nightly
+    RUST_VERSION: stable
     CRATE_NAME: devilution-comparer
 
   # These are all the build jobs. Adjust as necessary. Comment out what you
