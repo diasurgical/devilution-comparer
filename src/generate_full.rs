@@ -88,13 +88,6 @@ fn generate_full_pdb(
     mut info: GenerateFullCommandInfo,
     cfg: &ComparerConfig,
 ) -> Result<(), GenerateFullCommandError> {
-    let mut line = String::new();
-    {
-        use std::io::BufRead;
-        let stdin = std::io::stdin();
-        stdin.lock().read_line(&mut line).unwrap();
-    }
-
     let mut pdb_path = info.file_path.clone();
     pdb_path.set_extension("pdb");
 
