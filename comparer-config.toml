@@ -5927,7 +5927,7 @@ addr = 0x43F999
 size = 0x4C
 
 [[func]]
-name = "TList<EXTERNMESSAGE>::Delete"
+name = "EXTERNMESSAGE::Delete"
 addr = 0x43F9E5
 size = 0x2F
 
