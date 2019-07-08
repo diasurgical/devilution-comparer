@@ -3617,7 +3617,7 @@ addr = 0x427E1E
 size = 0x27
 
 [[func]]
-name = "mainmenu_create_hero"
+name = "mainmenu_change_name"
 addr = 0x427E45
 size = 0x1D
 
@@ -7067,7 +7067,7 @@ addr = 0x449BE4
 size = 0x76
 
 [[func]]
-name = "pfile_create_save_file"
+name = "pfile_rename_hero"
 addr = 0x449C5A
 size = 0xC8
 
