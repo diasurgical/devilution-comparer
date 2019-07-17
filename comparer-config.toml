@@ -6097,7 +6097,7 @@ addr = 0x44099A
 size = 0x3B
 
 [[func]]
-name = "InitNewSeed"
+name = "InitLevelType"
 addr = 0x4409D5
 size = 0x30
 
