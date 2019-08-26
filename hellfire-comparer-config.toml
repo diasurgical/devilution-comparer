@@ -5754,7 +5754,7 @@ size = 0x39
 [[func]]
 name = "On_STRING"
 addr = 0x44A171
-size = 0x0B
+size = 0xB
 
 [[func]]
 name = "On_STRING2"
@@ -9180,3 +9180,663 @@ size = 0xE53
 name = "world_draw_black_tile"
 addr = 0x4672C6
 size = 0x5C
+
+[[func]]
+name = "SearchAutomapItem"
+addr = 0x4029A7
+size = 0x1A3
+
+[[func]]
+name = "DrawAutomapItem"
+addr = 0x402B4A
+size = 0x8E
+
+[[func]]
+name = "diablo_TopLevelExceptionFilter"
+addr = 0x40964C
+size = 0x22
+
+[[func]]
+name = "diablo_40B908"
+addr = 0x40B908
+size = 0x57
+
+[[func]]
+name = "drlg_l1_40C039"
+addr = 0x40C039
+size = 0x46
+
+[[func]]
+name = "drlg_l1_40C71E"
+addr = 0x40C71E
+size = 0x2E5
+
+[[func]]
+name = "drlg_l1_40DD3E"
+addr = 0x40DD3E
+size = 0x17E
+
+[[func]]
+name = "drlg_l1_40E92D"
+addr = 0x40E92D
+size = 0xAF
+
+[[func]]
+name = "drlg_l1_40E9DC"
+addr = 0x40E9DC
+size = 0x8B
+
+[[func]]
+name = "drlg_l1_40EE7A"
+addr = 0x40EE7A
+size = 0x35
+
+[[func]]
+name = "drlg_l1_40EEAF"
+addr = 0x40EEAF
+size = 0xD1
+
+[[func]]
+name = "drlg_l1_40EF80"
+addr = 0x40EF80
+size = 0xD1
+
+[[func]]
+name = "drlg_l1_40F051"
+addr = 0x40F051
+size = 0xD1
+
+[[func]]
+name = "drlg_l1_40F122"
+addr = 0x40F122
+size = 0x7D
+
+[[func]]
+name = "drlg_l1_40F19F"
+addr = 0x40F19F
+size = 0x13D
+
+[[func]]
+name = "drlg_l1_40F2DC"
+addr = 0x40F2DC
+size = 0x35
+
+[[func]]
+name = "drlg_l3_414296"
+addr = 0x414296
+size = 0x18F
+
+[[func]]
+name = "engine_debug_trap"
+addr = 0x419FB1
+size = 0x1
+
+[[func]]
+name = "log_create"
+addr = 0x41AD2A
+size = 0xBF
+
+[[func]]
+name = "log_reset"
+addr = 0x41B20D
+size = 0x6C
+
+[[func]]
+name = "gamemenu_jogging"
+addr = 0x41B528
+size = 0x3A
+
+[[func]]
+name = "gamemenu_loadjog"
+addr = 0x41B6B4
+size = 0x3A
+
+[[func]]
+name = "inv_420FD0"
+addr = 0x420FD0
+size = 0x152
+
+[[func]]
+name = "items_4231CA"
+addr = 0x4231CA
+size = 0x66
+
+[[func]]
+name = "items_423230"
+addr = 0x423230
+size = 0x66
+
+[[func]]
+name = "items_423296"
+addr = 0x423296
+size = 0x66
+
+[[func]]
+name = "items_4232FC"
+addr = 0x4232FC
+size = 0x66
+
+[[func]]
+name = "items_423362"
+addr = 0x423362
+size = 0x66
+
+[[func]]
+name = "items_4233C8"
+addr = 0x4233C8
+size = 0x66
+
+[[func]]
+name = "items_42342E"
+addr = 0x42342E
+size = 0x84
+
+[[func]]
+name = "items_4234B2"
+addr = 0x4234B2
+size = 0x66
+
+[[func]]
+name = "items_423518"
+addr = 0x423518
+size = 0x66
+
+[[func]]
+name = "items_42357E"
+addr = 0x42357E
+size = 0x78
+
+[[func]]
+name = "items_42390F"
+addr = 0x42390F
+size = 0x56
+
+[[func]]
+name = "GetOilMagic"
+addr = 0x4256FF
+size = 0xB5
+
+[[func]]
+name = "items_427A72"
+addr = 0x427A72
+size = 0x48
+
+[[func]]
+name = "items_427ABA"
+addr = 0x427ABA
+size = 0x114
+
+[[func]]
+name = "items_427DC6"
+addr = 0x427DC6
+size = 0x9B
+
+[[func]]
+name = "items_427E61"
+addr = 0x427E61
+size = 0xE
+
+[[func]]
+name = "items_427E6F"
+addr = 0x427E6F
+size = 0xE
+
+[[func]]
+name = "items_427E7D"
+addr = 0x427E7D
+size = 0xE
+
+[[func]]
+name = "DoOil"
+addr = 0x42835D
+size = 0x58
+
+[[func]]
+name = "OilItem"
+addr = 0x4283B5
+size = 0x225
+
+[[func]]
+name = "items_42B8DC"
+addr = 0x42B8DC
+size = 0xC7
+
+[[func]]
+name = "missiles_hive_explosion"
+addr = 0x42FF33
+size = 0x95
+
+[[func]]
+name = "missiles_fire_rune"
+addr = 0x42FFC8
+size = 0x80
+
+[[func]]
+name = "missiles_found_target"
+addr = 0x430048
+size = 0xF6
+
+[[func]]
+name = "missiles_light_rune"
+addr = 0x43013E
+size = 0x80
+
+[[func]]
+name = "missiles_great_light_rune"
+addr = 0x4301BE
+size = 0x80
+
+[[func]]
+name = "missiles_immolation_rune"
+addr = 0x43023E
+size = 0x80
+
+[[func]]
+name = "missiles_stone_rune"
+addr = 0x4302BE
+size = 0x80
+
+[[func]]
+name = "missiles_reflection"
+addr = 0x43033E
+size = 0x6A
+
+[[func]]
+name = "missiles_berserk"
+addr = 0x4303A8
+size = 0x27C
+
+[[func]]
+name = "missiles_430624"
+addr = 0x430624
+size = 0x3D
+
+[[func]]
+name = "missiles_jester"
+addr = 0x43076A
+size = 0xC3
+
+[[func]]
+name = "missiles_steal_pots"
+addr = 0x43082D
+size = 0x24B
+
+[[func]]
+name = "missiles_mana_trap"
+addr = 0x430A78
+size = 0x111
+
+[[func]]
+name = "missiles_spec_arrow"
+addr = 0x431434
+size = 0xA9
+
+[[func]]
+name = "missiles_warp"
+addr = 0x4316D2
+size = 0x131
+
+[[func]]
+name = "missiles_light_wall"
+addr = 0x431C56
+size = 0x8A
+
+[[func]]
+name = "missiles_rune_explosion"
+addr = 0x431F08
+size = 0x1C6
+
+[[func]]
+name = "missiles_immo_1"
+addr = 0x4327C9
+size = 0x14D
+
+[[func]]
+name = "missiles_immo_2"
+addr = 0x432916
+size = 0xC4
+
+[[func]]
+name = "missiles_larrow"
+addr = 0x432A46
+size = 0x9F
+
+[[func]]
+name = "missiles_43303D"
+addr = 0x43303D
+size = 0x3
+
+[[func]]
+name = "missiles_433040"
+addr = 0x433040
+size = 0x5C
+
+[[func]]
+name = "missiles_rech_mana"
+addr = 0x433EF9
+size = 0x11A
+
+[[func]]
+name = "missiles_magi"
+addr = 0x434013
+size = 0x59
+
+[[func]]
+name = "missiles_ring"
+addr = 0x43497B
+size = 0x75
+
+[[func]]
+name = "missiles_search"
+addr = 0x4349F0
+size = 0x101
+
+[[func]]
+name = "AddBlodboil"
+addr = 0x434CB5
+size = 0x122
+
+[[func]]
+name = "missiles_cbolt_arrow"
+addr = 0x435225
+size = 0xDA
+
+[[func]]
+name = "missiles_hbolt_arrow"
+addr = 0x4353E6
+size = 0xAC
+
+[[func]]
+name = "missiles_4359A0"
+addr = 0x4359A0
+size = 0x138
+
+[[func]]
+name = "MI_Rune"
+addr = 0x435AD8
+size = 0xDB
+
+[[func]]
+name = "mi_light_wall"
+addr = 0x436521
+size = 0x62
+
+[[func]]
+name = "mi_hive_explode"
+addr = 0x436BE5
+size = 0x3E
+
+[[func]]
+name = "mi_immolation"
+addr = 0x436C23
+size = 0x48D
+
+[[func]]
+name = "mi_light_arrow"
+addr = 0x4372BB
+size = 0x183
+
+[[func]]
+name = "mi_flashfr"
+addr = 0x4377AB
+size = 0x9A
+
+[[func]]
+name = "mi_flashbk"
+addr = 0x437845
+size = 0x66
+
+[[func]]
+name = "mi_reflect"
+addr = 0x437987
+size = 0xCD
+
+[[func]]
+name = "mi_fire_ring"
+addr = 0x438D43
+size = 0x150
+
+[[func]]
+name = "mi_light_ring"
+addr = 0x438E93
+size = 0x150
+
+[[func]]
+name = "mi_search"
+addr = 0x438FE3
+size = 0x42
+
+[[func]]
+name = "mi_lightning_wall"
+addr = 0x439025
+size = 0x1BE
+
+[[func]]
+name = "mi_fire_nova"
+addr = 0x439710
+size = 0x15E
+
+[[func]]
+name = "mi_spec_arrow"
+addr = 0x43986E
+size = 0x124
+
+[[func]]
+name = "monster_some_crypt"
+addr = 0x43B682
+size = 0x63
+
+[[func]]
+name = "monster_43C785"
+addr = 0x43C785
+size = 0xEC
+
+[[func]]
+name = "monster_item_43D4E1"
+addr = 0x43D4E1
+size = 0x174
+
+[[func]]
+name = "mai_ranged_441649"
+addr = 0x441649
+size = 0xB
+
+[[func]]
+name = "mai_ranged_441654"
+addr = 0x441654
+size = 0xB
+
+[[func]]
+name = "mai_ranged_44165F"
+addr = 0x44165F
+size = 0xB
+
+[[func]]
+name = "mai_ranged_44166A"
+addr = 0x44166A
+size = 0xB
+
+[[func]]
+name = "mai_ranged_441680"
+addr = 0x441680
+size = 0xB
+
+[[func]]
+name = "mai_ranged_44168B"
+addr = 0x44168B
+size = 0xB
+
+[[func]]
+name = "mai_roundranged_441EA0"
+addr = 0x441EA0
+size = 0xF
+
+[[func]]
+name = "mai_horkdemon"
+addr = 0x442A04
+size = 0x2B1
+
+[[func]]
+name = "monster_posok"
+addr = 0x444981
+size = 0x11F
+
+[[func]]
+name = "NetSendCmdMonDmg"
+addr = 0x4475D7
+size = 0x2C
+
+[[func]]
+name = "On_cmd_99"
+addr = 0x44A26F
+size = 0x87
+
+[[func]]
+name = "On_cmd_100"
+addr = 0x44A2FA
+size = 0x28
+
+[[func]]
+name = "On_cmd_101"
+addr = 0x44A322
+size = 0x32
+
+[[func]]
+name = "On_cmd_102"
+addr = 0x44A354
+size = 0x28
+
+[[func]]
+name = "add_crypt_objs"
+addr = 0x44C0BA
+size = 0x6E
+
+[[func]]
+name = "objects_add_lv22"
+addr = 0x44D16B
+size = 0xDE
+
+[[func]]
+name = "AddBrnCross"
+addr = 0x44D769
+size = 0x13
+
+[[func]]
+name = "objects_44D8C5"
+addr = 0x44D8C5
+size = 0x81
+
+[[func]]
+name = "objects_44DA68"
+addr = 0x44DA68
+size = 0x20D
+
+[[func]]
+name = "objects_add_lv24"
+addr = 0x454963
+size = 0x18D
+
+[[func]]
+name = "objects_454AF0"
+addr = 0x454AF0
+size = 0x14
+
+[[func]]
+name = "objects_lv_24_454B04"
+addr = 0x454B04
+size = 0x42
+
+[[func]]
+name = "operate_lv24_lever"
+addr = 0x454B46
+size = 0x62
+
+[[func]]
+name = "objects_454BA8"
+addr = 0x454BA8
+size = 0x42
+
+[[func]]
+name = "objects_rnd_454BEA"
+addr = 0x454BEA
+size = 0xD5
+
+[[func]]
+name = "palette_update_crypt"
+addr = 0x455939
+size = 0xCE
+
+[[func]]
+name = "palette_update_hive"
+addr = 0x455A07
+size = 0xCB
+
+[[func]]
+name = "StripTopGold"
+addr = 0x45AA94
+size = 0x143
+
+[[func]]
+name = "player_45EFA1"
+addr = 0x45EFA1
+size = 0xA
+
+[[func]]
+name = "player_45EFAB"
+addr = 0x45EFAB
+size = 0xA
+
+[[func]]
+name = "player_45EFB5"
+addr = 0x45EFB5
+size = 0xA
+
+[[func]]
+name = "town_4751C6"
+addr = 0x4751C6
+size = 0x1B3
+
+[[func]]
+name = "town_475379"
+addr = 0x475379
+size = 0x1B3
+
+[[func]]
+name = "town_47552C"
+addr = 0x47552C
+size = 0x69
+
+[[func]]
+name = "town_475595"
+addr = 0x475595
+size = 0x69
+
+[[func]]
+name = "InitFarmer"
+addr = 0x476308
+size = 0x97
+
+[[func]]
+name = "InitCowFarmer"
+addr = 0x47639F
+size = 0xAC
+
+[[func]]
+name = "InitGirl"
+addr = 0x47644B
+size = 0xAC
+
+[[func]]
+name = "TownFarmer"
+addr = 0x476727
+size = 0xF
+
+[[func]]
+name = "TownCowFarmer"
+addr = 0x476736
+size = 0xF
+
+[[func]]
+name = "TownGirl"
+addr = 0x476745
+size = 0xF
