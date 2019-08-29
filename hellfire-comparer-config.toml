@@ -6283,7 +6283,7 @@ addr = 0x44A1E8
 size = 0x87
 
 [[func]]
-name = "On_cmd_99"
+name = "On_ENDREFLECT"
 addr = 0x44A26F
 size = 0x87
 
