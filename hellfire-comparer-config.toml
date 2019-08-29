@@ -80,7 +80,7 @@ size = 0x45
 [[func]]
 name = "DiskFreeDlg"
 addr = 0x401C96
-size = 0x39
+size = 0x3C
 
 [[func]]
 name = "InsertCDDlg"
@@ -2211,11 +2211,6 @@ size = 0x19
 name = "gamemenu_sound_music_toggle"
 addr = 0x41B4CE
 size = 0x41
-
-[[func]]
-name = "PkwareCompress"
-addr = 0x418A7E
-size = 0x19
 
 [[func]]
 name = "gamemenu_get_sound"
