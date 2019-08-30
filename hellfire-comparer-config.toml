@@ -798,12 +798,12 @@ addr = 0x40B884
 size = 0x53
 
 [[func]]
-name = "diablo_40B8D7"
+name = "alloc_plr"
 addr = 0x40B8D7
 size = 0x31
 
 [[func]]
-name = "diablo_40B908"
+name = "get_plr_mem"
 addr = 0x40B908
 size = 0x57
 
