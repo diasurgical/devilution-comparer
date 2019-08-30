@@ -7498,6 +7498,11 @@ addr = 0x4564E4
 size = 0xD1
 
 [[func]]
+name = "pfile_update"
+addr = 0x456DAF
+size = 0x32
+
+[[func]]
 name = "pfile_open_save_archive"
 addr = 0x4565B5
 size = 0x3C
