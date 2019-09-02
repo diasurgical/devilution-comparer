@@ -5728,6 +5728,11 @@ addr = 0x446576
 size = 0x49
 
 [[func]]
+name = "delta_leave_sync"
+addr = 0x4465BF
+size = 0xDE
+
+[[func]]
 name = "delta_portal_inited"
 addr = 0x44669D
 size = 0xE
