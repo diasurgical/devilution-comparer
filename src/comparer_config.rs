@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use serde_derive::Deserialize;
+use serde::Deserialize;
 
 const COMPARER_CONFIG_FILE: &str = "comparer-config.toml";
 
@@ -27,7 +27,8 @@ impl ComparerConfig {
     fn read_from_file(path: impl AsRef<Path>) -> Result<Self, ComparerConfigError> {
         Ok(toml::from_str::<Self>(
             &std::fs::read_to_string(path).map_err(ComparerConfigError::IoError)?,
-        ).map_err(ComparerConfigError::ParseError)?)
+        )
+        .map_err(ComparerConfigError::ParseError)?)
     }
 
     pub fn read_default() -> Result<Self, ComparerConfigError> {

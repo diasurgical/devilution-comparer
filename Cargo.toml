@@ -1,16 +1,15 @@
 [package]
 name = "devilution-comparer"
-version = "0.4.0"
+version = "0.5.0"
 authors = ["Dennis Duda <git@seri.tools>"]
 edition = '2018'
 
 [dependencies]
-zydis = "0.0.3"
+zydis = "3.0.0"
 notify = "4"
 clap = "2"
 regex = "1"
 num-traits = "0.2"
-serde = "1"
-serde_derive = "1"
+serde = { version = "1", features = ["derive"] }
 lazy_static = "^1.1"
 toml = "0.5"

@@ -1,10 +1,10 @@
 use std::any::Any;
-use std::ffi::CStr;
 use std::io::{Error as IoError, Write};
-use std::os::raw::c_char;
 
-use zydis::gen::*;
-use zydis::{Buffer, Decoder, Formatter, ZydisResult};
+use zydis::{
+    AddressWidth, Decoder, Formatter, FormatterBuffer, FormatterContext, FormatterStyle,
+    MachineMode, OperandType, OutputBuffer, Result as ZydisResult, Status,
+};
 
 use super::hexformat::*;
 
@@ -18,7 +18,7 @@ pub struct DisasmOpts {
 #[derive(Debug)]
 pub enum DisasmError {
     IoError(IoError),
-    ZydisError(ZydisStatusCode),
+    ZydisError(Status),
 }
 
 pub fn write_disasm(
@@ -28,34 +28,34 @@ pub fn write_disasm(
     offset: u64,
 ) -> Result<(), DisasmError> {
     let mut buf = [0u8; 255];
+    let mut buf = OutputBuffer::new(&mut buf);
 
-    let mut formatter =
-        Formatter::new(ZYDIS_FORMATTER_STYLE_INTEL).map_err(DisasmError::ZydisError)?;
+    let mut formatter = Formatter::new(FormatterStyle::INTEL).map_err(DisasmError::ZydisError)?;
     formatter
-        .set_print_address(Box::new(format_addrs))
+        .set_print_address_abs(Box::new(format_addrs))
         .map_err(DisasmError::ZydisError)?;
 
     if !disasm_opts.show_mem_disp {
         formatter
-            .set_print_displacement(Box::new(void_format_disp))
+            .set_print_disp(Box::new(void_format_disp))
             .map_err(DisasmError::ZydisError)?;
     }
 
     if !disasm_opts.show_imms {
         formatter
-            .set_print_immediate(Box::new(void_format_imms))
+            .set_print_imm(Box::new(void_format_imms))
             .map_err(DisasmError::ZydisError)?;
     }
 
-    let decoder = Decoder::new(ZYDIS_MACHINE_MODE_LEGACY_32, ZYDIS_ADDRESS_WIDTH_32)
-        .map_err(DisasmError::ZydisError)?;
+    let decoder =
+        Decoder::new(MachineMode::LEGACY_32, AddressWidth::_32).map_err(DisasmError::ZydisError)?;
 
     for (insn, ip) in decoder.instruction_iterator(bytes, offset) {
         formatter
-            .format_instruction_raw(&insn, &mut buf, Some(disasm_opts))
+            .format_instruction(&insn, &mut buf, Some(ip), Some(disasm_opts))
             .map_err(DisasmError::ZydisError)?;
 
-        let insn_str = unsafe { CStr::from_ptr(buf.as_ptr() as *const c_char) }.to_string_lossy();
+        let insn_str = buf.as_str().expect("not utf8");
 
         if disasm_opts.print_adresses {
             writeln!(writer, "{:X}: {}", ip, insn_str).map_err(DisasmError::IoError)?;
@@ -69,47 +69,49 @@ pub fn write_disasm(
 
 fn format_addrs(
     _: &Formatter,
-    buf: &mut Buffer,
-    insn: &ZydisDecodedInstruction,
-    op: &ZydisDecodedOperand,
-    _: u64,
+    buf: &mut FormatterBuffer,
+    ctx: &mut FormatterContext,
     disasm_opts: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
     let opts = disasm_opts.unwrap().downcast_ref::<DisasmOpts>().unwrap();
-    match op.type_ {
-        // memory address
-        2 => {
-            if opts.show_mem_disp {
-                if insn.opcode == 0xFF && [2, 3].contains(&insn.raw.modrm.reg) {
-                    buf.append("<indir_fn>")? // hide function call addresses, 0xFF /3 = CALL m16:32)
+
+    unsafe {
+        let op = &*ctx.operand;
+        let insn = &*ctx.instruction;
+
+        match op.ty {
+            OperandType::MEMORY => {
+                if opts.show_mem_disp {
+                    if insn.opcode == 0xFF && [2, 3].contains(&insn.raw.modrm_reg) {
+                        buf.append_str("<indir_fn>")? // hide function call addresses, 0xFF /3 = CALL m16:32)
+                    } else {
+                        buf.append_str(&format!("{:#X}", op.mem.disp.displacement))?
+                    }
                 } else {
-                    buf.append(&format!("{:#X}", op.mem.disp.value))?
+                    buf.append_str("<indir_addr>")?
                 }
-            } else {
-                buf.append("<indir_addr>")?
             }
+            OperandType::IMMEDIATE => match insn.opcode {
+                0xE8 => buf.append_str("<imm_fn>")?, // hide function call addresses, 0xE8 = CALL rel32
+                _ => {
+                    if op.imm.is_relative {
+                        buf.append_str("$")?;
+                    } else {
+                        buf.append_str("<imm_addr>")?;
+                        return Ok(());
+                    }
+                    if op.imm.is_signed {
+                        buf.append_str(&format!(
+                            "{:+#X}",
+                            CustomUpperHexFormat(op.imm.value as i64)
+                        ))?;
+                    } else {
+                        buf.append_str(&format!("{:+#X}", op.imm.value))?;
+                    }
+                }
+            },
+            _ => {}
         }
-        // immediate address
-        4 => match insn.opcode {
-            0xE8 => buf.append("<imm_fn>")?, // hide function call addresses, 0xE8 = CALL rel32
-            _ => {
-                if op.imm.isRelative != 0 {
-                    buf.append("$")?;
-                } else {
-                    buf.append("<imm_addr>")?;
-                    return Ok(());
-                }
-                if op.imm.isSigned != 0 {
-                    buf.append(&format!(
-                        "{:+#X}",
-                        CustomUpperHexFormat(*unsafe { op.imm.value.s.as_ref() })
-                    ))?;
-                } else {
-                    buf.append(&format!("{:+#X}", unsafe { op.imm.value.u.as_ref() }))?;
-                }
-            }
-        },
-        _ => {}
     }
 
     Ok(())
@@ -117,27 +119,46 @@ fn format_addrs(
 
 fn void_format_disp(
     _: &Formatter,
-    buf: &mut Buffer,
-    _: &ZydisDecodedInstruction,
-    op: &ZydisDecodedOperand,
+    buf: &mut FormatterBuffer,
+    ctx: &mut FormatterContext,
     _: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
-    if op.mem.disp.value != 0 {
-        // only write the displacement if it's actually displacing
-        // not the case for something like `mov bl, [eax]`, i.e. `mov bl, [eax+0x0]`
-        buf.append(if op.mem.disp.value < 0 { "-" } else { "+" })?;
-        buf.append(&format!("<disp{}>", op.size))?;
+    unsafe {
+        let op = &*ctx.operand;
+        if op.mem.disp.has_displacement {
+            // only write the displacement if it's actually displacing
+            // not the case for something like `mov bl, [eax]`, i.e. `mov bl, [eax+0x0]`
+            buf.append_str(if op.mem.disp.displacement < 0 {
+                "-"
+            } else {
+                "+"
+            })?;
+            buf.append_str(&format!("<disp{}>", op.size))?;
+        }
     }
     Ok(())
 }
 
 fn void_format_imms(
     _: &Formatter,
-    buf: &mut Buffer,
-    _: &ZydisDecodedInstruction,
-    op: &ZydisDecodedOperand,
+    buf: &mut FormatterBuffer,
+    ctx: &mut FormatterContext,
     _: Option<&mut dyn Any>,
 ) -> ZydisResult<()> {
-    buf.append(&format!("<imm{}>", op.size))?;
+    unsafe {
+        let op = &*ctx.operand;
+        buf.append_str(&format!("<imm{}>", op.size))?;
+    }
     Ok(())
+}
+
+trait Compat {
+    fn append_str<S: AsRef<str> + ?Sized>(&mut self, s: &S) -> ZydisResult<()>;
+}
+
+impl Compat for FormatterBuffer {
+    /// Compat function to not have to change all of the code above
+    fn append_str<S: AsRef<str> + ?Sized>(&mut self, s: &S) -> ZydisResult<()> {
+        self.get_string().expect("not utf8").append(s)
+    }
 }
