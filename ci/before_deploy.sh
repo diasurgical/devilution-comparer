@@ -22,7 +22,6 @@ main() {
     cp target/$TARGET/release/devilution-comparer $stage/
     cp cvdump.exe $stage/
     cp cvdump-LICENSE $stage/
-    cp comparer-config.toml $stage/
 
     cd $stage
     tar cJf $src/$CRATE_NAME-$TRAVIS_TAG-$TARGET.tar.xz *
